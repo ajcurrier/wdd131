@@ -31,10 +31,6 @@ nav {
     height: 50px;
     
 }
-
-.active {
-  text-decoration: overline;
-}
 .menu {
     background-color: black;
     display: flex;
