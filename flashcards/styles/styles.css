@@ -1,0 +1,63 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.flashcard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.flashcard {
+    width: 1000px;
+    height: 500px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.buttons, .sort-buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#report {
+    margin-top: 20px;
+    display: none;
+}
+
+#report-content {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 10px;
+    width: 80%;
+}
