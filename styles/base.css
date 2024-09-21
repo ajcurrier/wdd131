@@ -75,7 +75,6 @@ main {
  .card {
     grid-row:2/4;
     border-radius: 25px 25px 0px 0px;
-    display: flexbox;
     position: relative;
     margin-top: 8px;
  }
@@ -100,7 +99,6 @@ main {
 
 .photo {
   /* display: flex; */
-  align-self: right;
   margin: 25px;
   box-shadow: 8px 10px #0f0f0f41;
   float: right;
