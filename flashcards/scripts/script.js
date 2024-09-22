@@ -8,7 +8,7 @@ let wrong = []; // Array for wrong answers
 let vocabCards = []; // Array to hold vocabulary cards loaded from CSV
 
 // Load CSV data and parse it into vocabCards array
-fetch('/csv/web_dev_vocab.csv')
+fetch('csv/web_dev_vocab.csv')
     .then(response => response.text()) // Read CSV file as text
     .then(data => {
         vocabCards = parseCSV(data); // Convert CSV text to array of cards
