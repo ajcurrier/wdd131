@@ -162,3 +162,71 @@ footer{
     padding: 15px;
     color: white;
 }
+@media screen and (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        height: auto;
+        padding: 10px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Smaller font size */
+        line-height: 1.2;
+        margin: 0 10px; /* Reduce margin */
+    }
+
+    nav {
+        height: auto;
+        padding: 10px;
+    }
+
+    .menu {
+        flex-direction: column; /* Stack menu items */
+        align-items: flex-start; /* Align to the left */
+        padding: 10px; /* Add padding */
+    }
+
+    .menu a {
+        width: 100%; /* Full width links */
+        padding: 10px 0; /* Increase padding for touch targets */
+    }
+
+    main {
+        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-rows: auto; /* Auto rows */
+        gap: 15px; /* Space between stacked cards */
+    }
+
+    .card {
+        margin: 10px; /* Adjust margin for mobile */
+        padding: 10px; /* Reduce padding */
+    }
+
+    #leftcard, #rightcard {
+        grid-column: 1 / -1; /* Full width */
+        margin: 0 10px; /* Margin adjustment */
+    }
+
+    .photo, #rocks {
+        width: 100%; /* Full width images */
+        margin: 10px auto; /* Centered with margin */
+        float: none; /* Remove float */
+    }
+
+    .top-rounded-bar {
+        margin-top: 0px; /* Remove negative margin */
+        margin-left: 0px;
+        margin-right: 0px;
+        border-radius: 15px 15px 0px 0px; /* Smaller radius */
+    }
+
+    footer {
+        padding: 10px 5px; /* Smaller padding */
+        font-size: 0.9rem; /* Smaller font size */
+    }
+}
