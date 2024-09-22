@@ -64,7 +64,7 @@ nav {
 
 main {
   display: grid;
-  width: 90%;
+  width: 85%;
   max-width: 1500px;
   grid-template: 50px 1fr 150px/2fr  1fr;
   margin: auto;
@@ -129,6 +129,7 @@ main {
     grid-column: 2/3;
     background-color: #c4c6e7;
     outline: 4px solid #791e94;
+    max-width: 300px;
     /* margin-right: -4px; */
     
 }
@@ -172,7 +173,9 @@ footer{
         height: auto;
         padding: 10px;
         text-align: center;
+        margin-bottom: 25px;
     }
+    
 
     h1 {
         font-size: 1.5rem; /* Smaller font size */
@@ -187,13 +190,16 @@ footer{
 
     .menu {
         flex-direction: column; /* Stack menu items */
-        align-items: flex-start; /* Align to the left */
+        align-items: center; /* Align to the center */
         padding: 10px; /* Add padding */
+        height: unset;
     }
 
     .menu a {
         width: 100%; /* Full width links */
         padding: 10px 0; /* Increase padding for touch targets */
+        height: fit-content;
+        
     }
 
     main {
@@ -205,11 +211,29 @@ footer{
     .card {
         margin: 10px; /* Adjust margin for mobile */
         padding: 10px; /* Reduce padding */
+        flex-direction: column;
+        grid-row: unset;
     }
 
+
     #leftcard, #rightcard {
-        grid-column: 1 / -1; /* Full width */
+        grid-column: 1; /* Full width */
         margin: 0 10px; /* Margin adjustment */
+        max-width: unset;
+ 
+    }
+    #leftcard {
+        text-align: center;
+    }
+/* 
+    #rightcard {
+        max-height: 200px;
+        overflow-y: auto;
+    } */
+
+    .photo {
+        max-width: 200px;
+        /* margin: auto; */
     }
 
     .photo, #rocks {
