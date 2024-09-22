@@ -80,7 +80,7 @@ main {
     /* padding: 15px; */
  }
 
- .card :not(.top-rounded-bar) img:not() {
+ .card :not(.top-rounded-bar) img:not(.photo) {
     padding: 25px;
  }
 
@@ -103,7 +103,7 @@ main {
 
 }
 
-#leftcard h3:not() :not(.top-rounded-bar) {
+#leftcard h3:not(.leftcard) div:not(.top-rounded-bar) {
     padding: 25px;
 }
 
