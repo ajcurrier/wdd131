@@ -1,0 +1,23 @@
+DOM,Document Object Model,HTML
+concatenate,To join two or more strings together,General
+instantiate,To create an instance of a class,General
+implicit coercion,Automatic type conversion by JavaScript,General
+explicit coercion,Manually converting data types in JavaScript,General
+NaN,Not-a-Number value in JavaScript,General
+initialize,Set a variable with an initial value,General
+array,A collection of elements in an ordered list,General
+element,A single part of an HTML document,HTML
+tag,An HTML structure wrapped in angle brackets,HTML
+grid,Defines a grid-based layout in CSS,CSS
+flexbox,Defines a flexible box layout in CSS,CSS
+border,Defines a border around an element,CSS
+section,Defines a section of an HTML document,HTML
+menu,Defines a list of commands in HTML,HTML
+defer,Boolean attribute to defer script execution,JavaScript
+JavaScript Date Object,Object for date and time manipulation,JavaScript
+Method,Functions associated with objects,JavaScript
+Span Element,Inline container for content,HTML
+lastModified Property,Date when document was last modified,JavaScript
+Object vs Method,Difference between data structures and functions,JavaScript
+Document Object,Root node of the HTML document,JavaScript
+Template Literals,String literals with embedded expressions,JavaScript

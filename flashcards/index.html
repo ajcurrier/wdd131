@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Specifies the character encoding for the document -->
     <meta charset="UTF-8">
+    <!-- Sets the viewport to make the website responsive on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vocabulary Flashcards</title>
+    <!-- Link to the external CSS file located in the styles folder -->
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+    <!-- Main container for the flashcard and control buttons -->
     <div class="flashcard-container">
+        <!-- Div for displaying the flashcard content -->
         <div class="flashcard" id="flashcard"></div>
+        <!-- Button to flip between the front and back of the flashcard -->
         <button id="show-back">Flip Card</button>
+        <!-- Buttons to mark the card as correct or incorrect -->
         <div class="buttons">
             <button id="correct-btn">Correct</button>
             <button id="wrong-btn">Wrong</button>
         </div>
+        <!-- Buttons for sorting flashcards based on type (HTML, CSS, etc.) -->
         <div class="sort-buttons">
             <button id="show-html">Show HTML Tags</button>
             <button id="show-css">Show CSS Tags</button>
@@ -21,12 +29,17 @@
             <button id="show-all">Show All</button>
         </div>
     </div>
+    
+    <!-- Section for displaying a progress report of correct and wrong cards -->
     <div id="report">
         <h3>Progress Report</h3>
+        <!-- Button to show the report -->
         <button id="show-report">Show Report</button>
+        <!-- This div will dynamically display the report content -->
         <div id="report-content"></div>
     </div>
+
+    <!-- Link to the external JavaScript file located in the scripts folder -->
     <script src="scripts/script.js"></script>
 </body>
 </html>
-
