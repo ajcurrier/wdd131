@@ -6,6 +6,7 @@ let showingBack = false; // Track whether the back of the card is shown
 let correct = []; // Array for correct answers
 let wrong = []; // Array for wrong answers
 let vocabCards = []; // Array to hold vocabulary cards loaded from CSV
+let filteredCards = []; // Array to hold filtered cards
 
 // Load CSV data and parse it into vocabCards array
 fetch('csv/web_dev_vocab.csv')
@@ -31,33 +32,71 @@ function displayCard(index) {
     showingBack = false; // Set to show the front side
 }
 
+// Display card from filtered cards
+function displayFilteredCard(index) {
+    const flashcard = document.getElementById('flashcard'); // Get flashcard div
+    flashcard.innerText = filteredCards[index].term; // Set term as the flashcard text
+    showingBack = false; // Set to show the front side
+}
+
 // Toggle between showing the front (term) and back (definition) of the card
 document.getElementById('show-back').addEventListener('click', () => {
     const flashcard = document.getElementById('flashcard'); // Get flashcard div
     if (showingBack) {
-        displayCard(currentCard); // Show front if back is currently displayed
+        if (filteredCards.length > 0) {
+            displayFilteredCard(currentCard); // Show front of filtered card
+        } else {
+            displayCard(currentCard); // Show front if back is currently displayed
+        }
     } else {
-        flashcard.innerText = vocabCards[currentCard].definition; // Show back (definition)
+        if (filteredCards.length > 0) {
+            flashcard.innerText = filteredCards[currentCard].definition; // Show back (definition) of filtered card
+        } else {
+            flashcard.innerText = vocabCards[currentCard].definition; // Show back (definition) of normal card
+        }
     }
     showingBack = !showingBack; // Toggle the state
 });
 
 // Add event listener to mark the card as correct and go to the next card
 document.getElementById('correct-btn').addEventListener('click', () => {
-    correct.push(vocabCards[currentCard]); // Add current card to correct array
+    if (filteredCards.length > 0) {
+        correct.push(filteredCards[currentCard]); // Add filtered card to correct array
+    } else {
+        correct.push(vocabCards[currentCard]); // Add normal card to correct array
+    }
+    console.log("Correct Answer Added: ", filteredCards.length > 0 ? filteredCards[currentCard] : vocabCards[currentCard]); // Debugging: Log the correct card
     nextCard(); // Move to the next card
 });
 
 // Add event listener to mark the card as incorrect and go to the next card
 document.getElementById('wrong-btn').addEventListener('click', () => {
-    wrong.push(vocabCards[currentCard]); // Add current card to wrong array
+    if (filteredCards.length > 0) {
+        wrong.push(filteredCards[currentCard]); // Add filtered card to wrong array
+    } else {
+        wrong.push(vocabCards[currentCard]); // Add normal card to wrong array
+    }
+    console.log("Wrong Answer Added: ", filteredCards.length > 0 ? filteredCards[currentCard] : vocabCards[currentCard]); // Debugging: Log the wrong card
     nextCard(); // Move to the next card
 });
 
 // Function to move to the next card in the array
 function nextCard() {
-    currentCard = (currentCard + 1) % vocabCards.length; // Increment index, loop back if at the end
-    displayCard(currentCard); // Display the next card
+    if (filteredCards.length > 0) {
+        currentCard++; // Increment index for filtered cards
+        if (currentCard >= filteredCards.length) {
+            currentCard = 0; // Loop back to first card if at the end
+        }
+        console.log("Displaying Next Filtered Card: ", currentCard); // Debugging: Log the next filtered card index
+        displayFilteredCard(currentCard); // Display the next filtered card
+    } else {
+        currentCard++; // Increment index for normal cards
+        if (currentCard >= vocabCards.length) {
+            currentCard = 0; // Loop back to first card if at the end
+        }
+        console.log("Displaying Next Card: ", currentCard); // Debugging: Log the next card index
+        displayCard(currentCard); // Display the next card
+    }
 }
 
 // Event listeners for sorting the flashcards by type (HTML, CSS, General)
@@ -68,19 +107,23 @@ document.getElementById('show-all').addEventListener('click', () => displayAllCa
 
 // Filter the cards by the selected type and display the first filtered card
 function filterCards(type) {
-    vocabCards = vocabCards.filter(card => card.type === type); // Filter cards by type
+    filteredCards = vocabCards.filter(card => card.type === type); // Store filtered cards in separate array
     currentCard = 0; // Reset to the first card in the filtered list
-    displayCard(currentCard); // Display the first filtered card
+    if (filteredCards.length > 0) {
+        displayFilteredCard(currentCard); // Display the first filtered card
+    }
 }
 
 // Reset and display all cards by reloading the CSV data
 function displayAllCards() {
-    fetch('/csv/web_dev_vocab.csv')
+    fetch('csv/web_dev_vocab.csv') // Corrected the path
         .then(response => response.text())
         .then(data => {
             vocabCards = parseCSV(data); // Reload all cards
             shuffleCards(); // Reshuffle the cards
+            currentCard = 0; // Reset to the first card
             displayCard(currentCard); // Display the first card
+            filteredCards = []; // Reset filtered cards array
         });
 }
 
@@ -121,7 +164,9 @@ function parseCSV(data) {
     const cards = [];
     lines.forEach(line => {
         const [term, definition, type] = line.split(','); // Split each line into term, definition, type
-        cards.push({ term, definition, type }); // Create card object and add to array
+        if(term && definition && type) {
+            cards.push({ term, definition, type }); // Create card object and add to array
+        }
     });
     return cards;
 }
