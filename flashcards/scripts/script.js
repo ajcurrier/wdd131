@@ -65,7 +65,6 @@ document.getElementById('correct-btn').addEventListener('click', () => {
     } else {
         correct.push(vocabCards[currentCard]); // Add normal card to correct array
     }
-    console.log("Correct Answer Added: ", filteredCards.length > 0 ? filteredCards[currentCard] : vocabCards[currentCard]); // Debugging: Log the correct card
     nextCard(); // Move to the next card
 });
 
@@ -76,7 +75,6 @@ document.getElementById('wrong-btn').addEventListener('click', () => {
     } else {
         wrong.push(vocabCards[currentCard]); // Add normal card to wrong array
     }
-    console.log("Wrong Answer Added: ", filteredCards.length > 0 ? filteredCards[currentCard] : vocabCards[currentCard]); // Debugging: Log the wrong card
     nextCard(); // Move to the next card
 });
 
@@ -87,14 +85,12 @@ function nextCard() {
         if (currentCard >= filteredCards.length) {
             currentCard = 0; // Loop back to first card if at the end
         }
-        console.log("Displaying Next Filtered Card: ", currentCard); // Debugging: Log the next filtered card index
         displayFilteredCard(currentCard); // Display the next filtered card
     } else {
         currentCard++; // Increment index for normal cards
         if (currentCard >= vocabCards.length) {
             currentCard = 0; // Loop back to first card if at the end
         }
-        console.log("Displaying Next Card: ", currentCard); // Debugging: Log the next card index
         displayCard(currentCard); // Display the next card
     }
 }
@@ -107,6 +103,7 @@ document.getElementById('show-all').addEventListener('click', () => displayAllCa
 
 // Filter the cards by the selected type and display the first filtered card
 function filterCards(type) {
+    filteredCards = []; // Clear previous filtered cards
     filteredCards = vocabCards.filter(card => card.type === type); // Store filtered cards in separate array
     currentCard = 0; // Reset to the first card in the filtered list
     if (filteredCards.length > 0) {
@@ -116,15 +113,9 @@ function filterCards(type) {
 
 // Reset and display all cards by reloading the CSV data
 function displayAllCards() {
-    fetch('csv/web_dev_vocab.csv') // Corrected the path
-        .then(response => response.text())
-        .then(data => {
-            vocabCards = parseCSV(data); // Reload all cards
-            shuffleCards(); // Reshuffle the cards
-            currentCard = 0; // Reset to the first card
-            displayCard(currentCard); // Display the first card
-            filteredCards = []; // Reset filtered cards array
-        });
+    filteredCards = []; // Clear filtered cards
+    currentCard = 0; // Reset to the first card
+    displayCard(currentCard); // Display the first card from all cards
 }
 
 // Show the progress report when the "Show Report" button is clicked
@@ -160,13 +151,13 @@ function generateReport(cards) {
 
 // Parse the CSV file content into an array of flashcard objects
 function parseCSV(data) {
-    const lines = data.split('\\n'); // Split CSV text into lines
+    const lines = data.split('\n'); // Split CSV text into lines
     const cards = [];
     lines.forEach(line => {
         const [term, definition, type] = line.split(','); // Split each line into term, definition, type
-        if(term && definition && type) {
+        if(term && definition && type) { // Ensure all fields are present
             cards.push({ term, definition, type }); // Create card object and add to array
         }
     });
-    return cards;
+    return cards; // Return the array of flashcard objects
 }

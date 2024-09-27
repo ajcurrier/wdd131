@@ -1,0 +1,111 @@
+h1, h2, h3, h4 {
+    font-family: "Sofia", cursive;
+    font-size: 2.5em;
+    margin: 0px;
+}
+body {
+    font-family: "Sofia Sans", sans-serif;
+
+}
+
+#title-box {
+    background-color: #edafb8;
+    margin: 0px;
+    padding: 10px;
+    text-shadow: 2px 2px 0 white;
+    padding-left: 25px;
+
+}
+
+.hamburger {
+    display: none;
+    flex-direction:column;
+    cursor: pointer;
+    padding: 10px;
+}
+.hamburger .line {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+.menu {
+    display: none;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 75px;
+    background-color: #4a5759;
+    align-items: center;
+    margin: 0px;
+    text-align: center;
+
+}
+
+.menu.active {
+    display: flex;
+}
+
+.menu-tags {
+    font-size: 1.5em;
+    text-decoration: none;
+    /* color: #4a5759; */
+    color: white;
+    width: 15%;
+    padding: 5px;
+    
+    
+}
+
+.menu-tags:hover {
+    background-color: #b0c4b1;
+    color:black;
+    text-shadow: 2px 2px 0 white;
+}
+
+h2 {
+    margin: 15px;
+}
+.main-box {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    gap: 15px;
+    /* grid-template-rows: 1rem 1rem 1rem; */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-items: center;
+    
+}
+
+img {
+    width: 100%;
+    /* margin goes clockwise : top, right, bottom,left */
+    margin: 15px auto 20px auto;
+
+}
+
+figure {
+    margin: 15px;
+    border-color: #b0c4b1;
+    border-width: 8px;
+    border-style: solid;
+    border-radius: 25px;
+    width: 100%;
+    min-height: 200px;
+    max-width: 200px;
+    padding: 15px;
+   
+}
+figcaption {
+    text-align: center;
+    margin: auto;
+}
+
+
+
+@media (max-width: 768px) {
+    .hamburger {
+        
+        display: flex;
+    }
+}
