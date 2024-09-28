@@ -123,7 +123,8 @@ h2 {
 }
 
 img {
-    width: 100%;
+    width: 150px;
+    height: 124px;
     /* margin goes clockwise : top, right, bottom,left */
     margin: 15px auto 20px auto;
 
