@@ -147,6 +147,9 @@ figcaption {
     margin: auto;
 }
 
+footer {
+    margin: 10%;
+}
 
 
 
@@ -184,4 +187,5 @@ figcaption {
     .menu.active #menu-tag-container {
         justify-items: center;
     }
+
 }
