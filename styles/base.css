@@ -1,8 +1,15 @@
+img {
+    height: unset;
+    width: unset;
+    
+}
+
 body {
     /* height: 100vh; */
     /* grid-template: ROWS/COLUMNS */
     font-family: "Montserrat", sans-serif;
-    font-weight: 500;
+    /* font-weight: 500; */
+    font-size: 1rem;
     
 }
 
@@ -10,20 +17,21 @@ header {
     /* background-color: rgb(0, 255, 255); */
     background-color: #407899;
     color: white;
-    height: 75px;
+    height:fit-content;
 }
 
 h1 {
     text-align: center;
-    line-height: 75px;
+    /* line-height: 75px; */
     margin: 0;
-    font-weight: 700;
+    padding: 25px;
+    
 }
 
 
 nav {
     height: 50px;
-    font-weight: 300;   
+    /* font-weight: 300;    */
 }
 
 .active {
@@ -31,9 +39,11 @@ nav {
 }
 .menu {
     background-color: black;
-    display: flex;
+    display: inline-flex;
+    width: 100%;
     justify-content: space-evenly;
-    /* align-items: center; */
+    min-height: fit-content;
+    align-items: center;
     height: 55px;
     /* margin: 0; */
 }
@@ -55,7 +65,7 @@ nav {
 
 .menu a:hover {
     background-color: rgb(0, 255, 255);
-    outline: 2px dashed black;
+    outline: 2px solid black;
     color: black;
     /* border-style: dashed; */
     
@@ -65,7 +75,7 @@ nav {
 main {
   display: grid;
   width: 85%;
-  max-width: 1500px;
+  max-width: 1200px;
   grid-template: 50px 1fr 150px/2fr  1fr;
   margin: auto;
   gap: 10px;
@@ -94,7 +104,7 @@ main {
 #leftcard {
     
     grid-column: 1/2;
-    background-color: #c4c6e7;
+    background-color: hsl(238, 45%, 90%);
     outline: 4px solid #791e94;
     margin-right: 10px;
     
@@ -108,16 +118,19 @@ main {
 }
 
 .photo {
-  margin: 25px;
+  margin: 5%;
   box-shadow: 8px 10px #0f0f0f41;
   float: right;
-  width: 150px;
+  width: 40%;
+  max-width: 300px;
 
 }
 
+
 #rocks {
     max-width: 1000px;
-    width: 60%;
+    /* width: 100%; */
+    max-width: 90%;
     display: block;
     margin: auto;
     margin-top: 25px;
@@ -127,17 +140,24 @@ main {
 
 #rightcard {
     grid-column: 2/3;
-    background-color: #c4c6e7;
+    background-color: hsl(238, 45%, 90%);
     outline: 4px solid #791e94;
     max-width: 300px;
     /* margin-right: -4px; */
     
 }
 
+.links {
+    margin: 10px;
+}
+
 .top-rounded-bar {
     background-color: #791e94;
     text-align: center;
-    height: 50px;
+    font-size: 1.1rem;
+    height: 100px;
+    align-content: center;
+    /* min-height: fit-content; */
     border-radius: 25px 25px 0px 0px;
     margin-top: -20px;
     margin-left: -3px;
@@ -147,7 +167,6 @@ main {
 
 
 .top-bar-text {
-    padding-top: 11px;
     color: white;
 }
 
@@ -231,13 +250,13 @@ footer{
         overflow-y: auto;
     } */
 
-    .photo {
-        max-width: 200px;
-        /* margin: auto; */
-    }
+    /* .photo {
+        max-width: 250px;
+        /* margin: auto; 
+    } */
 
     .photo, #rocks {
-        width: 100%; /* Full width images */
+        /* width: 100%; Full width images */
         margin: 10px auto; /* Centered with margin */
         float: none; /* Remove float */
     }
