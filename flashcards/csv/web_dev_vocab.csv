@@ -1,4 +1,4 @@
-Term,Definition,Type
+﻿Term,Definition,Type
 DOM,A programming interface for web documents that represents the structure of the document as a tree of objects.,HTML
 Concatenate,To join two or more strings end to end in programming.,General
 Instantiate,The process of creating an instance of an object from a class in object-oriented programming.,General
@@ -56,9 +56,55 @@ button {
 button:hover {
     background-color: green;
 }""",CSS
-console.log() Method,"""The console.log() method is a built-in function in JavaScript used to print output to the browser�s console. It is commonly used for debugging purposes, allowing developers to log messages, variable values, or any other information to help track the flow of execution or identify issues in the code.
+console.log() Method,"""The console.log() method is a built-in function in JavaScript used to print output to the browser’s console. It is commonly used for debugging purposes, allowing developers to log messages, variable values, or any other information to help track the flow of execution or identify issues in the code.
 Example:
 
 const name = 'Alice';
 console.log('Hello, ' + name); // Outputs: Hello, Alice
 In this example, the console.log() method prints the message Hello, Alice to the console. It is an essential tool for troubleshooting and understanding code behavior during development.""",JavaScript
+.classList Method,"""### `classList` Property
+**Term**: `classList` Property  
+**Definition**: The `classList` property is a read-only property in JavaScript that provides access to the list of classes assigned to an HTML element. It allows you to easily add, remove, toggle, and check for the presence of CSS classes on an element, making it useful for dynamic styling and behavior control. It includes methods such as `.add()`, `.remove()`, `.toggle()`, and `.contains()`.  
+**Example**:
+```javascript
+const menu = document.getElementById('menu');
+
+// Toggle the 'active' class on the menu element
+menu.classList.toggle('active');
+```
+In this example, the `toggle` method adds the `active` class if it is not present and removes it if it is already there, making it useful for interactive elements like menus or buttons.""",JavaScript
+.toggle Method,"""### `toggle` Method
+**Term**: `toggle` Method  
+**Definition**: The `toggle` method is a function available on the `classList` property in JavaScript. It is used to add a specified class to an element if it is not already present, and to remove the class if it is present. It effectively switches the class on and off, making it ideal for toggling the visibility or state of an element based on user interaction. It can optionally take a second boolean argument to force-add or force-remove the class.  
+**Example**:
+```javascript
+const menu = document.getElementById('menu');
+
+// Toggle the 'active' class on the menu element
+menu.classList.toggle('active');
+```
+In this example, the `toggle` method adds the `active` class if it is not present and removes it if it is already there, providing a simple way to create interactive behavior.""",JavaScript
+:nth-child(),":nth-child()` Pseudo-Class
+**Term**: `:nth-child()` Pseudo-Class  
+**Definition**: The `:nth-child()` pseudo-class in CSS is used to select one or more elements based on their position within a parent element. It takes a single argument, which can be a number, keyword, or formula, to target elements in a pattern. Common arguments include numbers (`:nth-child(2)` selects the second child), keywords like `odd` or `even`, and formulas like `2n+1` to select every odd element.  
+**Example**:
+```css
+li:nth-child(2) {
+    color: red; /* Selects the second <li> element */
+}
+
+li:nth-child(odd) {
+    background-color: #f0f0f0; /* Selects all odd <li> elements */
+}
+```
+In these examples, the `nth-child(2)` targets the second `li` element, and `nth-child(odd)` targets all odd-numbered `li` elements, applying the specified styles to them.""",JavaScript
+The addEventListener() method steps,"""The first parameter is the type of the event (like click or mousedown or any other HTML DOM Event.)
+
+The second parameter is the function we want to call when the event occurs.
+
+The third parameter is a boolean value specifying whether to use event bubbling or event capturing. This parameter is optional.
+
+Note that you don't use the 'on' prefix for the event; use 'click instead of onclick""
+",JavaScript
+addEventListener definition,A method that attaches an event handler to an element without overwriting existing event handlers. It allows an element to respond to multiple events.,JavaScript
+document.querySelector(),"A method that returns the first element within the document that matches the specified CSS selector(s). If no matches are found, it returns null.",JavaScript
