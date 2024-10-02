@@ -32,24 +32,27 @@ body {
     cursor: pointer; /* Change cursor to pointer on hover */
     border-radius: 20px;
     box-shadow: 50px, 50px, 50px, 0px, #6f6e6e;
-      
 }
 
-/* Styling for the control buttons below the flashcard */
+/* Flexbox container for the buttons */
 .buttons, .sort-buttons {
     display: flex; /* Flexbox layout */
-    justify-content: space-around; /* Evenly space buttons */
-    width: 500px; /* Set container width */
+    justify-content: space-between; /* Evenly distribute buttons */
+    width: 100%; /* Make buttons container fill available width */
+    max-width: 500px; /* Set max width to prevent it from growing too large */
     margin-top: 10px; /* Space above buttons */
 }
 
 /* General styling for all buttons */
 button {
+    flex-grow: 1; /* Allow buttons to grow and fill available space */
+    margin: 0 10px; /* Space between buttons */
     padding: 10px 20px; /* Padding inside buttons */
     background-color: #007BFF; /* Blue background color */
     color: white; /* White text color */
     border: none; /* Remove border */
     cursor: pointer; /* Change cursor to pointer on hover */
+    text-align: center; /* Center text in button */
 }
 
 /* Button hover effect */
@@ -70,4 +73,56 @@ button:hover {
     padding: 20px; /* Padding inside the report box */
     margin-top: 10px; /* Space above the report content */
     width: 80%; /* 80% of the parent width */
+}
+
+/* Media query for devices with a max width of 768px (tablets and smaller screens) */
+@media only screen and (max-width: 768px) {
+    .flashcard {
+        width: 80%; /* Reduce the width for smaller screens */
+        height: 300px; /* Reduce height */
+        font-size: 18px; /* Smaller font size */
+        margin-bottom: 15px;
+    }
+
+    .buttons, .sort-buttons {
+        width: 100%; /* Fill the width */
+        flex-direction: row; /* Keep buttons in a row */
+        max-width: 100%; /* Remove max-width for smaller screens */
+    }
+
+    button {
+        flex-grow: 1; /* Buttons will fill the available space */
+        margin: 0 5px; /* Less margin between buttons */
+    }
+
+    #report-content {
+        width: 90%; /* Make report container take up more width */
+    }
+}
+
+/* Media query for devices with a max width of 480px (small mobile devices) */
+@media only screen and (max-width: 480px) {
+    .flashcard {
+        width: 95%; /* Further reduce the width for mobile phones */
+        height: 250px; /* Reduce height for small screens */
+        font-size: 16px; /* Smaller font for small screens */
+        margin-bottom: 10px;
+    }
+
+    .buttons, .sort-buttons {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        align-items: center; /* Center the buttons */
+        width: 100%; /* Use full width */
+    }
+
+    button {
+        width: 100%; /* Buttons take full width */
+        margin: 5px 0; /* Margin between buttons */
+        padding: 10px; /* Adjust padding */
+        font-size: 14px; /* Adjust button font size */
+    }
+
+    #report-content {
+        width: 100%; /* Full-width for report content */
+    }
 }
