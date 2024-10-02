@@ -21,7 +21,7 @@ body {
 .flashcard {
     width: 1000px; /* Set the width of the flashcard */
     height: 500px; /* Set the height of the flashcard */
-    background-color: #f0f0f0; /* Light grey background color */
+    background-color: #faf6ab; /* Light grey background color */
     border: 2px solid #ccc; /* Light grey border */
     display: flex; /* Flexbox layout */
     align-items: center; /* Center content vertically */
@@ -30,6 +30,9 @@ body {
     text-align: center; /* Center text */
     margin-bottom: 10px; /* Space below flashcard */
     cursor: pointer; /* Change cursor to pointer on hover */
+    border-radius: 20px;
+    box-shadow: 50px, 50px, 50px, 0px, #6f6e6e;
+      
 }
 
 /* Styling for the control buttons below the flashcard */
