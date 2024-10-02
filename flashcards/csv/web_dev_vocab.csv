@@ -2,13 +2,13 @@
 DOM,A programming interface for web documents that represents the structure of the document as a tree of objects.,HTML
 Concatenate,To join two or more strings end to end in programming.,General
 Instantiate,The process of creating an instance of an object from a class in object-oriented programming.,General
-Implicit Coercion,"The automatic conversion of one data type to another, such as converting a string to a number in JavaScript.",General
-Explicit Coercion,"The deliberate conversion of one data type to another, such as using Number() or String() in JavaScript.",General
+Implicit Coercion,The automatic conversion of one data type to another.. such as converting a string to a number in JavaScript.,General
+Explicit Coercion,The deliberate conversion of one data type to another.. such as using Number() or String() in JavaScript.,General
 NaN,A JavaScript value representing an unrepresentable or invalid number.,General
 Initialize,To assign an initial value to a variable.,General
-Array,"A data structure that stores a collection of items, usually of the same type, in an ordered list.",General
-Element,"""consists of a start tag, its attributes (if any), content, and an end tag. It is a fundamental building block of a web page.""",HTML
-Tag,"An HTML structure wrapped in angle brackets, such as <div> or <span>.",HTML
+Array,A data structure that stores a collection of items.. usually of the same type.. in an ordered list.,General
+Element,consists of a start tag.. its attributes (if any).. content.. and an end tag. It is a fundamental building block of a web page.,HTML
+Tag,An HTML structure wrapped in angle brackets.. such as <div> or <span>.,HTML
 Grid,Defines the layout of a grid-based structure in CSS.,CSS
 Flexbox,A CSS layout model for creating flexible and responsive design.,CSS
 Border,A property in CSS used to set the border around elements.,CSS
@@ -16,37 +16,37 @@ Section,A semantic HTML tag that represents a section in a document.,HTML
 Menu,A semantic HTML tag used to represent a list of commands or menu items.,HTML
 Defer Boolean Attribute,The 'defer' attribute is a boolean attribute for the <script> tag that makes the browser wait to execute the script until the HTML document has been fully parsed.,JavaScript
 JavaScript Date Object,An object in JavaScript that represents a single moment in time and allows you to get or set various date and time components.,JavaScript
-Method,"A function associated with an object, accessed using dot notation, such as dateObject.getFullYear().",JavaScript
+Method,A function associated with an object.. accessed using dot notation.. such as dateObject.getFullYear().,JavaScript
 Span Element,An inline element in HTML used to apply styles or scripts to a small portion of text or content.,HTML
-Defer Object,"Allows JavaScript to be executed after the document has been parsed, improving performance and avoiding blocking rendering.",JavaScript
+Defer Object,Allows JavaScript to be executed after the document has been parsed.. improving performance and avoiding blocking rendering.,JavaScript
 lastModified Property,A property of the document object that returns the date and time the document was last modified.,JavaScript
-Object vs Method,"Objects are data structures, while methods are functions associated with those objects. Methods are accessed using dot notation, like object.method().",JavaScript
+Object vs Method,Objects are data structures.. while methods are functions associated with those objects. Methods are accessed using dot notation.. like object.method().,JavaScript
 Document Object,The root object representing the entire HTML document in the browser. It provides methods and properties for interacting with the document.,JavaScript
-Template Literals,"String literals in JavaScript that allow for embedded expressions, using backticks (`) and ${} for variable interpolation.",JavaScript
+Template Literals,String literals in JavaScript that allow for embedded expressions.. using backticks (`) and ${} for variable interpolation.,JavaScript
 JavaScript Switch Statement,A control flow statement used to execute one block of code among many options based on the value of a variable or expression.,JavaScript
-JavaScript Conditional Statements,"Statements like if, else if, and else that allow for conditional execution of code segments based on whether a condition is true or false.",JavaScript
-JavaScript Looping Statements,"Statements like for, while, and do...while that allow for repetitive execution of code segments as long as a condition remains true.",JavaScript
-QuerySelector Method,"A method that returns the first element within the document that matches the specified selector, or group of selectors.",JavaScript
-Click Event,"An event triggered when an element is clicked, often used to trigger specific functions in response to user interaction.",JavaScript
+JavaScript Conditional Statements,Statements like if.. else if.. and else that allow for conditional execution of code segments based on whether a condition is true or false.,JavaScript
+JavaScript Looping Statements,Statements like for.. while.. and do...while that allow for repetitive execution of code segments as long as a condition remains true.,JavaScript
+QuerySelector Method,A method that returns the first element within the document that matches the specified selector.. or group of selectors.,JavaScript
+Click Event,An event triggered when an element is clicked.. often used to trigger specific functions in response to user interaction.,JavaScript
 Keyup Event,An event triggered when a key is released after being pressed. Useful for handling input changes in real-time.,JavaScript
-DOMContentLoaded Event,"An event that fires when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.",JavaScript
-Sandbox,"A security mechanism for browser-based applications. It allows for safe execution of potentially untrusted code, without risking the security of the rest of the site.",JavaScript
-HTML for external stylesheet,"""<link rel=""stylesheet"" href=""#"">""",HTML
-HTML for external javascript,"<script src=""#"" defer></script>",JavaScript
-Main Line Elements,"""Header, NavBar, Main, Footer - if applicable sidebar, Hero Section""",HTML
-<figure>,"HTML element that is used to represent self-contained content, such as illustrations, diagrams, photos, code snippets, or other content that can be referenced as a single unit",
-How to use :hover,"""To apply styles using the :hover pseudo-class, you directly attach it to the element selector without spaces. For example, to change the background color and text color of a link with the class .menu-tags on hover, you use the syntax .menu-tags:hover { background-color: #b0c4b1; color: black; }. Incorrect usage, such as including a space between the element and the :hover, will prevent the styles from being applied correctly.""",CSS
-Center Text Horizontally,"""commonly achieved using the text-align property. This property can be applied to a parent container to align its child elements' text content. To center text, use text-align: center; on the parent element containing the text.""",CSS
-Center Text Vertically,"""For vertical centering within a container, additional properties like display: flex;, align-items: center;, and justify-content: center; on the container may be needed.""",CSS
-auto-fitting columns,"""This layout automatically adjusts to screen size, adding or removing columns based on the space available, while ensuring each column is at least 150px wide.
+DOMContentLoaded Event,An event that fires when the initial HTML document has been completely loaded and parsed.. without waiting for stylesheets.. images.. and subframes to finish loading.,JavaScript
+Sandbox,A security mechanism for browser-based applications. It allows for safe execution of potentially untrusted code.. without risking the security of the rest of the site.,JavaScript
+HTML for external stylesheet,<link rel=stylesheet href=#>,HTML
+HTML for external javascript,<script src=# defer></script>,JavaScript
+Main Line Elements,Header.. NavBar.. Main.. Footer - if applicable sidebar.. Hero Section,HTML
+<figure>,HTML element that is used to represent self-contained content.. such as illustrations.. diagrams.. photos.. code snippets.. or other content that can be referenced as a single unit,
+How to use :hover,To apply styles using the :hover pseudo-class.. you directly attach it to the element selector without spaces. For example.. to change the background color and text color of a link with the class .menu-tags on hover.. you use the syntax .menu-tags:hover { background-color: #b0c4b1; color: black; }. Incorrect usage.. such as including a space between the element and the :hover.. will prevent the styles from being applied correctly.,CSS
+Center Text Horizontally,commonly achieved using the text-align property. This property can be applied to a parent container to align its child elements' text content. To center text.. use text-align: center; on the parent element containing the text.,CSS
+Center Text Vertically,For vertical centering within a container.. additional properties like display: flex;.. align-items: center;.. and justify-content: center; on the container may be needed.,CSS
+auto-fitting columns,"This layout automatically adjusts to screen size.. adding or removing columns based on the space available.. while ensuring each column is at least 150px wide.
 .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit.. minmax(150px.. 1fr));
     grid-gap: 15px;
-}""",CSS
-create a Border,"""border: width style color;""",CSS
-Round Border corners,"""border-radius: 5px;""",CSS
-CSS Transition Property,"""The transition property in CSS is used to animate changes in property values over a specified duration, creating smooth transitions between different states of an element. It is typically used to enhance the user experience by animating properties such as colors, sizes, and positions when the state of an element changes due to interactions like hover or focus.
+}",CSS
+create a Border,border: width style color;,CSS
+Round Border corners,border-radius: 5px;,CSS
+CSS Transition Property,"The transition property in CSS is used to animate changes in property values over a specified duration.. creating smooth transitions between different states of an element. It is typically used to enhance the user experience by animating properties such as colors.. sizes.. and positions when the state of an element changes due to interactions like hover or focus.
 Example:
 button {
     background-color: blue;
@@ -55,16 +55,16 @@ button {
 
 button:hover {
     background-color: green;
-}""",CSS
-console.log() Method,"""The console.log() method is a built-in function in JavaScript used to print output to the browser’s console. It is commonly used for debugging purposes, allowing developers to log messages, variable values, or any other information to help track the flow of execution or identify issues in the code.
+}",CSS
+console.log() Method,"The console.log() method is a built-in function in JavaScript used to print output to the browser’s console. It is commonly used for debugging purposes.. allowing developers to log messages.. variable values.. or any other information to help track the flow of execution or identify issues in the code.
 Example:
 
 const name = 'Alice';
-console.log('Hello, ' + name); // Outputs: Hello, Alice
-In this example, the console.log() method prints the message Hello, Alice to the console. It is an essential tool for troubleshooting and understanding code behavior during development.""",JavaScript
-.classList Method,"""### `classList` Property
+console.log('Hello.. ' + name); // Outputs: Hello.. Alice
+In this example.. the console.log() method prints the message Hello.. Alice to the console. It is an essential tool for troubleshooting and understanding code behavior during development.",JavaScript
+.classList Method,"### `classList` Property
 **Term**: `classList` Property  
-**Definition**: The `classList` property is a read-only property in JavaScript that provides access to the list of classes assigned to an HTML element. It allows you to easily add, remove, toggle, and check for the presence of CSS classes on an element, making it useful for dynamic styling and behavior control. It includes methods such as `.add()`, `.remove()`, `.toggle()`, and `.contains()`.  
+**Definition**: The `classList` property is a read-only property in JavaScript that provides access to the list of classes assigned to an HTML element. It allows you to easily add.. remove.. toggle.. and check for the presence of CSS classes on an element.. making it useful for dynamic styling and behavior control. It includes methods such as `.add()`.. `.remove()`.. `.toggle()`.. and `.contains()`.  
 **Example**:
 ```javascript
 const menu = document.getElementById('menu');
@@ -72,10 +72,10 @@ const menu = document.getElementById('menu');
 // Toggle the 'active' class on the menu element
 menu.classList.toggle('active');
 ```
-In this example, the `toggle` method adds the `active` class if it is not present and removes it if it is already there, making it useful for interactive elements like menus or buttons.""",JavaScript
-.toggle Method,"""### `toggle` Method
+In this example.. the `toggle` method adds the `active` class if it is not present and removes it if it is already there.. making it useful for interactive elements like menus or buttons.",JavaScript
+.toggle Method,"### `toggle` Method
 **Term**: `toggle` Method  
-**Definition**: The `toggle` method is a function available on the `classList` property in JavaScript. It is used to add a specified class to an element if it is not already present, and to remove the class if it is present. It effectively switches the class on and off, making it ideal for toggling the visibility or state of an element based on user interaction. It can optionally take a second boolean argument to force-add or force-remove the class.  
+**Definition**: The `toggle` method is a function available on the `classList` property in JavaScript. It is used to add a specified class to an element if it is not already present.. and to remove the class if it is present. It effectively switches the class on and off.. making it ideal for toggling the visibility or state of an element based on user interaction. It can optionally take a second boolean argument to force-add or force-remove the class.  
 **Example**:
 ```javascript
 const menu = document.getElementById('menu');
@@ -83,10 +83,10 @@ const menu = document.getElementById('menu');
 // Toggle the 'active' class on the menu element
 menu.classList.toggle('active');
 ```
-In this example, the `toggle` method adds the `active` class if it is not present and removes it if it is already there, providing a simple way to create interactive behavior.""",JavaScript
+In this example.. the `toggle` method adds the `active` class if it is not present and removes it if it is already there.. providing a simple way to create interactive behavior.",JavaScript
 :nth-child(),":nth-child()` Pseudo-Class
 **Term**: `:nth-child()` Pseudo-Class  
-**Definition**: The `:nth-child()` pseudo-class in CSS is used to select one or more elements based on their position within a parent element. It takes a single argument, which can be a number, keyword, or formula, to target elements in a pattern. Common arguments include numbers (`:nth-child(2)` selects the second child), keywords like `odd` or `even`, and formulas like `2n+1` to select every odd element.  
+**Definition**: The `:nth-child()` pseudo-class in CSS is used to select one or more elements based on their position within a parent element. It takes a single argument.. which can be a number.. keyword.. or formula.. to target elements in a pattern. Common arguments include numbers (`:nth-child(2)` selects the second child).. keywords like `odd` or `even`.. and formulas like `2n+1` to select every odd element.  
 **Example**:
 ```css
 li:nth-child(2) {
@@ -97,14 +97,14 @@ li:nth-child(odd) {
     background-color: #f0f0f0; /* Selects all odd <li> elements */
 }
 ```
-In these examples, the `nth-child(2)` targets the second `li` element, and `nth-child(odd)` targets all odd-numbered `li` elements, applying the specified styles to them.""",JavaScript
-The addEventListener() method steps,"""The first parameter is the type of the event (like click or mousedown or any other HTML DOM Event.)
+In these examples.. the `nth-child(2)` targets the second `li` element.. and `nth-child(odd)` targets all odd-numbered `li` elements.. applying the specified styles to them.",JavaScript
+The addEventListener() method steps,"The first parameter is the type of the event (like click or mousedown or any other HTML DOM Event.)
 
 The second parameter is the function we want to call when the event occurs.
 
 The third parameter is a boolean value specifying whether to use event bubbling or event capturing. This parameter is optional.
 
-Note that you don't use the 'on' prefix for the event; use 'click instead of onclick""
+Note that you don't use the 'on' prefix for the event; use 'click instead of onclick
 ",JavaScript
 addEventListener definition,A method that attaches an event handler to an element without overwriting existing event handlers. It allows an element to respond to multiple events.,JavaScript
-document.querySelector(),"A method that returns the first element within the document that matches the specified CSS selector(s). If no matches are found, it returns null.",JavaScript
+document.querySelector(),A method that returns the first element within the document that matches the specified CSS selector(s). If no matches are found.. it returns null.,JavaScript

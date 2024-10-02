@@ -8,6 +8,9 @@
     <title>Vocabulary Flashcards</title>
     <!-- Link to the external CSS file located in the styles folder -->
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Main container for the flashcard and control buttons -->
@@ -29,6 +32,13 @@
             <button id="show-all">Show All</button>
         </div>
     </div>
+    <!-- Add this below the flashcard container in your index.html -->
+    <div class="progress-container">
+        <label for="progress-bar">Progress: </label>
+        <progress id="progress-bar" value="0" max="100"></progress>
+        <span id="progress-text">0% (0 out of X completed)</span>
+    </div>
+
     
     <!-- Section for displaying a progress report of correct and wrong cards -->
     <div id="report">

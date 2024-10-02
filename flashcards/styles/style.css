@@ -1,6 +1,6 @@
 /* Basic styling for the body to center all content vertically and horizontally */
 body {
-    font-family: Arial, sans-serif; /* Sets the default font */
+    font-family: "Lexend", sans-serif; /* Sets the default font */
     display: flex; /* Flexbox layout */
     flex-direction: column; /* Align items vertically */
     align-items: center; /* Center items horizontally */

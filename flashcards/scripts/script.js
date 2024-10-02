@@ -8,13 +8,19 @@ let wrong = []; // Array for wrong answers
 let vocabCards = []; // Array to hold vocabulary cards loaded from CSV
 let filteredCards = []; // Array to hold filtered cards
 
+// cards for progress bar
+let totalCards = vocabCards.length; // Total number of flashcards
+let completedCards = 0; // Track number of completed flashcards
+
 // Load CSV data and parse it into vocabCards array
 fetch('csv/web_dev_vocab.csv')
     .then(response => response.text()) // Read CSV file as text
     .then(data => {
         vocabCards = parseCSV(data); // Convert CSV text to array of cards
+        totalCards = vocabCards.length; // Set totalCards AFTER vocabCards is populated
         shuffleCards(); // Randomize the order of flashcards
         displayCard(currentCard); // Display the first card
+        updateProgressBar(); // Initialize progress bar on first load
     });
 
 // Shuffle the flashcards array using Fisher-Yates algorithm
@@ -161,3 +167,46 @@ function parseCSV(data) {
     });
     return cards; // Return the array of flashcard objects
 }
+
+
+
+
+// Function to update progress bar
+function updateProgressBar() {
+    const progressBar = document.getElementById('progress-bar');
+    const progressText = document.getElementById('progress-text');
+    
+    // Calculate percentage completed
+    const percentComplete = (completedCards / totalCards) * 100;
+
+    // Update progress bar value
+    progressBar.value = percentComplete;
+
+    // Update progress text (e.g., "25% (5 out of 20 completed)")
+    progressText.innerText = `${Math.round(percentComplete)}% (${completedCards} out of ${totalCards} completed)`;
+}
+
+// Call this function when a flashcard is marked as correct or wrong
+document.getElementById('correct-btn').addEventListener('click', () => {
+    if (filteredCards.length > 0) {
+        correct.push(filteredCards[currentCard]);
+    } else {
+        correct.push(vocabCards[currentCard]);
+    }
+    completedCards++;
+    updateProgressBar(); // Update the progress bar after marking a card
+    nextCard();
+
+
+});
+
+document.getElementById('wrong-btn').addEventListener('click', () => {
+    if (filteredCards.length > 0) {
+        wrong.push(filteredCards[currentCard]);
+    } else {
+        wrong.push(vocabCards[currentCard]);
+    }
+    completedCards++;
+    updateProgressBar(); // Update the progress bar after marking a card
+    nextCard();
+});
