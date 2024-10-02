@@ -64,7 +64,7 @@ nav {
 }
 
 .menu a:hover {
-    background-color: rgb(0, 255, 255);
+    background-color: #f5f5ff;
     outline: 2px solid black;
     color: black;
     /* border-style: dashed; */
@@ -104,8 +104,8 @@ main {
 #leftcard {
     
     grid-column: 1/2;
-    background-color: hsl(238, 45%, 90%);
-    outline: 4px solid #791e94;
+    background-color: #f5f5ff;
+    outline: 4px solid #874a9c;
     margin-right: 10px;
     
     
@@ -121,7 +121,7 @@ main {
   margin: 5%;
   box-shadow: 8px 10px #0f0f0f41;
   float: right;
-  width: 40%;
+  width: 35%;
   max-width: 300px;
 
 }
@@ -140,8 +140,8 @@ main {
 
 #rightcard {
     grid-column: 2/3;
-    background-color: hsl(238, 45%, 90%);
-    outline: 4px solid #791e94;
+    background-color: #f5f5ff;
+    outline: 4px solid #874a9c;
     max-width: 300px;
     /* margin-right: -4px; */
     
@@ -152,7 +152,7 @@ main {
 }
 
 .top-rounded-bar {
-    background-color: #791e94;
+    background-color: #874a9c;
     text-align: center;
     font-size: 1.1rem;
     height: 100px;
