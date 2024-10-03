@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocabulary Flashcards</title>
+    <link rel="stylesheet" href="styles/updated_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@600&display=swap" rel="stylesheet">
+    <script src="scripts/updated_script.js" defer></script>
+</head>
+<body>
+    <div class="flashcard-container">
+        <div class="flashcard" id="flashcard"></div>
+        <button id="show-back">Flip Card</button>
+        <div class="buttons">
+            <button id="definition-first">Definition First</button>
+            <button id="correct-btn">Correct</button>
+            <button id="wrong-btn">Wrong</button>
+            <button id="save-csv-btn">Save Progress</button>
+            <button id="show-html">Show HTML Tags</button>
+            <button id="show-css">Show CSS Tags</button>
+            <button id="show-general">Show General Terms</button>
+            <button id="show-all">Show All</button>
+        </div>
+    </div>
+
+    <button id="show-report">Show Progress</button>
+
+    <div id="report" style="display: none;">
+        <h3>Progress Report</h3>
+        <div id="report-content"></div>
+    </div>
+
+    <progress id="progress-bar" value="0" max="100"></progress>
+    <p id="progress-text">0% completed</p>
+</body>
+</html>
