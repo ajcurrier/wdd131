@@ -9,6 +9,20 @@ let correctStreak = 0;
 let masteryLevel = {}; // Track mastery level for each card
 let lastAttempted = {}; // Track last attempted date for each card
 
+// Add event listener for "Definition First" button
+document.getElementById('definition-first').addEventListener('click', () => {
+    // Toggle the definitionFirst state
+    definitionFirst = !definitionFirst;
+    
+    // Update the flashcard to reflect the new state
+    displayCard(currentCard);
+
+    // Optional: Change button text to reflect the current mode
+    const definitionFirstButton = document.getElementById('definition-first');
+    definitionFirstButton.textContent = definitionFirst ? 'Term First' : 'Definition First';
+});
+
+
 // Load and parse the CSV data
 fetch('updated_flashcards_swap_ready.csv')  // Changed the fetch path to correct the file location
     .then(response => response.text())
