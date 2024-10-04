@@ -9,6 +9,22 @@ let correctStreak = 0;
 let masteryLevel = {}; // Track mastery level for each card
 let lastAttempted = {}; // Track last attempted date for each card
 
+// add papaparse for csv files
+const csvData = `
+"Name","Age","City"
+"John Doe","29","New York, USA"
+"Jane Smith","34","Los Angeles, USA"
+`;
+
+Papa.parse(csvData, {
+    header: true,  // Treat the first row as headers
+    dynamicTyping: true,  // Automatically convert data types
+    complete: function(results) {
+        console.log(results.data);  // Processed CSV data
+    }
+});
+
+
 // Add event listener for "Definition First" button
 document.getElementById('definition-first').addEventListener('click', () => {
     // Toggle the definitionFirst state
