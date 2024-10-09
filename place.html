@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Ashley Currier">
+  <meta name="Discover Cancun" content="Welcome to our Cancun information hub! Stay updated with live weather reports and explore key statistics about Cancun, including its population, area, time zone, and more. Whether you're planning a trip or just curious, find all the essential details about this beautiful coastal city in one place">
+  <link rel="stylesheet" href="styles/place.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+  <title>Cancun</title>
+  <script src="scripts/place.js" defer></script></head>
+<body>
+  <header>
+    <section id="header-section"><h1>Cancun</h1></section>
+  </header>
+  <main>
+    <picture id="hero-img">
+      <source srcset="images/cancun-arial-view.webp" media="(min-width: 1000px)">
+      <!-- alt="A stunning scene of Cancun, Mexico, with clear blue waters, white sandy beaches, palm trees swaying in the breeze, and a vibrant sunset over the horizon. Realistic but AI generated" -->
+      <source srcset="images/cancun-iguana.webp" media="(min-width: 550px)">
+      <img src="images/cancun_stingray.webp" alt="Beautiful images demonstrating the wonder of Cancun"
+        sizes="(min-width: 1000px) 100vw, (min-width: 550px) 50vw, 100vw">
+    </picture>
+    <div id="data">
+      <div class="box-head"><h2>Data</h2></div>
+      <div class="data-line"><h3>Area<span class="colon">:</span> </h3> &emsp;  1,979 km&sup2; </div>
+      <div class="data-line"><h3>Population<span class="colon">:</span> </h3> &emsp;<span class="definition" id="population">888,797</span></div>
+      <div class="data-line"><h3>Capital<span class="colon">:</span> </h3> &emsp;<span class="definition" id="capital">Chetumal</span></div>
+      <div class="data-line"><h3>Languages<span class="colon">:</span> </h3> &emsp;<span class="definition" id="languages">Spanish, English, Mayan</span></div>
+      <div class="data-line"><h3>Currency<span class="colon">:</span> </h3> &emsp;<span class="definition" id="currency">Mexican Peso (MXN)</span></div>
+      <div class="data-line"><h3>Time Zone<span class="colon">:</span> </h3> &emsp;<span class="definition" id="time_zone">UTC−5</span></div>
+      <div class="data-line"><h3>Calling Code<span class="colon">:</span> </h3> &emsp;<span class="definition" id="calling_code">+52 (area code: 998)</span></div>
+      <div class="data-line"><h3>Internet TLD<span class="colon">:</span> </h3> &emsp;<span class="definition" id="internet_tld">.mx</span></div>
+      
+
+    </div>
+    <div id="weather"> 
+      <div  class="box-head"><h2>Weather<img src="images/weather-icon.svg" id="weather-icon"></h2></div>
+      <p id="weather-info">
+        <div class="data-line"><h3>Temperature: </h3> &emsp;<span class="definition" id="temperature"></span>&deg;C</div>
+        <div class="data-line"><h3>Conditions: </h3> &emsp;<span class="definition" id="conditions"></span></div>
+        <div class="data-line"><h3>Wind: </h3> &emsp;<span class="definition" id="wind"></span> km/h</div>
+        <div class="data-line"><h3>Wind Chill: </h3> &emsp;<span class="definition" id="wind_chill"></span>&deg;C</div>
+      </p>
+    </div>
+  </main>
+  <footer>
+    <div id="footer-box">
+      <p>
+        &copy; <span id="currentYear"></span> Ashley Currier, Utah 
+      </p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+</body>
+
+
+
