@@ -1,67 +1,67 @@
-term,definition,type,right,wrong
-DOM,"The ________ (Document Object Model) is like a blueprint for your web page. It tells the browser how to display everything, so when you change the ________, you're basically telling the browser to update something on the page.
+"term","definition","type","right","wrong"
+"DOM","The ________ (Document Object Model) is like a blueprint for your web page. It tells the browser how to display everything, so when you change the ________, you're basically telling the browser to update something on the page.
 
 Example:
-document.getElementById('content').innerHTML = 'Hello, world!';",HTML,0,0
-Concatenate,"When you 'concatenate' two strings, you're just sticking them together like puzzle pieces. For example, 'hello' + ' world' becomes 'hello world'. It's an easy way to build longer sentences from smaller ones.
+document.getElementById('content').innerHTML = 'Hello, world!';","HTML","0","0"
+"Concatenate","When you 'concatenate' two strings, you're just sticking them together like puzzle pieces. For example, 'hello' + ' world' becomes 'hello world'. It's an easy way to build longer sentences from smaller ones.
 
 Example:
-'Hello, ' + 'World!' // Outputs: 'Hello, World!'",General,0,0
-Instantiate,"Instantiating is a fancy word that means creating an object from a class. Think of it like baking cookies from a cookie cutter. The class is the cookie cutter (the template), and each cookie you make is an instance (or object) of that class.
+'Hello, ' + 'World!' // Outputs: 'Hello, World!'","General","0","0"
+"Instantiate","Instantiating is a fancy word that means creating an object from a class. Think of it like baking cookies from a cookie cutter. The class is the cookie cutter (the template), and each cookie you make is an instance (or object) of that class.
 
 Example:
-let myCar = new Car('Toyota', 'Corolla');",General,0,0
-Implicit Coercion,"Implicit coercion happens when JavaScript automatically changes the type of one value to another type to make it work. For example, when you try to add a number and a string together, JavaScript will turn the number into a string behind the scenes.
+let myCar = new Car('Toyota', 'Corolla');","General","0","0"
+"Implicit Coercion","Implicit coercion happens when JavaScript automatically changes the type of one value to another type to make it work. For example, when you try to add a number and a string together, JavaScript will turn the number into a string behind the scenes.
 
 Example:
-'5' + 2 // Outputs: '52'",General,0,0
-Explicit Coercion,"Explicit coercion is when you, the programmer, decide to change a value's type yourself. For example, if you want to turn a string into a number, you'd use something like `Number('5')` to do it.
+'5' + 2 // Outputs: '52'","General","0","0"
+"Explicit Coercion","Explicit coercion is when you, the programmer, decide to change a value's type yourself. For example, if you want to turn a string into a number, you'd use something like `Number('5')` to do it.
 
 Example:
-Number('5') + 2 // Outputs: 7",General,0,0
-NaN Value,A JavaScript value representing an unrepresentable or invalid number.,General,0,0
-Initialize,To assign an initial value to a variable.,General,0,0
-Array,A data structure that stores a collection of items.. usually of the same type.. in an ordered list.,General,0,0
-Element,consists of a start tag.. its attributes (if any).. content.. and an end tag. It is a fundamental building block of a web page.,HTML,0,0
-Tag,An HTML structure wrapped in angle brackets.. such as <div> or <span>.,HTML,0,0
-Grid,Defines the layout of a grid-based structure in CSS.,CSS,0,0
-Flexbox,A CSS layout model for creating flexible and responsive design.,CSS,0,0
-Border,A property in CSS used to set the border around elements.,CSS,0,0
-Section,A semantic HTML tag that represents a section in a document.,HTML,0,0
-Menu,A semantic HTML tag used to represent a list of commands or menu items.,HTML,0,0
-Defer Boolean Attribute,The 'defer' attribute is a boolean attribute for the <script> tag that makes the browser wait to execute the script until the HTML document has been fully parsed.,JavaScript,0,0
-JavaScript Date Object,An object in JavaScript that represents a single moment in time and allows you to get or set various date and time components.,JavaScript,0,0
-Method,A function associated with an object.. accessed using dot notation.. such as dateObject.getFullYear().,JavaScript,0,0
-Span Element,An inline element in HTML used to apply styles or scripts to a small portion of text or content.,HTML,0,0
-Defer Object,Allows JavaScript to be executed after the document has been parsed.. improving performance and avoiding blocking rendering.,JavaScript,0,0
-lastModified Property,A property of the document object that returns the date and time the document was last modified.,JavaScript,0,0
-Object vs Method,Objects are data structures.. while methods are functions associated with those objects. Methods are accessed using dot notation.. like object.method().,JavaScript,0,0
-Document Object,The root object representing the entire HTML document in the browser. It provides methods and properties for interacting with the document.,JavaScript,0,0
-Template Literals,String literals in JavaScript that allow for embedded expressions.. using backticks (`) and ${} for variable interpolation.,JavaScript,0,0
-JavaScript Switch Statement,A control flow statement used to execute one block of code among many options based on the value of a variable or expression.,JavaScript,0,0
-JavaScript Conditional Statements,Statements like if.. else if.. and else that allow for conditional execution of code segments based on whether a condition is true or false.,JavaScript,0,0
-JavaScript Looping Statements,Statements like for.. while.. and do...while that allow for repetitive execution of code segments as long as a condition remains true.,JavaScript,0,0
-QuerySelector Method,A method that returns the first element within the document that matches the specified selector.. or group of selectors.,JavaScript,0,0
-Click Event,An event triggered when an element is clicked.. often used to trigger specific functions in response to user interaction.,JavaScript,0,0
-Keyup Event,An event triggered when a key is released after being pressed. Useful for handling input changes in real-time.,JavaScript,0,0
-DOMContentLoaded Event,An event that fires when the initial HTML document has been completely loaded and parsed.. without waiting for stylesheets.. images.. and subframes to finish loading.,JavaScript,0,0
-Sandbox,A security mechanism for browser-based applications. It allows for safe execution of potentially untrusted code.. without risking the security of the rest of the site.,JavaScript,0,0
-HTML for external stylesheet,<link rel=stylesheet href=#>,HTML,0,0
-HTML for external javascript,<script src=# defer></script>,JavaScript,0,0
-Main Line Elements,Header.. NavBar.. Main.. Footer - if applicable sidebar.. Hero Section,HTML,0,0
-<figure>,HTML element that is used to represent self-contained content.. such as illustrations.. diagrams.. photos.. code snippets.. or other content that can be referenced as a single unit,HTML,0,0
-How to use :hover,To apply styles using the :hover pseudo-class.. you directly attach it to the element selector without spaces. For example.. to change the background color and text color of a link with the class .menu-tags on hover.. you use the syntax .menu-tags:hover { background-color: #b0c4b1; color: black; }. Incorrect usage.. such as including a space between the element and the :hover.. will prevent the styles from being applied correctly.,CSS,0,0
-Center Text Horizontally,commonly achieved using the text-align property. This property can be applied to a parent container to align its child elements' text content. To center text.. use text-align: center; on the parent element containing the text.,CSS,0,0
-Center Text Vertically,For vertical centering within a container.. additional properties like display: flex;.. align-items: center;.. and justify-content: center; on the container may be needed.,CSS,0,0
-auto-fitting columns,"This layout automatically adjusts to screen size.. adding or removing columns based on the space available.. while ensuring each column is at least 150px wide.
+Number('5') + 2 // Outputs: 7","General","0","0"
+"NaN Value","A JavaScript value representing an unrepresentable or invalid number.","General","0","0"
+"Initialize","To assign an initial value to a variable.","General","0","0"
+"Array","A data structure that stores a collection of items.. usually of the same type.. in an ordered list.","General","0","0"
+"Element","consists of a start tag.. its attributes (if any).. content.. and an end tag. It is a fundamental building block of a web page.","HTML","0","0"
+"Tag","An HTML structure wrapped in angle brackets.. such as <div> or <span>.","HTML","0","0"
+"Grid","Defines the layout of a grid-based structure in CSS.","CSS","0","0"
+"Flexbox","A CSS layout model for creating flexible and responsive design.","CSS","0","0"
+"Border","A property in CSS used to set the border around elements.","CSS","0","0"
+"Section","A semantic HTML tag that represents a section in a document.","HTML","0","0"
+"Menu","A semantic HTML tag used to represent a list of commands or menu items.","HTML","0","0"
+"Defer Boolean Attribute","The 'defer' attribute is a boolean attribute for the <script> tag that makes the browser wait to execute the script until the HTML document has been fully parsed.","JavaScript","0","0"
+"JavaScript Date Object","An object in JavaScript that represents a single moment in time and allows you to get or set various date and time components.","JavaScript","0","0"
+"Method","A function associated with an object.. accessed using dot notation.. such as dateObject.getFullYear().","JavaScript","0","0"
+"Span Element","An inline element in HTML used to apply styles or scripts to a small portion of text or content.","HTML","0","0"
+"Defer Object","Allows JavaScript to be executed after the document has been parsed.. improving performance and avoiding blocking rendering.","JavaScript","0","0"
+"lastModified Property","A property of the document object that returns the date and time the document was last modified.","JavaScript","0","0"
+"Object vs Method","Objects are data structures.. while methods are functions associated with those objects. Methods are accessed using dot notation.. like object.method().","JavaScript","0","0"
+"Document Object","The root object representing the entire HTML document in the browser. It provides methods and properties for interacting with the document.","JavaScript","0","0"
+"Template Literals","String literals in JavaScript that allow for embedded expressions.. using backticks (`) and ${} for variable interpolation.","JavaScript","0","0"
+"JavaScript Switch Statement","A control flow statement used to execute one block of code among many options based on the value of a variable or expression.","JavaScript","0","0"
+"JavaScript Conditional Statements","Statements like if.. else if.. and else that allow for conditional execution of code segments based on whether a condition is true or false.","JavaScript","0","0"
+"JavaScript Looping Statements","Statements like for.. while.. and do...while that allow for repetitive execution of code segments as long as a condition remains true.","JavaScript","0","0"
+"QuerySelector Method","A method that returns the first element within the document that matches the specified selector.. or group of selectors.","JavaScript","0","0"
+"Click Event","An event triggered when an element is clicked.. often used to trigger specific functions in response to user interaction.","JavaScript","0","0"
+"Keyup Event","An event triggered when a key is released after being pressed. Useful for handling input changes in real-time.","JavaScript","0","0"
+"DOMContentLoaded Event","An event that fires when the initial HTML document has been completely loaded and parsed.. without waiting for stylesheets.. images.. and subframes to finish loading.","JavaScript","0","0"
+"Sandbox","A security mechanism for browser-based applications. It allows for safe execution of potentially untrusted code.. without risking the security of the rest of the site.","JavaScript","0","0"
+"HTML for external stylesheet","<link rel=stylesheet href=#>","HTML","0","0"
+"HTML for external javascript","<script src=# defer></script>","JavaScript","0","0"
+"Main Line Elements","Header.. NavBar.. Main.. Footer - if applicable sidebar.. Hero Section","HTML","0","0"
+"<figure>","HTML element that is used to represent self-contained content.. such as illustrations.. diagrams.. photos.. code snippets.. or other content that can be referenced as a single unit","HTML","0","0"
+"How to use :hover","To apply styles using the :hover pseudo-class.. you directly attach it to the element selector without spaces. For example.. to change the background color and text color of a link with the class .menu-tags on hover.. you use the syntax .menu-tags:hover { background-color: #b0c4b1; color: black; }. Incorrect usage.. such as including a space between the element and the :hover.. will prevent the styles from being applied correctly.","CSS","0","0"
+"Center Text Horizontally","commonly achieved using the text-align property. This property can be applied to a parent container to align its child elements' text content. To center text.. use text-align: center; on the parent element containing the text.","CSS","0","0"
+"Center Text Vertically","For vertical centering within a container.. additional properties like display: flex;.. align-items: center;.. and justify-content: center; on the container may be needed.","CSS","0","0"
+"auto-fitting columns","This layout automatically adjusts to screen size.. adding or removing columns based on the space available.. while ensuring each column is at least 150px wide.
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit.. minmax(150px.. 1fr));
     grid-gap: 15px;
-}",CSS,0,0
-create a Border,border: width style color;,CSS,0,0
-Round Border corners,border-radius: 5px;,CSS,0,0
-CSS Transition Property,"The transition property in CSS is used to animate changes in property values over a specified duration.. creating smooth transitions between different states of an element. It is typically used to enhance the user experience by animating properties such as colors.. sizes.. and positions when the state of an element changes due to interactions like hover or focus.
+}","CSS","0","0"
+"create a Border","border: width style color;","CSS","0","0"
+"Round Border corners","border-radius: 5px;","CSS","0","0"
+"CSS Transition Property","The transition property in CSS is used to animate changes in property values over a specified duration.. creating smooth transitions between different states of an element. It is typically used to enhance the user experience by animating properties such as colors.. sizes.. and positions when the state of an element changes due to interactions like hover or focus.
 Example:
 button {
     background-color: blue;
@@ -70,14 +70,14 @@ button {
 
 button:hover {
     background-color: green;
-}",CSS,0,0
-console.log() Method,"The console.log() method is a built-in function in JavaScript used to print output to the browser’s console. It is commonly used for debugging purposes.. allowing developers to log messages.. variable values.. or any other information to help track the flow of execution or identify issues in the code.
+}","CSS","0","0"
+"console.log() Method","The console.log() method is a built-in function in JavaScript used to print output to the browser’s console. It is commonly used for debugging purposes.. allowing developers to log messages.. variable values.. or any other information to help track the flow of execution or identify issues in the code.
 Example:
 
 const name = 'Alice';
 console.log('Hello.. ' + name); // Outputs: Hello.. Alice
-In this example.. the console.log() method prints the message Hello.. Alice to the console. It is an essential tool for troubleshooting and understanding code behavior during development.",JavaScript,0,0
-.classList Method,"### `classList` Property
+In this example.. the console.log() method prints the message Hello.. Alice to the console. It is an essential tool for troubleshooting and understanding code behavior during development.","JavaScript","0","0"
+".classList Method","### `classList` Property
 **Term**: `classList` Property  
 **Definition**: The `classList` property is a read-only property in JavaScript that provides access to the list of classes assigned to an HTML element. It allows you to easily add.. remove.. toggle.. and check for the presence of CSS classes on an element.. making it useful for dynamic styling and behavior control. It includes methods such as `.add()`.. `.remove()`.. `.toggle()`.. and `.contains()`.  
 **Example**:
@@ -87,8 +87,8 @@ const menu = document.getElementById('menu');
 // Toggle the 'active' class on the menu element
 menu.classList.toggle('active');
 ```
-In this example.. the `toggle` method adds the `active` class if it is not present and removes it if it is already there.. making it useful for interactive elements like menus or buttons.",JavaScript,0,0
-.toggle Method,"### `toggle` Method
+In this example.. the `toggle` method adds the `active` class if it is not present and removes it if it is already there.. making it useful for interactive elements like menus or buttons.","JavaScript","0","0"
+".toggle Method","### `toggle` Method
 **Term**: `toggle` Method  
 **Definition**: The `toggle` method is a function available on the `classList` property in JavaScript. It is used to add a specified class to an element if it is not already present.. and to remove the class if it is present. It effectively switches the class on and off.. making it ideal for toggling the visibility or state of an element based on user interaction. It can optionally take a second boolean argument to force-add or force-remove the class.  
 **Example**:
@@ -98,8 +98,8 @@ const menu = document.getElementById('menu');
 // Toggle the 'active' class on the menu element
 menu.classList.toggle('active');
 ```
-In this example.. the `toggle` method adds the `active` class if it is not present and removes it if it is already there.. providing a simple way to create interactive behavior.",JavaScript,0,0
-:nth-child(),"________` Pseudo-Class
+In this example.. the `toggle` method adds the `active` class if it is not present and removes it if it is already there.. providing a simple way to create interactive behavior.","JavaScript","0","0"
+":nth-child()","________` Pseudo-Class
 **Term**: `________` Pseudo-Class  
 **Definition**: The `________` pseudo-class in CSS is used to select one or more elements based on their position within a parent element. It takes a single argument.. which can be a number.. keyword.. or formula.. to target elements in a pattern. Common arguments include numbers (`:nth-child(2)` selects the second child).. keywords like `odd` or `even`.. and formulas like `2n+1` to select every odd element.  
 **Example**:
@@ -112,21 +112,21 @@ li:nth-child(odd) {
     background-color: #f0f0f0; /* Selects all odd <li> elements */
 }
 ```
-In these examples.. the `nth-child(2)` targets the second `li` element.. and `nth-child(odd)` targets all odd-numbered `li` elements.. applying the specified styles to them.",JavaScript,0,0
-The addEventListener() method steps,"The first parameter is the type of the event (like click or mousedown or any other HTML DOM Event.)
+In these examples.. the `nth-child(2)` targets the second `li` element.. and `nth-child(odd)` targets all odd-numbered `li` elements.. applying the specified styles to them.","JavaScript","0","0"
+"The addEventListener() method steps","The first parameter is the type of the event (like click or mousedown or any other HTML DOM Event.)
 
 The second parameter is the function we want to call when the event occurs.
 
 The third parameter is a boolean value specifying whether to use event bubbling or event capturing. This parameter is optional.
 
 Note that you don't use the 'on' prefix for the event; use 'click instead of onclick
-",JavaScript,0,0
-addEventListener definition,A method that attaches an event handler to an element without overwriting existing event handlers. It allows an element to respond to multiple events.,JavaScript,0,0
-document.querySelector(),A method that returns the first element within the document that matches the specified CSS selector(s). If no matches are found.. it returns null.,JavaScript,0,0
-Root Element,The ______ ________ is the top-level element in an HTML document.. In HTML.. this is typically the <html> element.. It encloses all the other elements and serves as the starting point of the document's structure.,HTML,0,0
-Span Tag aka <span> Tag,Definition: The <span> tag is an inline container used to group elements for styling purposes or to manipulate them with JavaScript.. It does not inherently provide any styling or layout.. but can be targeted with CSS or JavaScript.,HTML,0,0
-rem,________ (Root em) Definition: A CSS unit of measu________ent that is relative to the font size of the root element.. The ________ unit allows for scalable designs based on the root element's font size.. making it useful for creating responsive layouts.. 1________ equals the font size of the root element (typically <html>).. which by default is usually 16px.,CSS,0,0
- Assigning a Document Element to a Variable,"Definition: In JavaScript.. you can assign an element from the DOM to a variable using various methods depending on how you want to select the element.
+","JavaScript","0","0"
+"addEventListener definition","A method that attaches an event handler to an element without overwriting existing event handlers. It allows an element to respond to multiple events.","JavaScript","0","0"
+"document.querySelector()","A method that returns the first element within the document that matches the specified CSS selector(s). If no matches are found.. it returns null.","JavaScript","0","0"
+"Root Element","The ______ ________ is the top-level element in an HTML document.. In HTML.. this is typically the <html> element.. It encloses all the other elements and serves as the starting point of the document's structure.","HTML","0","0"
+"Span Tag aka <span> Tag","Definition: The <span> tag is an inline container used to group elements for styling purposes or to manipulate them with JavaScript.. It does not inherently provide any styling or layout.. but can be targeted with CSS or JavaScript.","HTML","0","0"
+"rem","________ (Root em) Definition: A CSS unit of measu________ent that is relative to the font size of the root element.. The ________ unit allows for scalable designs based on the root element's font size.. making it useful for creating responsive layouts.. 1________ equals the font size of the root element (typically <html>).. which by default is usually 16px.","CSS","0","0"
+" Assigning a Document Element to a Variable","Definition: In JavaScript.. you can assign an element from the DOM to a variable using various methods depending on how you want to select the element.
 
 getElementById(): Selects an element by ID..
 querySelector(): Selects the first element that matches a CSS selector..
@@ -140,20 +140,20 @@ let elementById = document.getElementById('elementId')..
 let elementByQuery = document.querySelector('.className')..
 let elementsByClass = document.getElementsByClassName('className')..
 let elementsByTag = document.getElementsByTagName('div')..
-let allMatches = document.querySelectorAll('.className",JavaScript,0,0
-Question: Can the querySelector() method be an ID or a class?,"Yes, the querySelector() method can select both ID and class selectors.",JavaScript,0,0
-Node in Javascript," refers to any single point in the DOM (Document Object Model) tree.. Nodes represent various parts of the document such as elements.. text.. attributes.. and comments.. The DOM is structured as a tree where each part of the document is a node..
+let allMatches = document.querySelectorAll('.className","JavaScript","0","0"
+"Question: Can the querySelector() method be an ID or a class?","Yes, the querySelector() method can select both ID and class selectors.","JavaScript","0","0"
+"Node in Javascript"," refers to any single point in the DOM (Document Object Model) tree.. Nodes represent various parts of the document such as elements.. text.. attributes.. and comments.. The DOM is structured as a tree where each part of the document is a node..
 Types of Nodes:
 Element Node: Represents an HTML element like <div>..
 Text Node: Contains text content inside an element..
 Attribute Node: Represents attributes of an element such as class or id..
-Comment Node: Represents comments in the document..",JavaScript,0,0
-How do you set a text node of a div element to a variable in JavaScript?," You can set the text node of a div element to a variable using the textContent or innerText property..
+Comment Node: Represents comments in the document..","JavaScript","0","0"
+"How do you set a text node of a div element to a variable in JavaScript?"," You can set the text node of a div element to a variable using the textContent or innerText property..
 Example:
 let divElement = document.getElementById('myDiv');  // Select the div element
 let textNode = divElement.textContent;  // Store the text node content in a variable
-Let me know if you'd like to modify anything!",JavaScript,0,0
-Wayfinding on a Website,"Wayfinding on a website refers to the design and layout elements that guide users through the site.. It helps users navigate and find what they are looking for easily.. Common wayfinding features include:
+Let me know if you'd like to modify anything!","JavaScript","0","0"
+"Wayfinding on a Website","Wayfinding on a website refers to the design and layout elements that guide users through the site.. It helps users navigate and find what they are looking for easily.. Common wayfinding features include:
 Navigation Menus: Organized menus to access different sections..
 Breadcrumbs: A trail showing the user's current location within the website..
 Search Bar: A tool to quickly locate specific content..
@@ -161,29 +161,29 @@ Consistent Layout: Uniformity across pages for easy navigation..
 Link Structure: Identifiable links that guide users to related information..
 CTA Buttons: Call-to-action buttons that direct users to take specific actions..
 Footers: Additional navigation at the bottom of the page..
-Icons and Symbols: Visual cues that guide user interaction..",General,0,0
-<span> vs <div>,"both used for structuring and styling content. 
+Icons and Symbols: Visual cues that guide user interaction..","General","0","0"
+"<span> vs <div>","both used for structuring and styling content. 
 <div> creates block-level containers for grouping elements
 <span> creates inline containers for styling specific portions of text or elements within a block-level container
-(https://www.geeksforgeeks.org/difference-between-div-and-span-tag-in-html/)",HTML,0,0
-If I want several child items that I want to display in multiple rows and columns.. to fit the screen width.. what kind of flex item would I use?,flex-wrap:wrap;,CSS,0,0
-How to add an event listener,"[clickable element(B)].addEventListener('[action such as click]`.. () => {clickable element(B)].classList.toggle('[class being toggled]');
+(https://www.geeksforgeeks.org/difference-between-div-and-span-tag-in-html/)","HTML","0","0"
+"If I want several child items that I want to display in multiple rows and columns.. to fit the screen width.. what kind of flex item would I use?","flex-wrap:wrap;","CSS","0","0"
+"How to add an event listener","[clickable element(B)].addEventListener('[action such as click]`.. () => {clickable element(B)].classList.toggle('[class being toggled]');
 
 
-[] brackets are used to indicate where each piece of code is placed. Do not actually include the brackets in the code",JavaScript,0,0
-What is an event in Java?,"""can be defined as changing the state of an object or behavior by performing actions. Actions can be a button click.. cursor movement.. keypress through keyboard or page scrolling.. etc. ""
+[] brackets are used to indicate where each piece of code is placed. Do not actually include the brackets in the code","JavaScript","0","0"
+"What is an event in Java?","""can be defined as changing the state of an object or behavior by performing actions. Actions can be a button click.. cursor movement.. keypress through keyboard or page scrolling.. etc. ""
 
-https://www.geeksforgeeks.org/event-handling-in-java/",JavaScript,0,0
-Event Handling,"a mechanism to control the events and to decide what should happen after an event occur. To handle the events Java follows the Delegation Event model.
+https://www.geeksforgeeks.org/event-handling-in-java/","JavaScript","0","0"
+"Event Handling","a mechanism to control the events and to decide what should happen after an event occur. To handle the events Java follows the Delegation Event model.
 
-https://www.geeksforgeeks.org/event-handling-in-java/",JavaScript,0,0
-Source (in javascript),"buttons.. checkboxes.. list.. menu-item.. choice.. scrollbar.. text components.. windows.. etc.
+https://www.geeksforgeeks.org/event-handling-in-java/","JavaScript","0","0"
+"Source (in javascript)","buttons.. checkboxes.. list.. menu-item.. choice.. scrollbar.. text components.. windows.. etc.
 
-https://www.geeksforgeeks.org/event-handling-in-java/",JavaScript,0,0
-Listeners," used for handling the events generated from the source. Each of these listeners represents interfaces that are responsible for handling events.
+https://www.geeksforgeeks.org/event-handling-in-java/","JavaScript","0","0"
+"Listeners"," used for handling the events generated from the source. Each of these listeners represents interfaces that are responsible for handling events.
 
-https://www.geeksforgeeks.org/event-handling-in-java/",JavaScript,0,0
-JavaScript Toggle Class Example:,"Term: Toggling a Class with JavaScript
+https://www.geeksforgeeks.org/event-handling-in-java/","JavaScript","0","0"
+"JavaScript Toggle Class Example:","Term: Toggling a Class with JavaScript
 Definition: A method to toggle (add or remove) a class from an element when an event (e.g... a click) occurs.
 Example:
 javascript
@@ -192,8 +192,8 @@ const menubutton = document.getElementById('menubutton');
 
 menubutton.addEventListener('click'.. function() {
     menubutton.classList.toggle('open');
-});",JavaScript,0,0
-target Attribute,"Definition: The target attribute in HTML specifies where to open the linked document. Common values include:
+});","JavaScript","0","0"
+"target Attribute","Definition: The target attribute in HTML specifies where to open the linked document. Common values include:
 _self: Opens the link in the same browsing context (default).
 _blank: Opens the link in a new tab or window.
 _parent: Opens the link in the parent frame.
@@ -201,8 +201,8 @@ _top: Opens the link in the full body of the window.. breaking out of any frames
 Example:
 html
 Copy code
-<a href=""https://example.com"" target=""_blank"">Visit Example</a>",HTML,0,0
-Pseudo-classes," A pseudo-class in CSS is used to define a special state of an element. For example.. it can style an element when the user interacts with it or when it meets certain conditions (like being the first child of its parent).
+<a href=""https://example.com"" target=""_blank"">Visit Example</a>","HTML","0","0"
+"Pseudo-classes"," A pseudo-class in CSS is used to define a special state of an element. For example.. it can style an element when the user interacts with it or when it meets certain conditions (like being the first child of its parent).
 Examples:
 :hover: Applies styles when an element is hovered over by the user.
 :nth-child(): Selects elements based on their position in a parent element.
@@ -211,32 +211,32 @@ css
 Copy code
 button:hover {
   background-color: blue;
-}",CSS,0,0
-:root ,This pseudo-class in CSS selects the highest-level parent element in the DOM.. which is typically the <html> element in an HTML document. It is commonly used to define CSS variables (custom properties) globally across the document.,CSS,0,0
-:hover Pseudo-class," is used to apply styles to an element when it is focused.. such as when a user selects an input field or clicks on a link. It is commonly used to enhance the accessibility and user experience of forms and interactive elements.
+}","CSS","0","0"
+":root ","This pseudo-class in CSS selects the highest-level parent element in the DOM.. which is typically the <html> element in an HTML document. It is commonly used to define CSS variables (custom properties) globally across the document.","CSS","0","0"
+":hover Pseudo-class"," is used to apply styles to an element when it is focused.. such as when a user selects an input field or clicks on a link. It is commonly used to enhance the accessibility and user experience of forms and interactive elements.
 Example:
 css
 Copy code
 input:focus {
   border-color: blue;
   outline: none;
-}",CSS,0,0
-:placeholder-shown Pseudo-class,"This class in CSS applies styles to an input element when the placeholder text is visible. This can be useful for styling input fields based on whether the user has entered any text.
+}","CSS","0","0"
+":placeholder-shown Pseudo-class","This class in CSS applies styles to an input element when the placeholder text is visible. This can be useful for styling input fields based on whether the user has entered any text.
 Example:
 css
 Copy code
 input:placeholder-shown {
   background-color: lightgray;
 }
-Type: CSS",CSS,0,0
-:not Pseudo-class,"Definition: The :not pseudo-class in CSS selects elements that do not match a given selector. It is often used to exclude certain elements from being styled.
+Type: CSS","CSS","0","0"
+":not Pseudo-class","Definition: The :not pseudo-class in CSS selects elements that do not match a given selector. It is often used to exclude certain elements from being styled.
 Example:
 css
 Copy code
 button:not(.primary) {
   background-color: gray;
-}",CSS,0,0
-srcset attribute,"allows the browser to choose the best image to display based on the device's screen size and resolution. The ________ is used with the picture and source elements.
+}","CSS","0","0"
+"srcset attribute","allows the browser to choose the best image to display based on the device's screen size and resolution. The ________ is used with the picture and source elements.
 
 Srcset supports the need to target different browser ranges. A different image can be rendered depending up on the width of the screen. Here is an example:
 
@@ -248,22 +248,22 @@ Srcset supports the need to target different browser ranges. A different image c
 </picture>
 
 from:
-https://byui-cse.github.io/wdd131-ww-course/week03/prepare-responsive-images.html",HTML,0,0
-Should I include image dimensions in HTML,Always! This will prevent layout shift,HTML,0,0
-How should I put responsive images into my html?,"<picture>
+https://byui-cse.github.io/wdd131-ww-course/week03/prepare-responsive-images.html","HTML","0","0"
+"Should I include image dimensions in HTML","Always! This will prevent layout shift","HTML","0","0"
+"How should I put responsive images into my html?","<picture>
   <source srcset=""images/hero-large.webp"" media=""min-width: 1000px"">
   <source srcset=""images/hero-medium.webp"" media=""min-width: 550px"">
   <img src=""images/hero-small.webp"" alt=""Orem Utah Temple"" width=""400"" height=""200"">
-</picture>",HTML,0,0
-How do you access an element in a JavaScript array?,"let arr = [10.. 20.. 30.. 40];
-console.log(arr[1]); // Outputs: 20",JavaScript,0,0
-How do you declare a JavaScript array?,"let fruits = ['apple'.. 'banana'.. 'orange'];
-console.log(fruits); // Outputs: ['apple'.. 'banana'.. 'orange']",JavaScript,0,0
-How do you modify an element in a JavaScript array?,"by accessing the index of the element and assigning it a new value.
+</picture>","HTML","0","0"
+"How do you access an element in a JavaScript array?","let arr = [10.. 20.. 30.. 40];
+console.log(arr[1]); // Outputs: 20","JavaScript","0","0"
+"How do you declare a JavaScript array?","let fruits = ['apple'.. 'banana'.. 'orange'];
+console.log(fruits); // Outputs: ['apple'.. 'banana'.. 'orange']","JavaScript","0","0"
+"How do you modify an element in a JavaScript array?","by accessing the index of the element and assigning it a new value.
 let numbers = [1.. 2.. 3];
 numbers[1] = 20;
-console.log(numbers); // Outputs: [1.. 20.. 3]",JavaScript,0,0
-How do you iterate over an array?,"You can iterate over an array using either the classic for loop or the forEach method.
+console.log(numbers); // Outputs: [1.. 20.. 3]","JavaScript","0","0"
+"How do you iterate over an array?","You can iterate over an array using either the classic for loop or the forEach method.
 
 Classic for loop:
 let numbers = [1.. 2.. 3.. 4];
@@ -275,20 +275,20 @@ forEach method
 let numbers = [1.. 2.. 3.. 4];
 numbers.forEach(function(number) {
   console.log(number);
-});",JavaScript,0,0
-How do you get the length of JS Array?,"With the length property 
+});","JavaScript","0","0"
+"How do you get the length of JS Array?","With the length property 
 
 let fruits = ['apple'.. 'banana'.. 'orange'];
-let lengthOfArray = fruits.length; // lengthOfArray is 3",JavaScript,0,0
-Method VS Property: Property,"holds information or values
+let lengthOfArray = fruits.length; // lengthOfArray is 3","JavaScript","0","0"
+"Method VS Property: Property","holds information or values
 
 let person = {
   name: 'John'..
   age: 30
 };
 
-console.log(person.name); // 'John' (This is a ________)",JavaScript,0,0
-Method VS Property: Method,"perform actions and are functions attached to an object
+console.log(person.name); // 'John' (This is a ________)","JavaScript","0","0"
+"Method VS Property: Method","perform actions and are functions attached to an object
 
 let person = {
   name: 'John'..
@@ -298,17 +298,17 @@ let person = {
   }
 };
 
-person.greet(); // 'Hello!' (This is a _________)",JavaScript,0,0
-array-variable.push('sally'),"adds a new element to the end of the array
-(in this case 'sally')",JavaScript,0,0
-array-variable.pop();,removes the last element from the array,JavaScript,0,0
-array-variable.shift();,removes first element from the array,JavaScript,0,0
-array-variable.unshift(100),adds a new element to the beginning of the array,JavaScript,0,0
-array-variable.slice(2..3),cut out a portion of the array starting at the index in the given number for the given length,JavaScript,0,0
-array-variable.splice(2..1),removes 1 element from the array starting at index 2,JavaScript,0,0
-array-variable.join,transform the array into a single string with a comma and space delimiter option,JavaScript,0,0
-How to put a box-shadow around an element,element { box-shadow: offset-x offset-y blur-radius spread-radius color; },CSS,0,0
-JavaScript Object,"A collection of key-value pairs (properties).. where the keys are strings and the values can be of any type.. including other objects or functions. Objects store and manipulate data in a structured way.
+person.greet(); // 'Hello!' (This is a _________)","JavaScript","0","0"
+"array-variable.push('sally')","adds a new element to the end of the array
+(in this case 'sally')","JavaScript","0","0"
+"array-variable.pop();","removes the last element from the array","JavaScript","0","0"
+"array-variable.shift();","removes first element from the array","JavaScript","0","0"
+"array-variable.unshift(100)","adds a new element to the beginning of the array","JavaScript","0","0"
+"array-variable.slice(2..3)","cut out a portion of the array starting at the index in the given number for the given length","JavaScript","0","0"
+"array-variable.splice(2..1)","removes 1 element from the array starting at index 2","JavaScript","0","0"
+"array-variable.join","transform the array into a single string with a comma and space delimiter option","JavaScript","0","0"
+"How to put a box-shadow around an element","element { box-shadow: offset-x offset-y blur-radius spread-radius color; }","CSS","0","0"
+"JavaScript Object","A collection of key-value pairs (properties).. where the keys are strings and the values can be of any type.. including other objects or functions. Objects store and manipulate data in a structured way.
 Example:
 
 javascript
@@ -320,71 +320,71 @@ const car = {
     start: function() {
         console.log('Car started');
     }
-};",JavaScript,0,0
-Function Expression,A function expression is when a function is assigned to a variable. It can be anonymous or named and is not hoisted.. meaning it cannot be used before its declaration.,JavaScript,0,0
-What is a function declaration in JavaScript?," A function declaration defines a named function that can be invoked anywhere in the code due to hoisting. Example:
+};","JavaScript","0","0"
+"Function Expression","A function expression is when a function is assigned to a variable. It can be anonymous or named and is not hoisted.. meaning it cannot be used before its declaration.","JavaScript","0","0"
+"What is a function declaration in JavaScript?"," A function declaration defines a named function that can be invoked anywhere in the code due to hoisting. Example:
 javascript
 Copy code
 function greet() {
     console.log('Hello!');
 }
-greet(); // Outputs: 'Hello!'",JavaScript,0,0
-How does function hoisting work in JavaScript?,"In JavaScript.. function declarations are hoisted.. meaning they can be called before they appear in the code. Example:
+greet(); // Outputs: 'Hello!'","JavaScript","0","0"
+"How does function hoisting work in JavaScript?","In JavaScript.. function declarations are hoisted.. meaning they can be called before they appear in the code. Example:
 
 greet(); // Outputs: 'Hello!'
 function greet() {
     console.log('Hello!');
-}",JavaScript,0,0
-How do function parameters and arguments work in JavaScript?," Parameters are variables listed in the function's definition.. while arguments are values passed when the function is invoked. Example:
+}","JavaScript","0","0"
+"How do function parameters and arguments work in JavaScript?"," Parameters are variables listed in the function's definition.. while arguments are values passed when the function is invoked. Example:
 
 function greet(name) {
     console.log('Hello.. ' + name);
 }
-greet('Alice'); // Outputs: 'Hello.. Alice'",JavaScript,0,0
-What are default parameters in JavaScript functions?,"Default parameters allow you to initialize a parameter with a default value if no argument is provided. Example:
+greet('Alice'); // Outputs: 'Hello.. Alice'","JavaScript","0","0"
+"What are default parameters in JavaScript functions?","Default parameters allow you to initialize a parameter with a default value if no argument is provided. Example:
 
 function greet(name = 'Guest') {
     console.log('Hello.. ' + name);
 }
-greet(); // Outputs: 'Hello.. Guest'",JavaScript,0,0
-How does the return statement work in JavaScript functions?," The return statement ends function execution and specifies a value to be returned. Example:
+greet(); // Outputs: 'Hello.. Guest'","JavaScript","0","0"
+"How does the return statement work in JavaScript functions?"," The return statement ends function execution and specifies a value to be returned. Example:
 
 function add(a.. b) {
     return a + b;
 }
-const sum = add(2.. 3); // sum is 5",JavaScript,0,0
-What is an anonymous function in JavaScript?,"An anonymous function is a function without a name.. often used in function expressions. Example:
+const sum = add(2.. 3); // sum is 5","JavaScript","0","0"
+"What is an anonymous function in JavaScript?","An anonymous function is a function without a name.. often used in function expressions. Example:
 
 const greet = function() {
     console.log('Hello!');
 };
-greet(); // Outputs: 'Hello!'",JavaScript,0,0
-What is a named function expression in JavaScript?," A named function expression is a function expression where the function has a name. Example:
+greet(); // Outputs: 'Hello!'","JavaScript","0","0"
+"What is a named function expression in JavaScript?"," A named function expression is a function expression where the function has a name. Example:
 
 const factorial = function fact(n) {
     return n <= 1 ? 1 : n * fact(n - 1);
-};",JavaScript,0,0
-What is an arrow function in JavaScript?,"An arrow function is a shorter syntax for writing function expressions. It does not have its own this context. Example:
+};","JavaScript","0","0"
+"What is an arrow function in JavaScript?","An arrow function is a shorter syntax for writing function expressions. It does not have its own this context. Example:
 javascript
 Copy code
 const greet = () => console.log('Hello!');
-greet(); // Outputs: 'Hello!'",JavaScript,0,0
+greet(); // Outputs: 'Hello!'","JavaScript","0","0"
 "What is an IIFE in JavaScript?
 Immediately Invoked Function Expression)","An IIFE is a function that is invoked immediately after it is defined. Example:
 
 (function() {
     console.log('IIFE!');
-})(); // Outputs: 'IIFE!'",JavaScript,0,0
-Term: Calling Functions,"In JavaScript.. you call or invoke a function by using the function's name followed by parentheses. If the function expects arguments.. you pass them inside the parentheses.
+})(); // Outputs: 'IIFE!'","JavaScript","0","0"
+"Term: Calling Functions","In JavaScript.. you call or invoke a function by using the function's name followed by parentheses. If the function expects arguments.. you pass them inside the parentheses.
 
 function greet(name) {
     console.log('Hello.. ' + name);
 }
-greet('John'); // Outputs: 'Hello.. John'",JavaScript,0,0
-Falsy Values in JavaScript,"In JavaScript, ________ values are considered false when evaluated in a boolean context. The six ________ values are: false, 0, """", null, undefined, and NaN.",JavaScript,0,0
-Declaring a Function in JavaScript,"________ defines a named function that can be invoked later in the code. Example:
+greet('John'); // Outputs: 'Hello.. John'","JavaScript","0","0"
+"Falsy Values in JavaScript","In JavaScript, ________ values are considered false when evaluated in a boolean context. The six ________ values are: false, 0, """", null, undefined, and NaN.","JavaScript","0","0"
+"Declaring a Function in JavaScript","________ defines a named function that can be invoked later in the code. Example:
 function greet() {
   console.log(""Hello, World!"");
-}",JavaScript,0,0
-Calling a Function in JavaScript,"You call a ____ by using the _____'s name followed by parentheses. Example:
-greet(); // Outputs: Hello, World!",JavaScript,0,0
+}","JavaScript","0","0"
+"Calling a Function in JavaScript","You call a ____ by using the _____'s name followed by parentheses. Example:
+greet(); // Outputs: Hello, World!","JavaScript","0","0"
