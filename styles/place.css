@@ -47,9 +47,7 @@ header {
     align-content: center;
     text-align: center;
 }
-body {
-    max-width: fit-content;
-}
+
 main {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -76,8 +74,8 @@ main {
     z-index: 1;
     right: 0px;
     margin: 0;
-    max-height: 800px;
-    object-fit: cover;
+    /* max-height: 800px; */
+    /* object-fit: cover; */
     position: relative;
 }
 .box-head {
@@ -136,10 +134,10 @@ footer {
     height: 35px;
     padding: var(--padding);
     /* color: white; */
-    z-index: 4;
+    /* z-index: 4; */
     width: 100%;
-    position: relative;
-    bottom: 0;
+    /* position: relative; */
+    /* bottom: 0; */
     text-align: center;
 
 }
@@ -161,15 +159,17 @@ footer {
     }
 
     #mobile-weather picture img{
-        display: block;
+        content: url("../images/sunset_icon.svg");
+        /* display: block;
         height: 50px;
-        width: 50px;
+        width: 50px; */
     }
 
-    footer {
-        bottom: 0;
-        display: block;
-    }
+        * {
+            z-index: 0;
+            
+        }
+
     /* * {
         padding: 15px;
         grid: none;
@@ -186,19 +186,20 @@ footer {
 
     main, .box-head, #data, #weather {
         display: block;
-        width: 80%;
         height: 100%;
         z-index: 0;
-        flex-direction: column;
+        /* overflow: hidden; */
+        /* flex-direction: column;
         flex-wrap: wrap;
-        margin: 0;
+        margin: 0; */
         /* text-align: center; */
 
     }
 
-    #weather {
-        display: block;
-    }
+    /* .boxes {
+        display: flex;
+        flex-wrap: wrap;
+    } */
 
     #hero-image img {
         position: relative;
@@ -207,13 +208,20 @@ footer {
         margin: 0;
         width: 100%;
         height: auto;
+        
 
 
+    }
+
+    .boxes {
+        z-index: 0;
     }
     .box-head {
         margin: 0;
         background-color: white;
         text-align: center;
     }
-
+    footer {
+        z-index: 0;
+    }
 }
