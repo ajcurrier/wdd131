@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
-  <title>Cancun</title>
+  <title>Cancun Information Hub</title>
   <script src="scripts/place.js" defer></script>
 </head>
 <body>
@@ -20,10 +20,9 @@
     <picture id="hero-img">
       <source srcset="images/cancun-arial-view.webp" media="(min-width: 1000px)">
       <!-- alt="A stunning scene of Cancun, Mexico, with clear blue waters, white sandy beaches, palm trees swaying in the breeze, and a vibrant sunset over the horizon. Realistic but AI generated" -->
-      <source srcset="images/cancun-flowers.webp" media="(min-width: 800px)">
+      <source srcset="images/cancun-flowers.webp" media="(min-width: 400px)">
       <img src="images/cancun_stingray.webp" 
-       alt="Beautiful images demonstrating the wonder of Cancun"
-       sizes="(min-width: 1000px) 100vw, (min-width: 550px) 50vw, 100vw">
+       alt="Beautiful images demonstrating the wonder of Cancun">
 
     </picture>
     <div id="data">
@@ -40,7 +39,12 @@
 
     </div>
     <div id="weather"> 
-      <div  class="box-head"><h2>Weather<img src="images/weather-icon.svg"></h2></div>
+      <div  class="box-head"><h2>Weather</h2></div>
+      <div id="mobile-weather">
+        <picture>
+          <source srcset="images/sunset_icon.svg" media="(min-width:200px)">
+        </picture> 
+      </div>
       <div id="weather-info">
         <div class="data-line"><h3>Temperature: </h3> &emsp;<span class="definition" id="temperature"></span>&deg;C</div>
         <div class="data-line"><h3>Conditions: </h3> &emsp;<span class="definition" id="conditions"></span></div>

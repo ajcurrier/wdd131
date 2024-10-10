@@ -140,9 +140,10 @@ footer {
     width: 100%;
     position: relative;
     bottom: 0;
+    text-align: center;
 
 }
-@media (min-width: 800px){
+@media (min-width: 600px){
     #weather h2::after  {/*targets the <h2> element inside the #weather section.*/
         content: url("../images/weather-icon.svg");
         height: 25px;
@@ -159,6 +160,16 @@ footer {
         justify-items: center;
     }
 
+    #mobile-weather picture img{
+        display: block;
+        height: 50px;
+        width: 50px;
+    }
+
+    footer {
+        bottom: 0;
+        display: block;
+    }
     /* * {
         padding: 15px;
         grid: none;
@@ -183,6 +194,10 @@ footer {
         margin: 0;
         /* text-align: center; */
 
+    }
+
+    #weather {
+        display: block;
     }
 
     #hero-image img {
