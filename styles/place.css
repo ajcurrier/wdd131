@@ -55,7 +55,7 @@ main {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     /* max-height: px; */
     justify-items: center;
-    max-height: 800px;
+    /* max-height: 800px; */
     /* position: relative; */
     /* height: auto; */
 }
@@ -139,6 +139,7 @@ footer {
     /* bottom: 0; */
     text-align: center;
     clear:both;
+    height: fit-content;
 
 }
 #weather h2::after  {/*targets the <h2> element inside the #weather section.*/
@@ -204,6 +205,5 @@ footer {
     footer {
         /* z-index: 0; */
         clear: both;
-        margin-top: 20px;
     }
 }
