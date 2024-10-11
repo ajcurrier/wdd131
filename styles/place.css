@@ -64,6 +64,7 @@ main {
     grid-column: 1/-1;
     grid-row: 1/-1;
     /* max-height: 800px; */
+    ;
 
 }
 
@@ -171,7 +172,6 @@ footer {
         display: block;
         height: auto;
         z-index: 0;
-        margin-left: 10%;
         /* overflow: hidden; */
         /* flex-direction: column;
         flex-wrap: wrap;
@@ -186,14 +186,14 @@ footer {
         background-color: var(--lion);
         margin: auto;
         width: 80%;
+        margin-top: 15PX;
         
     }
 
-    #data {
-        margin-top: 0px;
-    }
+
     #weather {
-        margin-bottom: 75px;
+        margin-bottom: 15px;
+        /* margin-top: ; */
     }
     
 
@@ -206,4 +206,5 @@ footer {
         /* z-index: 0; */
         clear: both;
     }
+
 }
