@@ -6,9 +6,10 @@
   <meta name="author" content="Ashley Currier">
   <meta name="description" content="Welcome to our Cancun information hub! Stay updated with live weather reports and explore key statistics about Cancun, including its population, area, time zone, and more. Whether you're planning a trip or just curious, find all the essential details about this beautiful coastal city in one place">
   <link rel="stylesheet" href="styles/place.css">
+  <!-- google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
   <title>Cancun Information Hub</title>
   <script src="scripts/place.js" defer></script>
 </head>
@@ -35,19 +36,15 @@
       <div class="data-line"><h3>Time Zone<span class="colon">:</span> </h3> &emsp;<span class="definition" id="time_zone">UTC−5</span></div>
       <div class="data-line"><h3>Calling Code<span class="colon">:</span> </h3> &emsp;<span class="definition" id="calling_code">+52 (area code: 998)</span></div>
       <div class="data-line"><h3>Internet TLD<span class="colon">:</span> </h3> &emsp;<span class="definition" id="internet_tld">.mx</span></div>
-      
 
     </div>
     <div id="weather" class = "boxes"> 
       <div  class="box-head"><h2>Weather</h2></div>
-      <div id="mobile-weather">
-      </div>
-      <div id="weather-info">
-        <div class="data-line"><h3>Temperature: </h3> &emsp;<span class="definition" id="temperature"></span>&deg;C</div>
-        <div class="data-line"><h3>Conditions: </h3> &emsp;<span class="definition" id="conditions"></span></div>
-        <div class="data-line"><h3>Wind: </h3> &emsp;<span class="definition" id="wind"></span> km/h</div>
-        <div class="data-line"><h3>Wind Chill: </h3> &emsp;<span class="definition" id="wind_chill"></span>&deg;C</div>
-      </div>
+      
+      <div class="data-line"><h3>Temperature: </h3> &emsp;<span class="definition" id="temperature"></span>&deg;C</div>
+      <div class="data-line"><h3>Conditions: </h3> &emsp;<span class="definition" id="conditions"></span></div>
+      <div class="data-line"><h3>Wind: </h3> &emsp;<span class="definition" id="wind"></span> km/h</div>
+      <div class="data-line"><h3>Wind Chill: </h3> &emsp;<span class="definition" id="wind_chill"></span>&deg;C</div>
     </div>
   </main>
   <footer>
