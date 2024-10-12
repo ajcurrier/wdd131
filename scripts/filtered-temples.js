@@ -99,7 +99,7 @@ const temples = [
         "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     },
     {
-        templeName: "Provo City Center Temple",
+        templeName: "Provo City Center",
         location: "Provo, Utah, United States",
         dedicated: "2016, March, 20",
         area: 85084,
@@ -109,8 +109,28 @@ const temples = [
     // Add more temple objects here...
   ];
 
-getElementByID()
+let templesBox = document.getElementById('main-box')
+let i = 0
+// for (let i = 0; i < temples.length; i++) {
+//     const img = document.createElement('img');
+//     img.src = temples[i].imageUrl;
+//     consoleLog.appendChild(img);
+// }
+temples.forEach(temple => {
+    const divBox = document.createElement('figure');
+    divBox.classList.add('thumbnail')
+    
+    const img = document.createElement('img');
+    img.src = temples[i].imageUrl;
+    img.classList.add('templeImg');
+    img.alt = `Photo of the ${temples[i].templeName} temple`;
+    img.loading = 'lazy'
+    divBox.appendChild(img);
+    templesBox.appendChild(divBox);
+    console.log(divBox);
 
-for (let templeThumbnail of temples) {
-
-}
+    // create title
+    const templeName = document.createElement('h2')
+    templeName.textContent
+    i = i + 1;
+})
