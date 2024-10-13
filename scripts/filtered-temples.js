@@ -5,6 +5,7 @@ let lastModified = new Date(document.lastModified);
 
 document.getElementById('currentYear').textContent = currentYear;
 
+
 // code using template literals
 // document.getElementById('lastModified').textContent = `Last Modified: ${lastModified.toLocaleDateString()} ${lastModified.toLocaleTimeString()}`;
 
@@ -109,28 +110,127 @@ const temples = [
     // Add more temple objects here...
   ];
 
-let templesBox = document.getElementById('main-box')
-let i = 0
+
+// menu event listeners
+let sortOlderTemples = false;
+let sortNewerTemples = false;
+let sortLargerTemples = false;
+let sortSmallerTemples = false;
+let alltemples = true;
+// event listeners
+function resetFilters() {
+    sortOlderTemples = false;
+    sortNewerTemples = false;
+    sortLargerTemples = false;
+    sortSmallerTemples = false;
+    alltemples = false; // Turn off all filters initially
+}
+
+function printTemple (temple) {
+    
+    let img = document.createElement('img');
+    let divBox = document.createElement('figure');
+    let templeHead = document.createElement('h3');
+    let templeStats = document.createElement('div');
+    divBox.classList.add('templeCards');
+    // create image html
+    img.src = temple.imageUrl;
+    img.classList.add('templeImg');
+    img.alt = `Photo of the ${temple.templeName} temple`;
+    img.loading = 'lazy';
+    divBox.appendChild(img);
+    // add the images as a child to the templesBox
+    document.getElementById('mainbox').appendChild(divBox);
+    console.log(divBox);
+
+// create title
+    
+    templeHead.textContent = temple.templeName;
+    divBox.appendChild(templeHead);
+    console.log(templeHead);
+    console.log(divBox);
+    
+
+    // Temple Stats
+        
+        templeStats.innerHTML = (`<h5>Location: </h5> <p> ${temple.location}</p>
+            <h5>Dedicated: </h5> <p> ${temple.dedicated}</p>
+            <h5>Size: </h5> <p> ${temple.area}</p>`);
+        templeStats.classList.add('templeStats')
+            console.log(templeStats);
+            divBox.appendChild(templeStats);
+    
+}
+
+// sort and print
+function sortTemples() {
+    temples.forEach(temples => {
+        let currentTemple = temples;
+        const year = parseInt(temples.dedicated.split(',')[0]); // Extract year
+
+        if (sortOlderTemples && year < 1900) {
+            printTemple(currentTemple);
+            console.log(currentTemple)
+        } else if (sortNewerTemples && year > 1900) {
+            printTemple(currentTemple);
+        } else if (sortLargerTemples && currentTemple.area > 90000) {
+            printTemple(currentTemple);
+        } else if (sortSmallerTemples && currentTemple.area < 10000) {
+            printTemple(currentTemple);
+        } else {
+            printTemple(currentTemple);
+        }
+        console.log('Current Filters:', {
+            sortOlderTemples,
+            sortNewerTemples,
+            sortLargerTemples,
+            sortSmallerTemples,
+            alltemples
+        });
+        i = i + 1;
+    });
+}
+
+
+
+document.querySelector('#old').addEventListener('click', () =>  { 
+    resetFilters();
+    sortOlderTemples = true;
+    sortTemples()
+    console.log(sortOlderTemples);
+});
+    
+document.querySelector('#new').addEventListener('click', () =>  { 
+    resetFilters();
+    sortNewerTemples = true;
+    sortTemples()
+    console.log(sortNewerTemples);
+});
+document.querySelector('#large').addEventListener('click', () =>  { 
+    resetFilters();
+    sortLargerTemples = true;
+    sortTemples()
+    console.log(sortLargerTemples);
+});
+document.querySelector('#small').addEventListener('click', () =>  { 
+    resetFilters();
+    sortSmallerTemples = true;
+    sortTemples()
+    console.log(sortSmallerTemples);
+});
+document.querySelector('#home').addEventListener('click', () =>  { 
+    resetFilters();
+    alltemples = true;
+    sortTemples()
+    console.log(home);
+});
+const templesBox = document.querySelector('#mainbox'); // Correct
+
+console.log(templesBox);
+
+ let i = 0;
 // for (let i = 0; i < temples.length; i++) {
 //     const img = document.createElement('img');
 //     img.src = temples[i].imageUrl;
 //     consoleLog.appendChild(img);
 // }
-temples.forEach(temple => {
-    const divBox = document.createElement('figure');
-    divBox.classList.add('thumbnail')
-    
-    const img = document.createElement('img');
-    img.src = temples[i].imageUrl;
-    img.classList.add('templeImg');
-    img.alt = `Photo of the ${temples[i].templeName} temple`;
-    img.loading = 'lazy'
-    divBox.appendChild(img);
-    templesBox.appendChild(divBox);
-    console.log(divBox);
-
-    // create title
-    const templeName = document.createElement('h2')
-    templeName.textContent
-    i = i + 1;
-})
