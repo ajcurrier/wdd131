@@ -126,6 +126,48 @@ function resetFilters() {
     alltemples = false; // Turn off all filters initially
 }
 
+document.querySelector('#home').addEventListener('click', () => {
+    resetFilters();
+    alltemples = true;
+    console.log(alltemples);
+});
+
+document.querySelector('#old').addEventListener('click', () =>  { 
+    resetFilters();
+    sortOlderTemples = true;
+    console.log(sortOlderTemples);
+});
+    
+document.querySelector('#new').addEventListener('click', () =>  { 
+    resetFilters();
+    sortNewerTemples = true;
+    console.log(sortNewerTemples);
+});
+document.querySelector('#large').addEventListener('click', () =>  { 
+    resetFilters();
+    sortLargerTemples = true;
+    console.log(sortLargerTemples);
+});
+document.querySelector('#small').addEventListener('click', () =>  { 
+    resetFilters();
+    sortSmallerTemples = true;
+    console.log(sortSmallerTemples);
+});
+document.querySelector('#home').addEventListener('click', () =>  { 
+    resetFilters();
+    alltemples = true;
+    console.log(home);
+});
+const templesBox = document.querySelector('#mainbox'); // Correct
+
+console.log(templesBox);
+
+ let i = 0;
+// for (let i = 0; i < temples.length; i++) {
+//     const img = document.createElement('img');
+//     img.src = temples[i].imageUrl;
+//     consoleLog.appendChild(img);
+// }
 function printTemple (temple) {
     
     let img = document.createElement('img');
@@ -163,74 +205,28 @@ function printTemple (temple) {
 }
 
 // sort and print
-function sortTemples() {
-    temples.forEach(temples => {
-        let currentTemple = temples;
-        const year = parseInt(temples.dedicated.split(',')[0]); // Extract year
 
-        if (sortOlderTemples && year < 1900) {
-            printTemple(currentTemple);
-            console.log(currentTemple)
-        } else if (sortNewerTemples && year > 1900) {
-            printTemple(currentTemple);
-        } else if (sortLargerTemples && currentTemple.area > 90000) {
-            printTemple(currentTemple);
-        } else if (sortSmallerTemples && currentTemple.area < 10000) {
-            printTemple(currentTemple);
-        } else {
-            printTemple(currentTemple);
-        }
-        console.log('Current Filters:', {
-            sortOlderTemples,
-            sortNewerTemples,
-            sortLargerTemples,
-            sortSmallerTemples,
-            alltemples
-        });
-        i = i + 1;
+temples.forEach(temples => {
+    let currentTemple = temples;
+    const year = parseInt(temples.dedicated.split(',')[0]); // Extract year
+
+    if (sortOlderTemples && year < 1900) {
+        printTemple(currentTemple);
+    } else if (sortNewerTemples && year > 1900) {
+        printTemple(currentTemple);
+    } else if (sortLargerTemples && currentTemple.area > 90000) {
+        printTemple(currentTemple);
+    } else if (sortSmallerTemples && currentTemple.area < 10000) {
+        printTemple(currentTemple);
+    } else {
+        printTemple(currentTemple);
+    }
+    console.log('Current Filters:', {
+        sortOlderTemples,
+        sortNewerTemples,
+        sortLargerTemples,
+        sortSmallerTemples,
+        alltemples
     });
-}
-
-
-
-document.querySelector('#old').addEventListener('click', () =>  { 
-    resetFilters();
-    sortOlderTemples = true;
-    sortTemples()
-    console.log(sortOlderTemples);
+    i = i + 1;
 });
-    
-document.querySelector('#new').addEventListener('click', () =>  { 
-    resetFilters();
-    sortNewerTemples = true;
-    sortTemples()
-    console.log(sortNewerTemples);
-});
-document.querySelector('#large').addEventListener('click', () =>  { 
-    resetFilters();
-    sortLargerTemples = true;
-    sortTemples()
-    console.log(sortLargerTemples);
-});
-document.querySelector('#small').addEventListener('click', () =>  { 
-    resetFilters();
-    sortSmallerTemples = true;
-    sortTemples()
-    console.log(sortSmallerTemples);
-});
-document.querySelector('#home').addEventListener('click', () =>  { 
-    resetFilters();
-    alltemples = true;
-    sortTemples()
-    console.log(home);
-});
-const templesBox = document.querySelector('#mainbox'); // Correct
-
-console.log(templesBox);
-
- let i = 0;
-// for (let i = 0; i < temples.length; i++) {
-//     const img = document.createElement('img');
-//     img.src = temples[i].imageUrl;
-//     consoleLog.appendChild(img);
-// }
