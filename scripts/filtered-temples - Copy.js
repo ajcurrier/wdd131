@@ -25,20 +25,6 @@ hamburger.addEventListener('click', function() {
     fadeElement.classList.toggle('active');
 })
 
-// Clear Previus Filter
-function clearTempleCards() {
-    templesBox.innerHTML = '';
-}
-
-function printTemples(templesArray) {
-    clearTempleCards(); // Clear the current temples
-
-    templesArray.forEach(temple => {
-        printTemple(temple); // Call the function to print each temple
-    });
-}
-
-
 const temples = [
     {
       templeName: "Aba Nigeria",
@@ -140,33 +126,7 @@ function resetFilters() {
     alltemples = false; // Turn off all filters initially
 }
 
-function printTemplesBasedOnFilters() {
-    let filteredTemples = temples.filter(temple => {
-        const year = parseInt(temple.dedicated.split(",")[0]); // Extract year
 
-        // Check each filter condition
-        if (sortOlderTemples && year < 1900) {
-            return true;
-        } else if (sortNewerTemples && year >= 1900) {
-            return true;
-        } else if (sortLargerTemples && temple.area > 90000) {
-            return true;
-        } else if (sortSmallerTemples && temple.area < 10000) {
-            return true;
-        } else if (alltemples) {
-            return true;
-        }
-        return false;
-    });
-
-
-    // If no filters are active, show all temples
-    if (!sortOlderTemples && !sortNewerTemples && !sortLargerTemples && !sortSmallerTemples && alltemples) {
-        filteredTemples = temples;
-    }
-
-    printTemples(filteredTemples);  // Pass the filtered list to printTemples
-}
 
 
 
@@ -174,37 +134,38 @@ function printTemplesBasedOnFilters() {
 // let dateparts = temples.dedicated.split(",")
 // let year = parseInt(dateparts[0])
 document.querySelector('#home').addEventListener('click', () => {
-    resetFilters(); // Reset filters to show all temples
-    alltemples = true; // Indicate that all temples should be shown
-    printTemples(temples); // Call the function to display all temples
-});
+    let dateparts = temples.dedicated.split(",")
+    let year = parseInt(dateparts[0])
+    printTemple(temples.filter(temple => {year < 1900}))
+   
+})
 
 document.querySelector('#old').addEventListener('click', () =>  { 
-    resetFilters();
-    sortOlderTemples = true;
-    alltemples = false; // Turn off showing all temples when filtering
-    printTemplesBasedOnFilters();
+    let dateparts = temples.dedicated.split(",")
+    let year = parseInt(dateparts[0])
+    printTemple(temples.filter(temple => {year < 1900}))
 });
     
 document.querySelector('#new').addEventListener('click', () =>  { 
     resetFilters();
     sortNewerTemples = true;
-    alltemples = false; // Turn off showing all temples when filtering
-    printTemplesBasedOnFilters();
+    console.log(sortNewerTemples);
 });
 document.querySelector('#large').addEventListener('click', () =>  { 
     resetFilters();
     sortLargerTemples = true;
-    alltemples = false; // Turn off showing all temples when filtering
-    printTemplesBasedOnFilters();
+    console.log(sortLargerTemples);
 });
 document.querySelector('#small').addEventListener('click', () =>  { 
     resetFilters();
     sortSmallerTemples = true;
-    alltemples = false; // Turn off showing all temples when filtering
-    printTemplesBasedOnFilters();
+    console.log(sortSmallerTemples);
 });
-
+document.querySelector('#home').addEventListener('click', () =>  { 
+    resetFilters();
+    alltemples = true;
+    console.log(alltemples);
+});
 const templesBox = document.querySelector('#mainbox'); // Correct
 
 console.log(templesBox);
@@ -253,3 +214,27 @@ function printTemple (temple) {
 
 // sort and print
 
+temples.forEach(temples => {
+    let currentTemple = temples;
+    const year = parseInt(temples.dedicated.split(',')[0]); // Extract year
+
+    if (sortOlderTemples && year < 1900) {
+        printTemple(currentTemple);
+    } else if (sortNewerTemples && year > 1900) {
+        printTemple(currentTemple);
+    } else if (sortLargerTemples && currentTemple.area > 90000) {
+        printTemple(currentTemple);
+    } else if (sortSmallerTemples && currentTemple.area < 10000) {
+        printTemple(currentTemple);
+    } else {
+        printTemple(currentTemple);
+    }
+    console.log('Current Filters:', {
+        sortOlderTemples,
+        sortNewerTemples,
+        sortLargerTemples,
+        sortSmallerTemples,
+        alltemples
+    });
+//     i = i + 1;
+});

@@ -111,7 +111,7 @@ body {
 h2 {
     margin: 15px;
 }
-.main-box {
+#main-box {
     max-width: 900px;
     margin: auto;
     display: grid;
