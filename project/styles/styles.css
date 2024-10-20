@@ -93,5 +93,8 @@ section {
 
 
 footer {
-    background-color: ;
+    background-color: var(--navy-blue);
+    color: var(--pale-dogwood);
+    height: 75px;
+    padding: 3%;
 }
