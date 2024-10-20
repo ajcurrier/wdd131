@@ -48,6 +48,13 @@ section {
     margin-bottom: 5%;
     padding: 5%;
 }
+
+.color {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+}
+
 #navy-blue-box {
     background-color: #000080;
     height: var(--box-height);
@@ -85,4 +92,6 @@ section {
 }
 
 
-
+footer {
+    background-color: ;
+}
