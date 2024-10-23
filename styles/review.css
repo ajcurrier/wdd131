@@ -1,0 +1,74 @@
+:root {
+    --headings: #fb8500;
+    --body: #023047;
+    --accents1: #ffb703;
+    --accents2: #219ebc;
+    --background: #8ecae6;
+}
+hr  {
+    /* color: unset; */
+    color: var(--body);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--body);
+    background-color: var(--background);
+    max-width: 450px;
+    border: 10px solid var(--accents1);
+    border-radius: 25px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: var(--body);
+    color: #ffb703;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 15px;
+    border-radius: 20px 20px 0 0;
+}
+
+main {
+    margin-bottom: 20px;
+    color: var(--body);
+    padding: 25px;
+    background-color: var(--accents2);
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    
+    /* margin-bottom: 5px; */
+}
+
+select {
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #8ecae6;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#writtenReview, #installationDate, #userName, #productName {
+    border-radius: 10px;
+    min-height: 35px;
+    min-width: 120px;
+    background-color: rgb(215, 236, 247);
+    text-align: center;
+}
+
+
+.formSection {
+    margin: 5px;
+}
+
+.underLabelSpace {
+    height: 10px;
+}
+
+footer {
+    padding: 15px;
+    background-color: var(--accents1);
+}
