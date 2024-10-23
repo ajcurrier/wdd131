@@ -29,7 +29,7 @@
             </div>
             <br>
             <div class="formSection" id="radio-product-info">
-                <label for="rating">Rate the Product (1-5)<abbr title="This field is mandatory" aria-label="required">*</abbr></label>
+                <label>Rate the Product (1-5)<abbr title="This field is mandatory" aria-label="required">*</abbr></label>
                 <div class="underLabelSpace"></div>
                 <input type="radio" name="rating" value="1" required>1
                 <input type="radio" name="rating" value="2" required>2
@@ -41,16 +41,23 @@
             <div class="formSection" id="installation-date">
                 <label for="installationDate">Installation Date<abbr title="This field is mandatory" aria-label="required">*</abbr></label>
                 <div class="underLabelSpace"></div>
-                <input type="date" name="installationDate" id="installationDate" required />
+                <input type="date" name="installationDate" id="installationDate" required>
             </div>
             <br>
             <div class="formSection" id="usefulFeatures-textbox">
-                <label for="features">What Features did you like or dislike about the product? (Check all that apply)</label>
-                <div class="underLabelSpace"></div>
-                <input type="checkbox" name="features" class="features" value="warpCore">Warp Core</input>
-                <input type="checkbox" name="features" class="features" value="customization">Customization</input>
-                <input type="checkbox" name="features" class="features" value="support">Support</input>
-                <input type="checkbox" name="features" class="features" value="price">Price</input>
+                <label>
+                    <input type="checkbox" name="features[]" class="features" value="warpCore"> Warp Core
+                </label>
+                <label>
+                    <input type="checkbox" name="features[]" class="features" value="customization"> Customization
+                </label>
+                <label>
+                    <input type="checkbox" name="features[]" class="features" value="support"> Support
+                </label>
+                <label>
+                    <input type="checkbox" name="features[]" class="features" value="price"> Price
+                </label>
+       
             </div>
             <br>
 
@@ -65,8 +72,8 @@
             </div>
             <br>
             <div class="formSection" id="submit-button-div">
-                <input type="submit" value="submit">
-                <label name="submit"></label>
+                <input type="submit" value="submit" name="submit">
+                
             </div>
    
         </form>
