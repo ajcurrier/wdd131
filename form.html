@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Ashley Currier">
+  <meta name="description" content="Help others by sharing your product experience in this lovely product review form.">
+  <link rel="stylesheet" href="styles\review.css">
+  <script src= "scripts/formscript.js" defer></script>
+  <title>Product Review</title>
+  <!-- <script src="scripts/script.js" defer></script> -->
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form action="review.html" method="get">
+            <label for="productName">Choose a Product<abbr title="This field is mandatory" aria-label="required">*</abbr></label>
+            <div class="underLabelSpace"></div>
+            <div class="formSection">
+                <select name="productName" id="productName" required>
+                    <option value="" disabled selected>Select a Product</option>
+                </select>
+            </div>
+            <br>
+            <div class="formSection" id="radio-product-info">
+                <label for="rating">Rate the Product (1-5)<abbr title="This field is mandatory" aria-label="required">*</abbr></label>
+                <div class="underLabelSpace"></div>
+                <input type="radio" name="rating" value="1" required>1
+                <input type="radio" name="rating" value="2" required>2
+                <input type="radio" name="rating" value="3" required>3
+                <input type="radio" name="rating" value="4" required>4
+                <input type="radio" name="rating" value="5" required>5
+            </div>
+            <br>
+            <div class="formSection" id="installation-date">
+                <label for="installationDate">Installation Date<abbr title="This field is mandatory" aria-label="required">*</abbr></label>
+                <div class="underLabelSpace"></div>
+                <input type="date" name="installationDate" id="installationDate" required>
+            </div>
+            <br>
+            <div class="formSection" id="usefulFeatures-textbox">
+                <label for="features">What Features did you like or dislike about the product? (Check all that apply)</label>
+                <div class="underLabelSpace"></div>
+                <input type="checkbox" name="features" id="features" value="warpCore">Warp Core</input>
+                <input type="checkbox" name="features" id="features" value="customization">Customization</input>
+                <input type="checkbox" name="features" id="features" value="support">Support</input>
+                <input type="checkbox" name="features" id="features" value="price">Price</input>
+            </div>
+            <br>
+
+            <div class="formSection" id="writtenReview-div">
+                <label for="writtenReview">Write your Review<abbr title="This field is Optional" aria-label="optional">*</abbr></label>
+                <div class="underLabelSpace"></div>
+                <textarea name="writtenReview" id="writtenReview"></textarea>
+            </div>
+            <br>
+            <div class="formSection" id="userName-div">
+                <input type="text" name="userName" id="userName" placeholder="Your Name">
+            </div>
+            <br>
+            <div class="formSection" id="submit-button-div">
+                <input type="submit" value="Submit">
+                <label name="submit"></label>
+            </div>
+   
+        </form>
+
+    </main>
+    <footer id="footer-box">
+        <p>
+            &copy; <span id="currentYear"></span> Ashley Currier, Utah 
+          </p>
+          <p id="lastModified"></p>
+          <p>&#127875;Happy Halloween! &#127875;</p>
+    </footer>
+</body>
+</html>

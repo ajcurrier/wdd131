@@ -71,4 +71,5 @@ select {
 footer {
     padding: 15px;
     background-color: var(--accents1);
+    text-align: center;
 }
