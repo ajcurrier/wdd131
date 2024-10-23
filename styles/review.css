@@ -51,6 +51,7 @@ select {
     width: 100%;
 }
 
+
 #writtenReview, #installationDate, #userName, #productName {
     border-radius: 10px;
     min-height: 35px;
