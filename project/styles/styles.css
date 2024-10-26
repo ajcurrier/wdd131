@@ -1,10 +1,10 @@
 :root {
     --box-height: 25px;
     --box-width: 25px;
-    --navy-blue: #000080ff;
+    --navy-blue: #000080;
     --camo-green: #88a096ff;
-    --pale-dogwood: #f5d3c8ff;
-    --black-bean: #3b0d11ff;
+    --pale-dogwood: #f5d3c8;
+    --black-bean: #3b0d11;
     --body: 'Work Sans';
     --heading: 'Pacifico';
 
@@ -12,18 +12,128 @@
 
 body {
     background-color: var(--camo-green);
+    font-family: var(--body);
+    margin: 0px;
+    z-index: 0;
+    display: unset;
 }
 
 h2, h3, h4, h5, h6 {
     font-family: var(--heading);
     color: var(--black-bean);
-    font-size: 2.2rem;
+    
 } 
 
-h1 {
+#normal-heading {
     line-height: 150px;
 }
+
+/* .45deg-heading {} */
+
 header {
+    height: fit-content;
+    background-color: var(--navy-blue);
+    /* background-image: url('../images/provo-trail-scene.webp'); */
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    /* display:grid;
+
+    grid-template-rows: 1fr; */
+}
+
+.menu-bar {
+    height: 50px;
+    background-color: var(--navy-blue);
+    color: white;
+    position: relative;
+    width: 100%;
+    justify-content: space-evenly;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+}
+
+.menu-bar a:hover {
+    background-color: var(--pale-dogwood);
+    color: var(--navy-blue);
+}
+
+
+.tilt-header-box {
+    transform: rotate(-20deg);
+    /* grid-row; */
+    font-family: var(--heading);
+    color: var(--pale-dogwood);
+    background-color: var(--navy-blue);
+    grid-column: 1/4;
+    grid-row: 1/1;
+    height: 75px;
+    z-index: 1;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: -100px;
+    /* flex-wrap: wrap; */
+    border-radius: 15px;
+    background-image: linear-gradient(var(--navy-blue), rgb(0, 0, 255, 0.5), var(--navy-blue));
+    /* transform-origin: bottom left; */
+    max-width: 100%;
+}
+
+.tilted-heading {
+    line-height: 75px;
+    z-index: 2;
+    /* margin-left: -25; */
+    
+}
+
+ #header-image-box {
+    width: 80%;
+    margin: auto;
+    /* position: absolute; */
+    z-index: 0;
+    border: 10px solid var(--navy-blue);
+    grid-column: -1/4;
+    grid-row: 1/2;
+    
+} 
+
+.header-image {
+    
+    max-height: 500px;
+    max-width: 100%;
+    /* position:absolute; */
+    z-index: 0;
+
+}
+
+#bike-logo-box {
+    grid-row: 3/4;
+}
+#index-description {
+    width: 45%;
+    z-index: 0;
+    height: 100px;
+    background-color: black;
+    color: white;
+    padding: 2%;
+    justify-self: right;
+    border-radius: 20px;
+    background-image: linear-gradient(black, rgba(60, 60, 60, 0.5), black, black, rgba(60, 60, 60, 0.5),  black);
+    position: static;
+    text-align: center;
+    grid-row: 4/5;
+
+
+}
+
+#site-plan {
     background-color: var(--navy-blue);
     color: var(--pale-dogwood);
     font-family: var(--heading);
@@ -31,13 +141,21 @@ header {
     width: 100%;
     text-align: center;
     justify-content: center;
-    font-size: 2rem;
 }
 
 main {
     /* font-family: 'Work Sans'; */
     font-family: var(--body);
-    margin: 10%;
+    margin: auto;
+    /* position: absolute; */
+    width: 80%;
+    border: 5px solid #f5d3c8ff;
+    /* position: relative; */
+    z-index: inherit;
+    /* display: flex; */
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 section {

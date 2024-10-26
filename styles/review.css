@@ -45,7 +45,7 @@ label {
 
 input {
     min-width: 25px;
-    min-height: 25px;
+    min-height: 25pxw;
 }
 select {
     padding: 5px;
