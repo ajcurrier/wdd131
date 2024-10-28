@@ -16,6 +16,7 @@ body {
     margin: 0px;
     z-index: 0;
     display: unset;
+    height: 100%;
 }
 
 h2, h3, h4, h5, h6 {
@@ -96,7 +97,7 @@ a {
     z-index: 0;
     border: 10px solid var(--navy-blue);
     grid-column-start: auto;
-    grid-column: 1/10;
+    grid-column: 2/10;
     grid-row: 1;
     max-width: fit-content;
     
@@ -121,14 +122,27 @@ a {
 }
 
 #bike-logo-box {
-    grid-row: 2;
-    grid-column: 4/8;
+    /* grid-row: 2;
+    grid-column: 4/8; */
     z-index: 2;
-    padding: 15px;
     text-align: center;
+    /* max-width: 200px; */
+    margin: auto;
 }
+
+.bike-logo {
+    /* width: auto; */
+    height: 100%;
+    max-height: 200px;
+
+}
+
+#main-bottom{
+    position: static;
+}
+
 #index-description {
-    z-index: 1;
+    z-index: 2;
     height: 100px;
     background-color: black;
     color: white;
@@ -136,14 +150,19 @@ a {
     justify-self: right;
     border-radius: 20px;
     background-image: linear-gradient(black, rgba(60, 60, 60, 0.5), black, black, rgba(60, 60, 60, 0.5),  black);
-    position: static;
+    position: relative;
     text-align: center;
     grid-row: 3;
     grid-column: 6/10;
+    max-width: 45%;
 
 
 }
-
+#index-site-heading{
+    /* grid-template-columns: 4/8; */
+    /* margin: auto; */
+    text-align: center;
+}
 #site-plan {
     background-color: var(--navy-blue);
     color: var(--pale-dogwood);
@@ -155,25 +174,21 @@ a {
 }
 
 main {
-    /* font-family: 'Work Sans'; */
-
     font-family: var(--body);
     margin: auto;
-    width: 80%;
+    /* width: 80%; */
     /* position: absolute; */
     border: 5px solid #f5d3c8ff;
     /* position: relative; */
     z-index: inherit;
-    /* display: flex; */
-    display: inline-grid;
     grid-template-rows: 1fr 0.5fr 10% 10% 0.5fr;
     grid-template-columns: repeat(10, 1fr);
+    
 }
 
 #img2-box {
-    grid-row: 3/5;
-    grid-column: 2/10;
-    margin-top: 25px;
+
+    margin-top: -25px;
     z-index: 0;
     height: fit-content;
     
@@ -186,12 +201,11 @@ main {
 }
 
 section {
-    border-radius: 50px;
-    border: 15px solid #f5d3c8ff;
-    /* box-shadow: 15px 10px 10px grey; */
-    background-color: white;
-    margin-bottom: 5%;
-    padding: 5%;
+    border-radius: 40px;
+    border: 10px solid #f5d3c8ff;
+    width: 75%;
+    margin: auto;
+
 }
 
 .color {
@@ -242,4 +256,6 @@ footer {
     color: var(--pale-dogwood);
     height: 75px;
     padding: 3%;
+    position: static;
+    bottom: 0;
 }
