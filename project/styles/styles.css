@@ -7,7 +7,17 @@
     --black-bean: #3b0d11;
     --body: 'Work Sans';
     --heading: 'Pacifico';
+    --dropshadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
 
+}
+h2, h3, h4, h5, h6 {
+    font-family: var(--heading);
+    /* color: var(--black-bean); */
+    
+} 
+
+li {
+    list-style-type: none;
 }
 
 body {
@@ -19,12 +29,6 @@ body {
     height: 100%;
 }
 
-h2, h3, h4, h5, h6 {
-    font-family: var(--heading);
-    color: var(--black-bean);
-    
-} 
-
 #normal-heading {
     line-height: 150px;
 }
@@ -33,16 +37,16 @@ h2, h3, h4, h5, h6 {
 
 header {
     height: fit-content;
-    background-color: var(--navy-blue);
-    /* background-image: url('../images/provo-trail-scene.webp'); */
     width: 100%;
-    position: relative;
-    z-index: 0;
+    position: relative; 
+    z-index: 5;
+    margin-bottom: -25px;
+    border-bottom: 25px solid var(--camo-green);
 }
 
 .menu-bar {
-    height: 50px;
-    background-color: var(--navy-blue);
+    height: 65px;
+    background-color: var(--black-bean);
     color: white;
     position: relative;
     width: 100%;
@@ -64,15 +68,16 @@ a {
 }
 
 
-.tilt-header-box {
+#tilt-header-box {
     transform: rotate(-20deg);
+
     /* grid-row; */
     font-family: var(--heading);
     color: var(--pale-dogwood);
     background-color: var(--navy-blue);
     grid-column: 1/4;
     grid-row: 1/1;
-    height: 75px;
+    height: 85px;
     z-index: 1;
     text-align: center;
     margin-top: 50px;
@@ -81,53 +86,63 @@ a {
     border-radius: 15px;
     background-image: linear-gradient(var(--navy-blue), rgb(0, 0, 255, 0.5), var(--navy-blue));
     /* transform-origin: bottom left; */
-    max-width: 100%;
+    max-width: 700px;
 }
 
-.tilted-heading {
-    line-height: 75px;
+#tilted-heading {
+    line-height: 85px;
     z-index: 2;
-    /* margin-left: -25; */
+    font-size: 3em;
+    text-align: right;
+    
     
 }
 
+#tilted-heading .space :after {
+    content: "&emsp";
+    /* margin-right: 15em; */
+}
+
  #header-image-box {
-    margin: auto;
+    margin: 0px;
     /* position: absolute; */
     z-index: 0;
-    border: 10px solid var(--navy-blue);
-    grid-column-start: auto;
-    grid-column: 2/10;
-    grid-row: 1;
+    border: 10px solid var(--black-bean);
     max-width: fit-content;
+    max-height: fit-content;
+    padding: 0;
     
 } 
 
 .header-image {
     
-    max-height: 500px;
+    /* max-height: 500px; */
     max-width: 100%;
     /* position:absolute; */
     z-index: 0;
 
 }
 
-.accent-bar {
-    height: 25px;
-    width: auto;
-    background-color: var(--pale-dogwood);
-    grid-column-end: 11;
-    grid-column-start: 1;
-    grid-row: 2;
-}
 
+main {
+    font-family: var(--body);
+    margin: auto;
+    /* border: 5px solid #f5d3c8ff; */
+    z-index: inherit;
+    grid-template-rows: 1fr 0.5fr 10% 10% 0.5fr;
+    grid-template-columns: repeat(10, 1fr);
+    
+}
 #bike-logo-box {
     /* grid-row: 2;
     grid-column: 4/8; */
     z-index: 2;
     text-align: center;
-    /* max-width: 200px; */
+    position: absolute;
     margin: auto;
+    left: 0; 
+    right: 0; 
+    margin-inline: auto;
 }
 
 .bike-logo {
@@ -137,13 +152,38 @@ a {
 
 }
 
-#main-bottom{
+
+
+
+#img2-box img {
+    width: 100%;
+    height: 100%;
+    max-width: 550px;
+}
+
+section {
+    margin: auto;
+
+}
+
+#section1 {
+    background-color: var(--pale-dogwood);
+    /* padding: 25px; */
+    margin-top: 25px;
+    text-align: center;
+    height: fit-content;
+    width: fit-content;
+}
+
+#section2{
     position: static;
+    width: 65%;
+    padding: 25px;
 }
 
 #index-description {
     z-index: 2;
-    height: 100px;
+    height: 150px;
     background-color: black;
     color: white;
     padding: 2%;
@@ -154,13 +194,25 @@ a {
     text-align: center;
     grid-row: 3;
     grid-column: 6/10;
-    max-width: 45%;
+    max-width: 65%;
+    box-shadow: var(--dropshadow);
 
 
 }
+
+#img2-box {
+
+    margin-top: -85px;
+    z-index: 0;
+    height: fit-content;
+
+}
+
+#img2-box img {
+    box-shadow: var(--dropshadow)
+}
+
 #index-site-heading{
-    /* grid-template-columns: 4/8; */
-    /* margin: auto; */
     text-align: center;
 }
 #site-plan {
@@ -173,40 +225,7 @@ a {
     justify-content: center;
 }
 
-main {
-    font-family: var(--body);
-    margin: auto;
-    /* width: 80%; */
-    /* position: absolute; */
-    border: 5px solid #f5d3c8ff;
-    /* position: relative; */
-    z-index: inherit;
-    grid-template-rows: 1fr 0.5fr 10% 10% 0.5fr;
-    grid-template-columns: repeat(10, 1fr);
-    
-}
 
-#img2-box {
-
-    margin-top: -25px;
-    z-index: 0;
-    height: fit-content;
-    
-}
-
-#img2-box img {
-    width: 100%;
-    height: 100%;
-    max-width: 550px;
-}
-
-section {
-    border-radius: 40px;
-    border: 10px solid #f5d3c8ff;
-    width: 75%;
-    margin: auto;
-
-}
 
 .color {
     display: inline-block;
