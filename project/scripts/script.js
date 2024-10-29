@@ -62,19 +62,49 @@ menuItems.forEach(item => {
 });
 
 faqArray.forEach(faqItem => {
-  const faq = document.createElement('input');
-  faq.type = 'radio';
-  faq.name = 'faq';
-  faq.value = faqItem.title;
-  faq.textContent = faqItem.content;
-  faqContainer.appendChild(faq);
-  
+  // create the elements
+  const button = document.createElement('button');
+  const panel = document.createElement('div');
+  const panelContent = document.createElement('p');
+  // const heading = document.createElement('h3');
+  // Add classes to elements
+  button.className = 'accordion';
+  panel.className = 'accordion-panel';
+  // heading.className = 'accordion-heading';
+  panelContent.className = 'accordion-content';
 
-  // const faqContent = document.createElement('p');
-  // faqTitle.textContent = faqItem.title;
-  // faqContent.textContent = faqItem.content;
-  // faqContainer.appendChild(faqTitle);
-  // faqContainer.appendChild(faqContent);
-  // faqContainer.appendChild(document.createElement('hr')); // Add a horizontal rule after each FAQ item
+
+  // assign the parts of the array to the elements
+  // heading.textContent = faqItem.title;
+  panelContent.textContent = faqItem.content;
+  button.textContent = faqItem.title;
+  // add the elements to the DOM
+  faqContainer.appendChild(button);
+  button.appendChild(panel);
+  panel.appendChild(panelContent);
+  // panel.appendChild(heading);
 
   })
+
+
+  // Accordion Function
+  var accordionDiv = document.getElementsByClassName("accordion");
+  
+
+  for (var i = 0; i < accordionDiv.length; i++) {
+    accordionDiv[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      console.log(accordionDiv);
+      // console.log(this);
+      
+      var panelSibling = this.querySelector(".accordion-panel");
+      console.log(panelSibling);
+      
+      if (panelSibling.style.display === "block") {
+        panelSibling.style.display = "none";
+      } else {
+        panelSibling.style.display = "block";
+      }
+    });
+  }
+

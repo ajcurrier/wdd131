@@ -2,8 +2,10 @@
     --box-height: 25px;
     --box-width: 25px;
     --navy-blue: #000080;
-    --camo-green: #88a096ff;
+    --camo-green: hsl(155, 11%, 58%);
+    --lighter-green: hsl(155, 11%, 69%);
     --pale-dogwood: #f5d3c8;
+    --lighterdogwood: hsl(15, 69%, 97%);
     --black-bean: #3b0d11;
     --body: 'Work Sans';
     --heading: 'Pacifico';
@@ -166,13 +168,46 @@ section {
 
 }
 
-#section1 {
-    background-color: var(--pale-dogwood);
+.section1 {
+    /* background-color: var(--pale-dogwood); */
     /* padding: 25px; */
     margin-top: 25px;
     text-align: center;
     height: fit-content;
     width: fit-content;
+    
+}
+#accordianSection{
+    padding: 25px;
+    background-color: var(--lighter-green);
+
+}
+
+/* FAQ Accordion */
+.accordion {
+    background-color: var(--lighter-green);
+    cursor: pointer;
+    padding: 18px;
+    /* border: 2px solid var(--black-bean); */
+    outline: none;
+    text-align: left;
+    transition: 0.4s;
+    width: 55%;
+    border-radius: 15px;
+    box-shadow: var(--dropshadow);
+    
+
+}
+
+.active, .accordion:hover {
+    background-color: var(--lighterdogwood);
+  }
+
+.accordion-panel {
+    padding: 0 18px;
+    /* background-color: white; */
+    display: none;
+    overflow: hidden;
 }
 
 #section2{
