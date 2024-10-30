@@ -177,13 +177,39 @@ section {
     width: fit-content;
     
 }
+
+#faqContainer {
+    height: fit-content;
+    min-height: 30rem;
+    padding: 25px;
+}
+.section-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.right-aligned-image {
+    right: 12%;
+    width: 25%;
+    max-width: 700px;
+    position:absolute;
+    margin: 25px;
+    box-shadow: var(--dropshadow);
+}
 #accordianSection{
     padding: 25px;
     background-color: var(--lighter-green);
+    width: 85%;
+    margin: auto;
 
 }
 
 /* FAQ Accordion */
+
 .accordion {
     background-color: var(--lighter-green);
     cursor: pointer;
@@ -195,6 +221,8 @@ section {
     width: 55%;
     border-radius: 15px;
     box-shadow: var(--dropshadow);
+    display: flex;
+    flex-direction: column;
     
 
 }
@@ -306,7 +334,7 @@ section {
 
 
 footer {
-    background-color: var(--navy-blue);
+    background-color: var(--black-bean);
     color: var(--pale-dogwood);
     height: 75px;
     padding: 3%;

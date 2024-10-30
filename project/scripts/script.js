@@ -41,10 +41,19 @@ const faqArray = [
   {
     title: 'Bicycle Theft Concerns',
     content: 'Bicycle theft has become a growing issue in Provo, with a noted increase in reported thefts. To mitigate this risk, consider investing in high-quality U-locks and ensuring that your bike is securely locked. Additionally, registering your bike increases the chances of recovery if it is stolen.'
+  },   
+  {
+    title: 'What options do I have for bike rentals in Provo?',
+    content: 'Several local shops in Provo offer bike rentals for a variety of needs, including road bikes, mountain bikes, and electric bicycles. Popular rental locations often provide hourly, daily, and even multi-day rental options.{',
+  }, 
+  
+  {
+    title: 'What if my bike has mechanical issues while riding?',
+    content: 'Provo has installed several self-service bike repair stations along popular trails. These stations typically include tools for basic bike repairs, such as tire pumps and wrenches. Check the biking map provided by the city for locations of these amenities.',
   },
   {
-    title: 'Security Measures',
-    content: 'Stay warm and avoid getting too cold.'
+    title: 'Winter Security Measures',
+    content: 'Stay warm and avoid getting too cold. Stay off the ice'
   }
 ];
 // Get the menu container element
