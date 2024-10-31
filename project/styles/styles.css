@@ -192,22 +192,30 @@ section {
     align-items: center;
     margin-bottom: 25px;
 }
-.right-aligned-image {
+.right-aligned-image, .in-line-image {
         right: 12%;
-        width: 25%;
+        width: 30%;
         max-width: 700px;
         /* position:absolute; */
         float: right;
         margin: 25px;
-    box-shadow: var(--dropshadow);
+        box-shadow: var(--dropshadow);
 }
 
-.right-aligned-image img {
+/* .right-aligned-image img {
     width: 100%;
     min-height: fit-content;
     height: 100%;
-    
 
+} */
+
+/* .in-line-image {
+    
+} */
+
+#sunset-silhouette {
+    /* min-height: fit-content; */
+    width: 100%;
 }
 #accordionSection{
     padding: 25px;
