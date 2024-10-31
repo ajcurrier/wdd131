@@ -44,7 +44,7 @@ const faqArray = [
   },   
   {
     title: 'What options do I have for bike rentals in Provo?',
-    content: 'Several local shops in Provo offer bike rentals for a variety of needs, including road bikes, mountain bikes, and electric bicycles. Popular rental locations often provide hourly, daily, and even multi-day rental options.{',
+    content: 'Several local shops in Provo offer bike rentals for a variety of needs, including road bikes, mountain bikes, and electric bicycles. Popular rental locations often provide hourly, daily, and even multi-day rental options.',
   }, 
   
   {
@@ -97,13 +97,14 @@ faqArray.forEach(faqItem => {
 
 
   // Accordion Function
-  var accordionDiv = document.getElementsByClassName("accordion");
+  // var accordionDiv = document.getElementsByClassName("accordion");
+  var accordionDiv = document.querySelectorAll('.accordion');
   
-
-  for (var i = 0; i < accordionDiv.length; i++) {
-    accordionDiv[i].addEventListener("click", function() {
+function toggleAccordion(div) {
+  for (var i = 0; i < div.length; i++) {
+    div[i].addEventListener("click", function() {
       this.classList.toggle("active");
-      console.log(accordionDiv);
+      console.log(div);
       // console.log(this);
       
       var panelSibling = this.querySelector(".accordion-panel");
@@ -116,4 +117,6 @@ faqArray.forEach(faqItem => {
       }
     });
   }
+}
 
+toggleAccordion(accordionDiv);

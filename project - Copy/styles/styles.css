@@ -193,12 +193,11 @@ section {
     margin-bottom: 25px;
 }
 .right-aligned-image {
-        right: 12%;
-        width: 25%;
-        max-width: 700px;
-        /* position:absolute; */
-        float: right;
-        margin: 25px;
+    right: 12%;
+    width: 25%;
+    max-width: 700px;
+    position:absolute;
+    margin: 25px;
     box-shadow: var(--dropshadow);
 }
 
@@ -219,7 +218,7 @@ section {
 
 /* FAQ Accordion */
 
-.accordion {
+.accordionPrint {
     background-color: var(--lighter-green);
     cursor: pointer;
     padding: 18px;
@@ -236,7 +235,7 @@ section {
 
 }
 
-.active, .accordion:hover {
+.active, .accordionPrint:hover {
     background-color: var(--lighterdogwood);
   }
 
