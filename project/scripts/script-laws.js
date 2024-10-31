@@ -149,24 +149,27 @@ writeobjectArrayToDOM(lawobjectArray, lawContainer);
 
   
   
-function toggleAccordion() {
-  for (var i = 0; i < accordionDiv.length; i++) {
-    accordionDiv[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      console.log(accordionDiv);
-      // console.log(this);
+// function toggleAccordion() {
+//   for (var i = 0; i < accordionDiv.length; i++) {
+//     accordionDiv[i].addEventListener("click", function() {
+//       this.classList.toggle("active");
+//       console.log(accordionDiv);
+//       // console.log(this);
       
-      var panelSibling = this.querySelector(".accordion-panel");
-      console.log(panelSibling);
+//       var panelSibling = this.querySelector(".accordion-panel");
+//       console.log(panelSibling);
       
-      if (panelSibling.style.display === "block") {
-        panelSibling.style.display = "none";
-      } else {
-        panelSibling.style.display = "block";
-      }
-    });
-  }
-}
+//       if (panelSibling.style.display === "block") {
+//         panelSibling.style.display = "none";
+//       } else {
+//         panelSibling.style.display = "block";
+//       }
+//     });
+//   }
+// }
 
-toggleAccordion(accordionDiv);
-// toggleAccordion(lawsContainer);
+// toggleAccordion(accordionDiv);
+// // toggleAccordion(lawsContainer);
+
+// law Form
+
