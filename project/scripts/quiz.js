@@ -1,37 +1,75 @@
-submitTest = document.getElementById('submit-button');// get the law-quiz element
-console.log(submitTest);
-document.getElementById('law-quiz').addEventListener('submit', function(event) {    
+const form = document.querySelector("#law-quiz");
+const resultBox = document.getElementById("result");
+
+form.addEventListener('submit', callbackFunction);
+
+
+// resource: https://stackabuse.com/convert-form-data-to-javascript-object/
+
+
+function callbackFunction(event) {
     event.preventDefault();
+    // prevent default prevents the form from reloading after the submit button is clicked (which is the default behavior)
+    const formData = new FormData(event.target);
 
-    const answers = {
-        q1: 'false', // correct answer for question 1
-        q2: 'license',      // correct answer for question 2
-        q3: 'yield',
-        q4: 'police', 
-        q5: 'use',
-        q6: 'B'
-    };
-
-    let score = 0;
-    // count how many questions
-    const totalQuestions = Object.keys(answers).length;
-
-    // check answers
-    for (let question in answers) {
-        const userAnswer = document.getElementById(question).value;
-        console.log(`User answered: ${userAnswer}`);
-        if (userAnswer && userAnswer.value === answers[question]) {
-            score++;
-            console.log(score);
-
-            const passed = score === totalQuestions;
-    
-    // Store result in local storage
-    localStorage.setItem('quizResult', JSON.stringify({ passed, score }));
-
-    // Display result
-    const resultText = passed ? 'You passed!' : 'You failed. Try again!';
-    document.getElementById('result').innerText = `Score: ${score}/${totalQuestions}. ${resultText}`;
-    }
+    const formDataObj = {};
+    formData.forEach((value, key) => (formDataObj[key] = value));
+    console.log(formDataObj);
+    compareQuizAnswers(formDataObj, answers);
 }
-});
+
+
+// const quizFormData = {};
+// formData.forEach((value, key) => (quizFormData[key] = value));
+
+
+
+const answers = {
+q1: 'false', // correct answer for question 1
+q2: 'license',      // correct answer for question 2
+q3: 'yield',
+q4: 'police', 
+q5: 'use',
+q6: 'b'
+};
+   
+
+function compareQuizAnswers(userAnswers, quizAnswers) {
+    let score = 0;
+    for (let key in userAnswers) {
+        if (userAnswers[key] === quizAnswers[key]) {
+            score++;
+        }
+    }
+        // print results
+        const storeScore = window.localStorage.getItem("score-ls") || 0;
+        const printScore = document.createElement('h1');
+        printScore.textContent = `Your score is: ${score} out of 6`;
+        resultBox.appendChild(printScore);
+        console.log('printScore is {printScore}');
+    
+
+}
+
+// Use code below to test that localStorage is working:
+
+// 1️⃣ Initialize display element variable
+const visitsDisplay = document.querySelector(".visits");
+
+// 2️⃣ Get the stored VALUE for the numVisits-ls KEY in localStorage if it exists. If the numVisits KEY is missing, then assign 0 to the numVisits variable.
+let numVisits = Number(window.localStorage.getItem("numVisits-ls")) || 0;
+
+// 3️⃣ Determine if this is the first visit or display the number of visits. We wrote this example backwards in order for you to think deeply about the logic.
+if (numVisits !== 0) {
+	visitsDisplay.textContent = numVisits;
+} else {
+	visitsDisplay.textContent = `This is your first visit. 🥳 Welcome!`;
+}
+
+// 4️⃣ increment the number of visits by one.
+numVisits++;
+
+// 5️⃣ store the new visit total into localStorage, key=numVisits-ls
+localStorage.setItem("numVisits-ls", numVisits);
+
+// 💡A client can view the localStorage data using the Applications panel in the browsers's DevTools - check it out on any major site.

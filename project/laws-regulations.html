@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Work+Sans:ital@0;1&display=swap" rel="stylesheet">
   <title>Bicyling Laws</title>
-  <script src="scripts/script-laws.js" defer></script>
+  <!-- <script src="scripts/script-laws.js" defer></script> -->
   <script src="scripts/quiz.js" defer></script>
 </head>
 <body>
@@ -73,51 +73,54 @@
         </section>
 
         <section class="section1" id="form-section">
-            <h1>Quiz your Knowledge</h1>
-            <form id="law-quiz">
-                <div>
-                    <p>1. You will get a ticket if you don't wear a helmet.</p>
-                    <label><input type="radio" name="q1" value="true">True</label>
-                    <label><input type="radio" name="q1" value="false">False</label>
+    
+            <form id="law-quiz" method="get">
+                <fieldset>
+                    <legend>Quiz Yourself</legend>
+                    <div>
+                        <p>1. You will get a ticket if you don't wear a helmet.</p>
+                        <label><input type="radio" name="q1" value="true">True</label>
+                        <label><input type="radio" name="q1" value="false">False</label>
 
-                </div>
-                <div>
-                    <p>2. What is required before riding a bicycle on public streets in Provo?</p>
-                    <label><input type="radio" name="q2" value="helmet">A Helmet</label>
-                    <label><input type="radio" name="q2" value="light">A Light</label>
-                    <label><input type="radio" name="q2" value="license">A license</label>
-                </div>
-                <div>
-                    <p>3. What should a cyclist do if riding on the sidewalk and approaching pedestrians?</p>
-                    <label><input type="radio" name="q3" value="speed">Speed up to pass them</label>
-                    <label><input type="radio" name="q3" value="Ring">Ring a bell loudly</label>
-                    <label><input type="radio" name="q3" value="yield">Yield the right-of-way and signal before passing</label>
-                    <label><input type="radio" name="q3" value="none">Ignore pedestrians</label>
-                </div>
-                <div>
-                    <p>4. Where can individuals obtain a Provo bike license?</p>
-                    <label><input type="radio" name="q4" value="city-hall">City Hall</label>
-                    <label><input type="radio" name="q4" value="bike-shop">Bike Shop</label>
-                    <label><input type="radio" name="q4" value="parking-garage">Parking Garage</label>
-                    <label><input type="radio" name="q4" value="police">Provo Police Department</label>
-                </div>
-                <div>
-                    <p>What are the regulations for riding bicycles on sidewalks in Provo?</p>
-                    <label><input type="radio" name="q5" value="no-use">A. No riding on sidewalks</label>
-                    <label><input type="radio" name="q5" value="use">B. No riding on sidewalks by University Avenue and Center Street</label>
-                    <label><input type="radio" name="q5" value="use-only">C. Cyclists must always ride on sidewalks</label>
-                    <label><input type="radio" name="q5" value="use-night">D. Riding on sidewalks is allowed, but only at night</label>
-                <div>
-                    <p>5. Under what circumstances may cyclists take the entire lane of traffic?</p>
-                    <label><input type="radio" name="q6" value="A">A. When riding in a group</label>
-                    <label><input type="radio" name="q6" value="B">B. If it is deemed unsafe to ride alongside vehicles</label>
-                    <label><input type="radio" name="q6" value="C">C. To assert dominance on the road</label>
-                    <label><input type="radio" name="q6" value="D">D. During rush hour</label>
-                </div>
+                    </div>
+                    <div>
+                        <p>2. What is required before riding a bicycle on public streets in Provo?</p>
+                        <label><input type="radio" name="q2" value="helmet">A Helmet</label>
+                        <label><input type="radio" name="q2" value="light">A Light</label>
+                        <label><input type="radio" name="q2" value="license">A license</label>
+                    </div>
+                    <div>
+                        <p>3. What should a cyclist do if riding on the sidewalk and approaching pedestrians?</p>
+                        <label><input type="radio" name="q3" value="speed">Speed up to pass them</label>
+                        <label><input type="radio" name="q3" value="Ring">Ring a bell loudly</label>
+                        <label><input type="radio" name="q3" value="yield">Yield the right-of-way and signal before passing</label>
+                        <label><input type="radio" name="q3" value="none">Ignore pedestrians</label>
+                    </div>
+                    <div>
+                        <p>4. Where can individuals obtain a Provo bike license?</p>
+                        <label><input type="radio" name="q4" value="city-hall">City Hall</label>
+                        <label><input type="radio" name="q4" value="bike-shop">Bike Shop</label>
+                        <label><input type="radio" name="q4" value="parking-garage">Parking Garage</label>
+                        <label><input type="radio" name="q4" value="police">Provo Police Department</label>
+                    </div>
+                    <div>
+                        <p>What are the regulations for riding bicycles on sidewalks in Provo?</p>
+                        <label><input type="radio" name="q5" value="no-use">A. No riding on sidewalks</label>
+                        <label><input type="radio" name="q5" value="use">B. No riding on sidewalks by University Avenue and Center Street</label>
+                        <label><input type="radio" name="q5" value="use-only">C. Cyclists must always ride on sidewalks</label>
+                        <label><input type="radio" name="q5" value="use-night">D. Riding on sidewalks is allowed, but only at night</label>
+                    <div>
+                        <p>5. Under what circumstances may cyclists take the entire lane of traffic?</p>
+                        <label><input type="radio" name="q6" value="a">A. When riding in a group</label>
+                        <label><input type="radio" name="q6" value="b">B. If it is deemed unsafe to ride alongside vehicles</label>
+                        <label><input type="radio" name="q6" value="c">C. To assert dominance on the road</label>
+                        <label><input type="radio" name="q6" value="d">D. During rush hour</label>
+                    </div>
 
-                <!-- <button type="submit">Submit</button> -->
-                 <input id="submit-button" type="button" value="submit">
-
+                    <!-- <button type="submit">Submit</button> -->
+                    <input id="submit-button" type="Submit" value="Submit Quiz">
+                    
+                </fieldset>
             </form>
 
             <p id="result"></p>
@@ -133,6 +136,8 @@
             &copy; <span id="currentYear"></span> Ashley Currier, Utah 
           </p>
           <p id="lastModified"></p>
+          <p><span class="label">Number of Visits: </span><span class="visits"></span></p>
+        </main>
     </footer>
 
 
