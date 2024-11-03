@@ -75,7 +75,7 @@ if (scoreStore !== 0) {
         tryAgain.textContent = 'Congratulations! You passed the quiz!🥳';
         quizInviteDisplay.appendChild(tryAgain);}
 } else {
-            tryAgain.textContent = 'Try our Quiz!';
+            tryAgain.textContent = 'Check out our Quiz Below!';
             quizInviteDisplay.appendChild(tryAgain);
 	
 }
