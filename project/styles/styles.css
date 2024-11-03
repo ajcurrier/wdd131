@@ -31,9 +31,7 @@ body {
     height: 100%;
 }
 
-#normal-heading {
-    line-height: 150px;
-}
+
 
 /* .45deg-heading {} */
 
@@ -217,12 +215,16 @@ section {
     /* min-height: fit-content; */
     width: 100%;
 }
-#accordionSection{
-    padding: 25px;
+#accordionSection, .accordionSection{
+    padding: 5%;
     background-color: var(--lighter-green);
     width: 85%;
     margin: auto;
 
+}
+
+section .accordionSection {
+    border-radius: 15px;
 }
 
 /* FAQ Accordion */
@@ -305,12 +307,33 @@ section {
     justify-content: center;
 }
 
+/* Law Quiz */
+
+#quizInvite {
+    background-color: var(--pale-dogwood);
+    padding: 25px;
+    border-radius: 25px;
+    text-align: center;
+    max-width: 50%;
+    margin: 35px auto;
+    box-shadow: var(--dropshadow);
+    
+}
+
+#quizInvite h1, h2 {
+    font-size: 1.45rem;
+}
+
 #law-quiz fieldset {
-    width: 60%;
+    width: 80%;
     display: block;
     text-align: left;
     margin: auto;
     border-radius: 15px;
+    padding: 25px 55px;
+    background-color: var(--lighter-green);
+    box-shadow: var(--dropshadow);
+    margin-bottom: 25px;
 }
 
 #law-quiz legend {
@@ -319,7 +342,7 @@ section {
 
 #law-quiz label {
     /* margin-top: -15px; */
-    padding: 15px;
+    padding: 0px 15px;
     display: block;
 }
 
@@ -384,3 +407,43 @@ footer {
     position: static;
     bottom: 0;
 }
+
+
+@media (max-width: 768px) {
+    .hamburger {
+        margin: 25px;
+        display: flex;
+    }
+
+    #tilted-heading, #tilt-header-box {
+        display: none;
+    }
+
+
+
+    #menu-tag-container {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    #menu-bar{
+
+        margin: auto;
+        margin-bottom: 10px;
+        width: 100%;
+        justify-self: center;
+        display: flex;
+        justify-items: center;
+        display: none;
+        flex-direction: column;
+        height: fit-content;
+        width: 100%;
+    }
+
+
+    }
+
+    .menu.active #menu-tag-container {
+        justify-items: center;
+    }
+
