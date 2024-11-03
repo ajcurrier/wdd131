@@ -1,10 +1,19 @@
 const form = document.querySelector("#law-quiz");
-const resultBox = document.getElementById("result");
+const resultBox = document.querySelector("#result");
 
 form.addEventListener('submit', callbackFunction);
 
 
 // resource: https://stackabuse.com/convert-form-data-to-javascript-object/
+
+
+// pull from local storage
+const quizInviteDisplay = document.querySelector("#quizInvite");
+
+// Get the stored VALUE for the numVisits-ls KEY in localStorage if it exists. If the numVisits KEY is missing, then assign 0 to the numVisits variable.
+let scoreStore = Number(window.localStorage.getItem("score-ls")) || 0;
+
+
 
 
 function callbackFunction(event) {
@@ -16,6 +25,7 @@ function callbackFunction(event) {
     formData.forEach((value, key) => (formDataObj[key] = value));
     console.log(formDataObj);
     compareQuizAnswers(formDataObj, answers);
+    
 }
 
 
@@ -42,14 +52,35 @@ function compareQuizAnswers(userAnswers, quizAnswers) {
         }
     }
         // print results
-        const storeScore = window.localStorage.getItem("score-ls") || 0;
+
         const printScore = document.createElement('h1');
         printScore.textContent = `Your score is: ${score} out of 6`;
         resultBox.appendChild(printScore);
         console.log('printScore is {printScore}');
+        localStorage.setItem("score-ls", score);
     
 
 }
+const tryAgain = document.createElement('h2');
+tryAgain.className = 'quizAction';
+
+if (scoreStore !== 0) {
+    const inviteScore = document.createElement('h1')
+    inviteScore.textContent = 'Your score: '+ scoreStore + ' out of 6';
+    quizInviteDisplay.appendChild(inviteScore);
+    if (scoreStore < 6) {
+        tryAgain.textContent = 'Would you like to try again?'
+        quizInviteDisplay.appendChild(tryAgain);
+    } else {
+        tryAgain.textContent = 'Congratulations! You passed the quiz!🥳';
+        quizInviteDisplay.appendChild(tryAgain);}
+} else {
+            tryAgain.textContent = 'Try our Quiz!';
+            quizInviteDisplay.appendChild(tryAgain);
+	
+}
+
+
 
 // Use code below to test that localStorage is working:
 
