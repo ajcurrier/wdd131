@@ -5,27 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Ashley Currier">
   <meta name="description" content="WDD 131 – Dynamic Web Fundamentals. Ashley Jordan Currier.">
+  <!-- Javascript -->
+   <script src="scripts/getdates.js" defer></script>
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/base.css">
+  <!-- Title -->
   <title>WDD 131 – Dynamic Web Fundamentals - Ashley Currier</title>
+  <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Valley+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
   
 </head>
 <body>
     <header>
-        <div class="header-space">Header Content</div>
+        <span id="course-title">
+            <h3>131 – Dynamic Web Fundamentals</h3>
+        </span>
         <nav class ="navbar">
-            <ul class="navigation">
-                <li><a href="https://ajcurrier.github.io/wdd131/index.html">Home</a></li>
-                <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
-                <li><a href="https://byupw.instructure.com/">Canvas</a></li>
-                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/rom/8?lang=eng&id=p35-p37#p35">A Favorite Scripture</a></li>
-                <li><a href="#">Final Project</a></li>
+            <ul>
+                <li><a target="_blank" href="https://ajcurrier.github.io/wdd131/index.html">Home</a></li>
+                <li><a target="_blank" href="https://www.linkedin.com/">LinkedIn</a></li>
+                <li><a target="_blank" href="https://byupw.instructure.com/">Canvas</a></li>
+                <li><a target="_blank" href="https://www.churchofjesuschrist.org/study/scriptures/nt/rom/8?lang=eng&id=p35-p37#p35">A Favorite Scripture</a></li>
+                <li><a target="_blank" href="#">Final Project</a></li>
             </ul>
         </nav>     
     </header>
-    <div class="main-box">
-        <main>Main Content</main>
-        <div class="right-sidebar">Aside Content</div>
-    </div>
-    <footer>Footer Content</footer>
+        <main>
+            <h1>Ashley Currier</h1>
+            <section class="card" id="focus-card">
+                <h2>About Me</h2>
+                <p>My name is Ashley. I am from Southern California, but I am living in Utah. I enjoy being creative and bicycling with my friends and family. I love going to the beach, boogie boarding and listening to the waves while watching the sunset. Sunsets at the beach are incredible!</p>
+                <h3>California's Geographic Diversity</h3>
+                <p>California is known for its remarkable geographic diversity. It is home to both the highest and lowest points in the contiguous United States: Mt. Whitney, which stands at 14,505 feet, and Death Valley, which lies 282 feet below sea level. Amazingly, these two extremes are only about 80 miles apart!</p>
+                <p>From Los Angeles, you can experience this diversity firsthand. Travel roughly two hours west, and you’ll find yourself at the beach, enjoying the waves and sunshine. Head about two hours southeast instead, and you can go sledding in the mountains, depending on the season.</p>
+                <h3>Transport to an Alien World</h3> 
+                <p>One of the most otherworldly landscapes in California is Vasquez Rocks, located just north of Los Angeles. With its dramatic, jagged rock formations that seem to defy gravity, it feels like an alien world. This striking landscape has made it a favorite for movie makers seeking an otherworldly feel and for families, hikers and geography enthusiasts. I have many memories here.</p>
+                <p>The rocks, formed by the collision of the Pacific and North American plates, tilt at sharp angles, offering a glimpse into California's geological past and the immense forces that shaped it. Walking through Vasquez Rocks, it's easy to imagine yourself on a different planet entirely.</p>
+                <img id="rocks" src="images/about-ca-vasquez_rocks.jpg" alt="photo of vasquez rocks that demonstrates the otherworldly angles and folds in the landscape caused by plate techtonics">
+                
+            </section>
+            <section class="card" id="side-card">
+                    <h2>My Favorite Resources</h2>
+                    <ul>
+                        <li><a target="_blank" href="https://www.w3schools.com/"> W3 Schools</a></li>
+                        <li><a target="_blank" href="https://www.ankiweb.net">Anki Flashcards</a></li>
+                        <li><a target="_blank" href="https://developer.mozilla.org/en-US/">MDN</a></li>
+                    </ul>   
+            </section>
+        </main>
+        
+    <footer>
+        <p>&copy<span id="currentyear"></span> Ashley Currier United States</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>

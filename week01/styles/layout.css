@@ -14,6 +14,7 @@ header {
 .header-space {
     padding: 1rem;
 }
+
 .navbar {
     color: white;
     background-color: black;
@@ -31,6 +32,8 @@ header {
         flex: 1 1 auto;
         padding: 1rem;
 }
+
+
 .main-box {
     grid-column: 1/4;
     display: grid;
