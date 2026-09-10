@@ -70,12 +70,29 @@ main h1 {
 .card li {
     padding: 0.5rem;
 }
+
 #focus-card {
     grid-column: 1/3;
     margin-left: 0px;
+    display: flex;
+}
+#inside-focus-card {
+    display: flex;
+    flex-wrap: wrap;
+}
+#focus-card h2 {
+    width: 100%;
+}
+#p1 {
+    flex: 1;
+}
+#profile {
+    width: 135px;
+    height: 135px;
+    margin: 10px;
+    flex-shrink: 0;
 }
 .photo, #rocks {
-    /* width: 100%; Full width images */
     margin: 10px auto;
     /* Centered with margin */
     float: none;
