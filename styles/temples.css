@@ -90,7 +90,7 @@ header nav li:hover, header nav li a:hover {
 
 /* Temple Image Arrangement */
 #temples figure {
-  display: grid;
+
   /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
   margin: auto;
   padding: 20px;
@@ -109,42 +109,4 @@ footer {
   background-color: #e8dc8f;
   padding: 10px;
   text-align: center;
-}
-
-@media (min-width: 600px) {
-
-  /* Add desktop-specific styles here */
-  header nav ul {
-    justify-content: center;
-    flex-wrap: nowrap;
-    display: flex;
-    font-size: 1rem;
-
-  }
-
-  .hamburger-menu {
-    display: none;
-    /* Hide the hamburger menu on desktop */
-  }
-
-  header nav li a {
-    width: auto;
-    margin: 0;
-    padding: 10px 20px;
-  }
-
-  nav {
-    max-height: 100px;
-    padding: 0;
-  }
-
-  #temples {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  figure {
-    width: fit-content;
-    margin: 0;
-  }
 }
