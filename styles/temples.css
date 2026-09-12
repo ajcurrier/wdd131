@@ -1,0 +1,63 @@
+body {
+    font-family: "DM Sans", sans-serif;
+
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #e8dc8f;
+  padding: 10px;
+  max-height: 100px;
+
+}
+header nav a {
+  color: #000;
+  text-decoration: none;
+  margin: 0 10px;
+}
+header nav li {
+    list-style: none;
+    padding: 5px 5%;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+header nav ul {
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding:0;
+  margin:0;
+  
+}
+header nav li:hover {
+  background-color: #0f4f20;
+}
+header nav li a:hover {
+  color: #e8dc8f;
+}
+
+/* Temple Image Arrangement */
+main figure {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+main figure img {
+    /* width: 100%; */
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+footer {
+  background-color: #e8dc8f;
+  padding: 10px;
+  text-align: center;
+}
