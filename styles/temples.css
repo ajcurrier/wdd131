@@ -1,6 +1,18 @@
 body {
     font-family: "DM Sans", sans-serif;
+    text-align: center;
 
+}
+
+header {
+  background-color:#0f4f20;
+  color: #fff;
+  margin: 0;
+  width: 100%;
+}
+header h3{ 
+  margin:auto;
+  padding: 10px;
 }
 
 /* Navigation Bar */
@@ -9,55 +21,129 @@ nav {
   flex-wrap: wrap;
   align-items: center;
   background-color: #e8dc8f;
-  padding: 10px;
-  max-height: 100px;
+  padding: 5px;
+  /* width: 100%; */
+  margin: 0px;
+  font-size: 1.5rem;
 
 }
+/* Hamburger Menu Styles */
+.hamburger-menu {
+  padding: 5px;
+  /* cursor: pointer; */
+  /* background-color: #fff; */
+}
+/* Rotating Hamburger incomplete Attempt
+.hamburger-x .bar {
+  transform: rotate(-45deg) translate(-5px, 6px);
+} 
+.bar {
+  height: 4px;
+  width: 35px;
+  background-color: #414040;
+  display: block;
+  margin: 4px;
+}  */
+.hamburger-menu::before {
+  content: "☰";
+  color:#000;
+}
+.hamburger-menu.hamburger-x::before {
+  content: "X";
+  color: #000;
+
+}
+
 header nav a {
   color: #000;
   text-decoration: none;
-  margin: 0 10px;
-}
-header nav li {
-    list-style: none;
-    padding: 5px 5%;
-    border-radius: 5px;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    
+  margin: 0 auto;
+  display: block;
+  /* height: 100%; */
 }
 header nav ul {
-  justify-content: center;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  padding:0;
-  margin:0;
-  
+  /* height: 100%; */
+  padding: 0;
+  margin: 0;
+  display: none; /* Hide the menu by default */
+
 }
-header nav li:hover {
+#menu.show {
+  display: flex; /* Show the menu when the "show" class is added */
+  flex-direction: column;
+  width: 100%;
+}
+header nav ul li {
+  display:block;
+  flex: 1 1 100%;
+  font-size: 1rem;
+  padding: 5px;
+}
+header nav li:hover, header nav li a:hover {
   background-color: #0f4f20;
-}
-header nav li a:hover {
   color: #e8dc8f;
 }
 
 /* Temple Image Arrangement */
-main figure {
+#temples figure {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  margin: auto;
+  padding: 20px;
 }
-main figure img {
+#temples figure img {
     /* width: 100%; */
-    width: 300px;
+    width: 200px;
     height: auto;
     border-radius: 10px;
+    margin: 0 auto;
+    height: fit-content;
 }
 
 footer {
   background-color: #e8dc8f;
   padding: 10px;
   text-align: center;
+}
+
+@media (min-width: 600px) {
+
+  /* Add desktop-specific styles here */
+  header nav ul {
+    justify-content: center;
+    flex-wrap: nowrap;
+    display: flex;
+    font-size: 1rem;
+
+  }
+
+  .hamburger-menu {
+    display: none;
+    /* Hide the hamburger menu on desktop */
+  }
+
+  header nav li a {
+    width: auto;
+    margin: 0;
+    padding: 10px 20px;
+  }
+
+  nav {
+    max-height: 100px;
+    padding: 0;
+  }
+
+  #temples {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  figure {
+    width: fit-content;
+    margin: 0;
+  }
 }

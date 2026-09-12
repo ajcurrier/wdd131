@@ -1,0 +1,36 @@
+/* Desktop view: */
+@media (min-width: 600px) {
+
+    /* Add desktop-specific styles here */
+    header nav ul {
+        justify-content: center;
+        flex-wrap: nowrap;
+        display: flex;
+        font-size: 1rem;
+
+    }
+
+    .hamburger-menu {
+        display: none;
+        /* Hide the hamburger menu on desktop */
+    }
+
+    header nav li a {
+        width: auto;
+        margin: 0;
+        padding: 10px 20px;
+    }
+
+    nav {
+        max-height: 100px;
+        padding: 0;
+    }
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    figure {
+        width: fit-content;
+        margin: 0;
+    }
+}
