@@ -96,7 +96,7 @@ header nav li:hover, header nav li a:hover {
 }
 #temples figure img {
     width: 100%;
-    max-width: 300px;
+    /* max-width: 300px; */
     /* width: 250px; */
     height: auto;
     border-radius: 10px;
