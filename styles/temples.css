@@ -30,8 +30,9 @@ nav {
 /* Hamburger Menu Styles */
 .hamburger-menu {
   padding: 5px;
-  /* cursor: pointer; */
-  /* background-color: #fff; */
+  background-color: #e8dc8f;
+  border: none;
+  font-size: 2rem;
 }
 /* Rotating Hamburger incomplete Attempt
 .hamburger-x .bar {
@@ -46,11 +47,9 @@ nav {
 }  */
 .hamburger-menu::before {
   content: "☰";
-  color:#000;
 }
 .hamburger-menu.hamburger-x::before {
   content: "X";
-  color: #000;
 
 }
 
@@ -101,7 +100,7 @@ header nav li:hover, header nav li a:hover {
     height: auto;
     border-radius: 10px;
     margin: 0 auto;
-    height: fit-content;
+
 }
 
 footer {
