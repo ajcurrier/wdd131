@@ -3,6 +3,7 @@
     --background-color1: rgba(245, 240, 140, 100%);
     --background-color2: rgba(153, 200, 247, 80%);
     --background-color3: rgba(97, 144, 60, 100%);
+    --border-black: rgba(0, 0, 0, 0.9);
     --universal-padding: 0.5rem;
     --label-padding: 0.2rem
 }
@@ -31,7 +32,7 @@ header {
 .card {
     margin: 1rem;
     padding: var(--universal-padding);
-    border: 2px solid #000000;
+    border: 2px solid var(--border-black);
     border-radius: 25px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     text-align: center;

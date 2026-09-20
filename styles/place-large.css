@@ -50,7 +50,7 @@
         margin-top: 20px;
         margin-right: 20px;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-        border: 2px solid #000;
+        border: 2px solid var(--border-black);
         justify-content: center;
     }
     
