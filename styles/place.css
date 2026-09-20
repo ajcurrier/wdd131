@@ -1,8 +1,8 @@
 :root {
     /* --font-family: 'Montserrat', sans-serif; */
-    --background-color1: #f5f08c;
+    --background-color1: rgba(245, 240, 140, 100%);
     --background-color2: rgba(153, 200, 247, 80%);
-    --background-color3: #61903c;
+    --background-color3: rgba(97, 144, 60, 100%);
     --universal-padding: 0.5rem;
     --label-padding: 0.2rem
 }
@@ -44,9 +44,6 @@ ul {
     padding: 0px;
 }
 
-.card {
-    padding: 0;
-}
 
 .data-list li{
     display: grid;
