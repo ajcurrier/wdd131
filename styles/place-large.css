@@ -1,0 +1,63 @@
+
+
+@media (min-width: 900px){
+    
+    
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: fit-content;
+    }
+    #hero-image {
+        grid-column: 1/7;
+        grid-row: 1/4;
+        /* z-index: -1;
+        position: relative; */
+
+    }
+    header {
+        border-bottom: var(--universal-padding) solid var(--background-color3);
+    }
+    /* .card {
+        z-index: 1;
+        position: relative;
+    } */
+    #data {
+        grid-row: 1/2;
+    }
+    .card {
+        height: fit-content;
+        padding: var(--universal-padding);
+
+    }
+    
+    #weather {
+        grid-column: 5/7;
+        grid-row: 2/3;
+        height: fit-content;
+        justify-self: end;
+        align-self: end;
+        padding: var(--universal-padding);
+    }
+
+
+    .card-heading {
+        background-color: var(--background-color1);
+        height: fit-content;
+        padding: var(--universal-padding) 0;
+        margin-left: -20px;
+        margin-top: 20px;
+        margin-right: 20px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        border: 2px solid #000;
+        justify-content: center;
+    }
+    
+    #h2weather::after {
+     content: "⛅";
+    }
+    #mobile-icon {
+        display: none;
+    }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Ashley Currier">
+  <meta name="Malibu California" content="Weather and Statistics of Malibu California">
+  <meta name="description" content="Malibu, CA, United States Statistics and Weather">
+  <link rel="stylesheet" href="styles/place.css">
+  <link rel="stylesheet" href="styles/place-large.css">
+  <title>🌴Malibu, California🌴</title>
+  <script src="scripts/place.js" defer></script>
+  <!-- Google Font Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>🌴Malibu, California🌴</h1>
+  </header>
+  <main>
+    <!-- Hero Responsive Image -->
+    <picture id="hero-image">
+      <source media="(min-width: 1200px)" srcset="images/malibu-large.webp">
+      <source media="(min-width: 600px)" srcset="images/malibu-medium.webp">
+      <img src="images/malibu-small.webp" alt="Dolphins jumping in the ocean off the coast of Malibu, California">      
+    </picture>
+    <section class="card" id="data">
+      <section class="card-heading"><h2>Data</h2></section>
+      <section class="data-list">
+        <ul>
+          <li>
+            <span class="label">Population:</span> 
+            <span class="value">9,500</span>
+          </li>
+          <li>
+            <span class="label">Area:</span> 
+            <span class="value">19.8 mi²</span>
+          </li>
+          <li>
+            <span class="label">Country:</span> 
+            <span class="value">United States</span>
+          </li>
+          <li>
+            <span class="label">Top Languages:</span>
+            <span class="value">English, Spanish</span>
+          </li>
+          <li>
+            <span class="label">Currency:</span> 
+            <span class="value">USD</span>
+          </li>
+          <li>
+            <span class="label">Time Zone:</span> 
+            <span class="value">UTC -8</span>
+          </li>
+          <li>
+            <span class="label">Calling Code:</span> 
+            <span class="value">+1</span>
+          </li>
+          <li>
+            <span class="label">Internet TLD:</span> 
+            <span class="value">.com</span>
+          </li>
+        </ul>
+      </section>
+    </section>
+    <section class="card" id="weather">
+        <section class="card-heading">
+          <h2 id="h2weather">Weather</h2>
+          <img id="mobile-icon" src="images/weather-icon.svg" alt="Weather Icon">
+        </section>
+
+        <section class="data-list">
+          <ul>
+            <li>
+              <span class="label">Temperature:</span>
+              <span class="value"> 72°F</span>
+            </li>
+            <li>
+              <span class="label">Wind Speed:</span>
+              <span class="value"> 10 mph</span>
+            </li>
+            <li>
+              <span class="label">Wind Chill:</span>
+              <span class="value">
+                <span id="windChill"></span>°F
+              </span>
+            </li>
+          </ul>
+        </section>
+
+      </section>
+    </section>
+  </main>
+  <footer>
+    <p>&copy;<span id="currentyear"></span> Ashley Currier United States</p>
+    <p id="lastModified"></p>
+    <p>Photo by Marek Piwnicki on <a href="https://www.pexels.com/photo/dolphins-jumping-in-the-ocean-off-the-coast-of-malibu-california-1234567/" target="_blank">Pexels</a></p>
+  </footer>
+</body>
+</html>
