@@ -6,7 +6,7 @@ document.getElementById("currentyear").textContent = year;
 document.getElementById("lastModified").textContent = document.lastModified;
 
 // Weather Variables
-const temperature = 25;
+const temperature = 45;
 const windSpeed = 10;
 
 // Wind Chill Calculation
