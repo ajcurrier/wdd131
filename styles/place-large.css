@@ -16,9 +16,7 @@
         position: relative; */
 
     }
-    header {
-        border-bottom: var(--universal-padding) solid var(--background-color3);
-    }
+
     /* .card {
         z-index: 1;
         position: relative;
@@ -29,6 +27,7 @@
     .card {
         height: fit-content;
         padding: var(--universal-padding);
+        border: 2px solid var(--border-black);
 
     }
     
@@ -50,7 +49,7 @@
         margin-top: 20px;
         margin-right: 20px;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-        border: 2px solid var(--border-black);
+        border: 2px solid var(--background-color3);
         justify-content: center;
     }
     

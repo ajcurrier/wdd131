@@ -20,6 +20,18 @@ header {
     padding: var(--universal-padding) 0;
     align-items: center;
     text-align: center;
+    border-bottom: var(--universal-padding) solid var(--background-color3);
+            
+}
+
+header h1{
+    margin-bottom: 0px;
+}
+header p {
+    font-weight: 400;
+    margin-top: 0;
+    font-size: 1.5rem;
+    width: 100%;
 }
 /* main {
     display: grid;
@@ -28,11 +40,12 @@ header {
 #hero-image img{
     max-width: 100%;
     display: block;
+    border-bottom: var(--universal-padding) solid var(--background-color3);
 }
 .card {
     margin: 1rem;
     padding: var(--universal-padding);
-    border: 2px solid var(--border-black);
+    border: 2px solid var(--background-color3);
     border-radius: 25px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
