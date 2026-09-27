@@ -184,7 +184,7 @@ temples.forEach(temple => {
     
 });
 // DEFINE LIST ITEMS FOR USER COMMUNICATION
-const listItems = document.querySelectorAll('li');
+const listItems = document.querySelectorAll('li a');
 // Define Page heading
 const pageHeading = document.getElementById('page-heading')
 
@@ -201,7 +201,7 @@ homeBtn.addEventListener('click', () => {
     // Remove 'is-active' from all nav items
     listItems.forEach(el => el.classList.remove('is-active'));
     // Add 'is-active' to the clicked item
-    homeBtn.classList.add('is-active');
+    homeBtn.querySelector('a').classList.add('is-active');
     // display all cards
     allCardsNode.forEach(card => {
         card.style.display = "";
@@ -219,7 +219,7 @@ oldBtn.addEventListener('click', () => {
     // Remove 'is-active' from all nav items
     listItems.forEach(el => el.classList.remove('is-active'));
     // Add 'is-active' to the clicked item
-    oldBtn.classList.add('is-active');
+    oldBtn.querySelector('a').classList.add('is-active');
     // parse through nodelist of all cards and hide them
     allCardsNode.forEach(card => {
     card.style.display = "none";
@@ -242,7 +242,7 @@ newBtn.addEventListener('click', () => {
     // Remove 'is-active' from all nav items
     listItems.forEach(el => el.classList.remove('is-active'));
     // Add 'is-active' to the clicked item
-    newBtn.classList.add('is-active');
+    newBtn.querySelector('a').classList.add('is-active');
     // parse through nodelist of all cards and hide them
     allCardsNode.forEach(card => {
     card.style.display = "none";
@@ -264,7 +264,7 @@ largeBtn.addEventListener('click', () => {
     // Remove 'is-active' from all nav items
     listItems.forEach(el => el.classList.remove('is-active'));
     // Add 'is-active' to the clicked item
-    largeBtn.classList.add('is-active');
+    largeBtn.querySelector('a').classList.add('is-active');
     // parse through nodelist of all cards and hide them
     allCardsNode.forEach(card => {
     card.style.display = "none";
@@ -286,7 +286,7 @@ smallBtn.addEventListener('click', () => {
     // Remove 'is-active' from all nav items
     listItems.forEach(el => el.classList.remove('is-active'));
     // Add 'is-active' to the clicked item
-    smallBtn.classList.add('is-active');
+    smallBtn.querySelector('a').classList.add('is-active');
     // parse through nodelist of all cards and hide them
     allCardsNode.forEach(card => {
     card.style.display = "none";
