@@ -27,8 +27,10 @@
         padding: 10px 20px;
         color: var(--background-color1);
         font-weight: 700;
+        border: solid 2px var(--background-color2);
     }
-    header nav li a:hover {
+    header nav li a:hover,
+    header nav li a.is-active {
         background-color: var(--background-color1);
         color: var(--background-color2);
     }

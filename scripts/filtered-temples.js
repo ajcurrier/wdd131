@@ -183,7 +183,10 @@ temples.forEach(temple => {
 
     
 });
-
+// DEFINE LIST ITEMS FOR USER COMMUNICATION
+const listItems = document.querySelectorAll('li');
+// Define Page heading
+const pageHeading = document.getElementById('page-heading')
 
 // HOME BUTTON
 // get the  home button
@@ -193,6 +196,12 @@ const allCardsNode = document.querySelectorAll('figure');
 
 // add the event listener
 homeBtn.addEventListener('click', () => {
+    // Change Page Title
+    pageHeading.textContent = 'Home';
+    // Remove 'is-active' from all nav items
+    listItems.forEach(el => el.classList.remove('is-active'));
+    // Add 'is-active' to the clicked item
+    homeBtn.classList.add('is-active');
     // display all cards
     allCardsNode.forEach(card => {
         card.style.display = "";
@@ -205,9 +214,15 @@ const oldBtn = document.getElementById('old-btn');
 const oldCards = document.querySelectorAll('.old');
 // add the old event listener
 oldBtn.addEventListener('click', () => {
+    // Change Page Title
+    pageHeading.textContent = 'Old Temples';
+    // Remove 'is-active' from all nav items
+    listItems.forEach(el => el.classList.remove('is-active'));
+    // Add 'is-active' to the clicked item
+    oldBtn.classList.add('is-active');
     // parse through nodelist of all cards and hide them
-        allCardsNode.forEach(card => {
-        card.style.display = "none";
+    allCardsNode.forEach(card => {
+    card.style.display = "none";
     });
     // parse through the NodeList of oldCards
     oldCards.forEach(card => {
@@ -222,9 +237,15 @@ const newBtn = document.getElementById('new-btn');
 const newCards = document.querySelectorAll('.new');
 // add the old event listener
 newBtn.addEventListener('click', () => {
+    // Change Page Title
+    pageHeading.textContent = 'New Temples';
+    // Remove 'is-active' from all nav items
+    listItems.forEach(el => el.classList.remove('is-active'));
+    // Add 'is-active' to the clicked item
+    newBtn.classList.add('is-active');
     // parse through nodelist of all cards and hide them
-        allCardsNode.forEach(card => {
-        card.style.display = "none";
+    allCardsNode.forEach(card => {
+    card.style.display = "none";
     });
     // parse through the NodeList of newCards
     newCards.forEach(card => {
@@ -238,9 +259,15 @@ const largeBtn = document.getElementById('large-btn');
 const largeCards = document.querySelectorAll('.large');
 // add the old event listener
 largeBtn.addEventListener('click', () => {
+    // Change Page Title
+    pageHeading.textContent = 'Large Temples';
+    // Remove 'is-active' from all nav items
+    listItems.forEach(el => el.classList.remove('is-active'));
+    // Add 'is-active' to the clicked item
+    largeBtn.classList.add('is-active');
     // parse through nodelist of all cards and hide them
-        allCardsNode.forEach(card => {
-        card.style.display = "none";
+    allCardsNode.forEach(card => {
+    card.style.display = "none";
     });
     // parse through the NodeList of largeCards
     largeCards.forEach(card => {
@@ -254,9 +281,15 @@ const smallBtn = document.getElementById('small-btn');
 const smallCards = document.querySelectorAll('.small');
 // add the old event listener
 smallBtn.addEventListener('click', () => {
+    // Change Page Title
+    pageHeading.textContent = 'Small Temples';
+    // Remove 'is-active' from all nav items
+    listItems.forEach(el => el.classList.remove('is-active'));
+    // Add 'is-active' to the clicked item
+    smallBtn.classList.add('is-active');
     // parse through nodelist of all cards and hide them
-        allCardsNode.forEach(card => {
-        card.style.display = "none";
+    allCardsNode.forEach(card => {
+    card.style.display = "none";
     });
     // parse through the NodeList of smallCards
     smallCards.forEach(card => {
