@@ -1,0 +1,58 @@
+@media (min-width: 600px) {
+
+    /* Add desktop-specific styles here */
+    header nav ul {
+        justify-content: center;
+        flex-wrap: nowrap;
+        display: flex;
+        font-size: 1rem;
+
+    }
+
+    .hamburger-menu {
+        display: none;
+        /* Hide the hamburger menu on desktop */
+    }
+    #title {
+        display: none;
+    }
+    #desktop-title {
+        display: block;
+        padding: var(--universal-padding);
+    }
+
+    header nav li a {
+        width: auto;
+        margin: 0;
+        padding: 10px 20px;
+        color: var(--background-color1);
+        font-weight: 700;
+    }
+    header nav li a:hover {
+        background-color: var(--background-color1);
+        color: var(--background-color2);
+    }
+
+    nav {
+        padding: 0;
+        background-color: var(--background-color2);
+    }
+    main {
+        color: var(--background-color1)
+    }
+    #temples {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    figure {
+        width: 300px;
+        height: 350px;
+        margin: 1rem;
+
+    }
+    figure img{
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 50%);
+    }
+
+}

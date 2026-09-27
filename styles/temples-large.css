@@ -6,7 +6,11 @@
         flex-wrap: nowrap;
         display: flex;
         font-size: 1rem;
+        width: 100%;
 
+    }
+    main {
+        width: 100%;
     }
 
     .hamburger-menu {

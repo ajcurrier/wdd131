@@ -1,0 +1,133 @@
+:root {
+  --background-color1: rgba(15, 79, 32, 100%);
+  --background-color2:rgb(248, 243, 211);
+  --background-color2-25: rgba(248, 243, 211, 25%);
+  --universal-padding: 2rem;
+  --nav-padding: 1rem;
+}
+body {
+    font-family: "DM Sans", sans-serif;
+    text-align: center;
+
+}
+/* test */
+.old figure {
+  background-color: chartreuse;
+  display: "";
+}
+
+header {
+  background-color: var(--background-color1);
+  color: var(--background-color2);
+  margin: 0;
+  width: 100%;
+}
+header h3{ 
+  margin:auto;
+  padding: var(--universal-padding);
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: var(--nav-padding);
+  /* width: 100%; */
+  margin: 0px;
+  font-size: 2rem;
+
+}
+/* Hamburger Menu Styles */
+.hamburger-menu {
+  padding: 5px;
+  background-color: var(--background-color1);
+  border: none;
+  font-size: 2rem;
+  color:var(--background-color2);
+}
+#title{
+  margin: auto;
+  padding: var(--universal-padding);
+}
+/* Rotating Hamburger incomplete Attempt
+.hamburger-x .bar {
+  transform: rotate(-45deg) translate(-5px, 6px);
+} 
+.bar {
+  height: 4px;
+  width: 35px;
+  background-color: #414040;
+  display: block;
+  margin: 4px;
+}  */
+.hamburger-menu::before {
+  content: "☰";
+}
+.hamburger-menu.hamburger-x::before {
+  content: "X";
+
+}
+#desktop-title {
+  display: none;
+}
+
+header nav a {
+  color: var(--background-color2);
+  text-decoration: none;
+  margin: 0 auto;
+  display: block;
+  padding: var(--nav-padding);
+  /* height: 100%; */
+}
+header nav ul {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: none; /* Hide the menu by default */
+
+}
+#menu.show {
+  display: flex; /* Show the menu when the "show" class is added */
+  flex-direction: column;
+  width: 100%;
+}
+header nav ul li {
+  display:block;
+  flex: 1 1 100%;
+  font-size: 1rem;
+  
+}
+
+header nav li a:hover {
+  background-color: var(--background-color2);
+  color: var(--background-color1);
+}
+
+/* Temple Image Arrangement */
+figure {
+
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  margin: var(--universal-padding);
+  padding: var(--universal-padding);
+  border: 2px solid var(--background-color1);
+  background-color: var(--background-color2-25);
+}
+#temples figure img {
+    height: auto;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 250px;
+    height: auto;
+
+}
+
+footer {
+  background-color: var(--background-color1);
+  padding: var(--universal-padding);
+  text-align: center;
+  color:var(--background-color2);
+}

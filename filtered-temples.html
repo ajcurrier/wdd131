@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Ashley Currier">
+  <meta name="Temple Album" content="Temples of the Church of Jesus Christ of Latter-day Saints">
+  <meta name="description" content="A collection of temples of the Church of Jesus Christ of Latter-day Saints">
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+  <link rel="stylesheet" href="styles/filtered-temples-large.css">
+  <title>Temple Album</title>
+  <!-- JavaScript -->
+  <script src="scripts/filtered-temples.js" defer></script>
+<!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,500&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h2 id="desktop-title">Temple Album</h2>
+        <nav>
+            <!-- Hamburger Menu -->
+             <button class="hamburger-menu" id="hamburger-menu" aria-label="Menu"></button>
+             <span id="title"><strong>Temple Album</strong></span>   
+                <!-- Rotating Hamburger Menu
+                3 bars that rotate to form an X when clicked. Code incomplete
+                <div class="bar" id="bar1"></div>
+                <div class="bar" id="bar2"></div>
+                <div class="bar" id="bar3"></div> -->
+            
+            <ul id="menu">
+                <li id="home-btn"><a href="#">Home</a></li>
+                <li id="old-btn"><a href="#">Old</a></li>
+                <li  id="new-btn"><a href="#">New</a></li>
+                <li id="large-btn"><a href="#">Large</a></li>
+                <li id="small-btn"><a href="#">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Home</h1>
+        <div id="temples">
+            
+            
+        </div>
+
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Ashley Currier United States</p>
+        <pre>Last Modified: </pre><p id="lastModified"></p>
+        <!-- Footer content goes here -->
+    </footer>
+</body>
+</html>
