@@ -1,6 +1,6 @@
 :root {
   --background-color1: rgba(15, 79, 32, 100%);
-  --background-color2:rgb(248, 243, 211);
+  --background-color2:rgba(248, 243, 211, 100%);
   --background-color2-25: rgba(248, 243, 211, 25%);
   --universal-padding: 2rem;
   --nav-padding: 1rem;
@@ -9,11 +9,6 @@ body {
     font-family: "DM Sans", sans-serif;
     text-align: center;
 
-}
-/* test */
-.old figure {
-  background-color: chartreuse;
-  display: "";
 }
 
 header {
@@ -82,7 +77,6 @@ header nav a {
 }
 header nav ul {
   text-align: center;
-  display: flex;
   flex-wrap: wrap;
   width: 100%;
   padding: 0;
@@ -122,7 +116,6 @@ figure {
     border-radius: 10px;
     margin: 0 auto;
     width: 250px;
-    height: auto;
 
 }
 
