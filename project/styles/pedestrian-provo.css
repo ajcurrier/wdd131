@@ -132,34 +132,75 @@ main h1 {
     margin: var(--universal-padding);
     padding: var(--universal-padding);
 }
+
+
+
+/* -----------------Community Form----------------- */
 .join-community {
-    margin: var(--universal-padding);
+    margin: auto;
     padding: var(--universal-padding);
     border: 4px solid var(--ocean-blue);
     border-radius: var(--border-radius);
     background-color: rgba(255, 255, 255, 0.6);
+    max-width: 450px;
 }
 .join-community h3 {
-    text-align: center;
+    margin: 0 var(--half-universal-padding) var(--half-universal-padding);
 }
-.join-community form {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
+.wf1 fieldset {
+    border: .1px solid rgba(37, 110, 141, 0.3);
+    border-radius: var(--border-radius);
+    padding: .5rem 2% 1rem 2%;
+    margin: auto;
 }
-.join-community label {
+
+.wf1 legend {
+    font-weight: 400;
+    color: var(--ocean-blue);
+    padding: 0 .5rem;
+}
+
+.wf1 label {
+    display: block;
+    padding-top: var(--half-universal-padding);
     font-weight: 600;
 }
-button[type="submit"] {
-    background-color: var(--ocean-blue);
+
+.wf1 input[type="text"],
+.wf1 input[type="email"]{
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid var(--mocha);
+    border-radius: var(--border-radius);
+    padding: .75rem;
+    color: var(--mocha);
+    appearance: none;
+}
+
+.wf1 input[type="submit"] {
+    background-image: linear-gradient(hsl(198, 58%, 35%), hsl(198, 58%, 20%));
     color: white;
     border: none;
-    padding: var(--half-universal-padding);
+    padding: .75rem;
     border-radius: var(--border-radius);
     cursor: pointer;
-    margin-top: var(--universal-padding);
+    margin: 1.5rem 2% 0.5rem 2%;
+    font-size: 1rem;
     font-weight: 600;
+    width: 96%;
+    max-width: 400px;
+    
 }
+.wf1 input[type="submit"]:hover {
+    background-image: linear-gradient(hsl(198, 58%, 20%), hsl(198, 58%, 30%));
+}
+.wf1 input:required {
+    border-left: solid 8px var(--ocean-blue);
+}
+.wf1 input:required:valid {
+    border-left: solid 8px green;
+}
+
 .reference-table {
     text-align: left;
     padding: var(--half-universal-padding);

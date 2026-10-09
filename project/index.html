@@ -42,14 +42,18 @@
     <!-- Form -->
         <section class="join-community">
             <h3>Join Our Community</h3>
-            <form>
-                <label for="name">*Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">*Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="pet">Pet Name (optional):</label>
-                <input type="text" id="pet" name="pet">
-                <button type="submit">Join Our Community</button>
+            <!-- Join our Community form. I need to add an action to the form. I will need to add a script to handle the form submission and validation. I will also need to add a success message after the form is submitted. -->
+            <form class="wf1" method="get" action="#">
+                <fieldset>
+                    <legend>Your Information</legend>
+                    <label for="name">Name*</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                    <label for="pet">Pet Name (optional):</label>
+                    <input type="text" id="pet" name="pet">
+                </fieldset>
+                <input type="submit" value="Join Our Community">
             </form>
         </section>
     </main>
