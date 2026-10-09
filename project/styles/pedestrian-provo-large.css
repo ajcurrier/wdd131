@@ -46,7 +46,7 @@
         position: relative;
         z-index: -1;
         width: 100%;
-        max-width: 1500px;
+        max-width: 2000px;
         height: auto;
         margin: auto;
         grid-column: 1 / 5;
@@ -62,6 +62,9 @@
     }
     .join-community {
         grid-column: 3/5;
+        max-width: 500px;
+        margin-right: 0px;
+        margin-top: var(--universal-padding);
     }
 
     .reference-table {
