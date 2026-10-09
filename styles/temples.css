@@ -51,14 +51,19 @@ nav {
 }
 .hamburger-menu.hamburger-x::before {
   content: "X";
-
 }
-
+#menu.show {
+  display: flex;
+  /* Show the menu when the "show" class is added */
+  flex-direction: column;
+  width: 100%;
+}
 header nav a {
   color: #000;
   text-decoration: none;
-  margin: 0 auto;
+  margin: 0;
   display: block;
+  padding: var(--half-universal-padding);
   /* height: 100%; */
 }
 header nav ul {
@@ -71,18 +76,14 @@ header nav ul {
   display: none; /* Hide the menu by default */
 
 }
-#menu.show {
-  display: flex; /* Show the menu when the "show" class is added */
-  flex-direction: column;
-  width: 100%;
-}
+
 header nav ul li {
   display:block;  
   flex: 1 1 100%;
   font-size: 1rem;
-  padding: 5px;
+  padding: 0px;
 }
-header nav li:hover, header nav li a:hover {
+header nav li:hover {
   background-color: #0f4f20;
   color: #e8dc8f;
 }

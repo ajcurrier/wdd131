@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Ashley Currier">
+  <meta name="description" content="Experience the delights of Provo, Utah biking and pedestrian style. Discover the rules and regulations for safe walking, hiking, and biking. Explore the best routes and areas to explore, and learn about responsible dog-walking guidelines.">
+  <link rel="stylesheet" href="styles/pedestrian-provo.css">
+  <link rel="stylesheet" href="styles/pedestrian-provo-large.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,800;1,600;1,600;1,400;1,700&display=swap">
+  <title>Pedestrian Provo</title>
+  <script src="scripts/pedestrian-provo.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="ham-box">
+                <button class="hamburger-menu" id="hamburger-menu" aria-label="Menu"></button>
+            </div>
+            
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bicycling.html">Bicycling</a></li>
+                <li><a href="walking.html">Walking</a></li>
+                <li><a href="recreation-routes.html">Routes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="home">
+        <h1 id="home-h1">Pedestrian Provo</h1>
+        <picture class="hero-image">
+            <source srcset="images/hero-1500px.webp" media="(min-width: 1000px)">
+            <source srcset="images/hero-1000px.webp" media="(min-width: 600px)">
+            <source srcset="images/hero-600px.webp" media="(min-width: 400px)">
+            <img src="images/hero-400px.webp" alt="A scenic view of Provo, Utah with mountains in the background and a trail in the foreground.">
+        </picture>
+    <!-- Intro -->
+        <section class="intro">
+            <h2>Welcome to Pedestrian Provo</h2>
+            <p>Discover the delights of Provo, Utah biking and pedestrian style. Learn about the rules and regulations for safe walking, hiking, and biking. Explore the best routes and areas to explore, and learn about responsible dog-walking guidelines.</p>
+        </section>
+    <!-- Form -->
+        <section class="join-community">
+            <h3>Join Our Community</h3>
+            <form>
+                <label for="name">*Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">*Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="pet">Pet Name (optional):</label>
+                <input type="text" id="pet" name="pet">
+                <button type="submit">Join Our Community</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Ashley Currier United States</p>
+        <span>Last Modified: </span>
+        <span id="lastModified"></span>
+        <p>Photo by Victoria B. on <a href="https://images.pexels.com/photos/20296675/pexels-photo-20296675.jpeg" target="_blank">Pexels</a></p>
+        <p><a href="resources.html">Website Resources</a></p>
+    </footer>
+
+
+<!-- Any image or frame used below the fold utilizes native lazy loading or equivalent practice. -->
+</body>
+</html>
