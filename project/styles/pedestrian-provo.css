@@ -133,7 +133,11 @@ main h1 {
     padding: var(--universal-padding);
 }
 
-
+.rside-img {
+    margin: auto;
+    width: 80%;
+    max-width: 400px;
+}
 
 /* -----------------Community Form----------------- */
 .join-community {
@@ -200,7 +204,11 @@ main h1 {
 .wf1 input:required:valid {
     border-left: solid 8px green;
 }
-
+/* --------------Walking Body Section------------- */
+.walking-body {
+    margin: var(--universal-padding);
+}
+/* ---------------------Reference Table--------------- */
 .reference-table {
     text-align: left;
     padding: var(--half-universal-padding);

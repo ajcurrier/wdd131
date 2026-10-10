@@ -9,8 +9,7 @@
         content="Experience the delights of Provo, Utah biking and pedestrian style. Discover the rules and regulations for safe walking, hiking, and biking. Explore the best routes and areas to explore, and learn about responsible dog-walking guidelines.">
     <link rel="stylesheet" href="styles/pedestrian-provo.css">
     <link rel="stylesheet" href="styles/pedestrian-provo-large.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,800;1,600;1,600;1,400;1,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap">
     <title>Pedestrian Provo</title>
     <script src="scripts/pedestrian-provo.js" defer></script>
 </head>
@@ -31,16 +30,72 @@
         </nav>
     </header>
     <main class="home">
-        <h1>Walking</h1>
-        <p class="h2">Walking With <span class="pet-name">Your Pet</span></p>
+        <h1 id="home-h1">Pedestrian Provo</h1>
         
-        <p></p>
+        <!-- Intro -->
+        <section class="walking-body" >
+            
+            <h2>Walking</h2>
+            
+            <p>
+                The city of Provo Utah was designed with pedestrians in mind. Sidewalks line every street and you can get anywhere you
+                want to go on foot. The city is even designed in a grid street system so it’s easy to find your way around. In many
+                areas lovely lawns line, both sides of the sidewalk. Beautiful trees provide shade and a touch of nature.
+                Provo is a very family friendly city and it’s not unlikely to see mothers and fathers pushing strollers or kids walking
+                with their parents to the closest park. You are also likely to come across neighbors walking their dog.
+            </p>
+            <h3>Bring <span class="pet">Your Dog</span>!</h3>
+            <img class="rside-img" src="images/dog.webp" alt="Picture of a magestic german shepherd named Dusty Rusty"
+                loading="lazy">
+            <p>
+                A dog’s love, loyalty, companionship and dedication to their families have made them beloved companions to people all over the world,
+                and Provo is no exception. Many residents of Provo will be found taking their beloved pets on their customary walk on a regular basis.
+            </p>
+            <p>
+                I have grown fond of creating a little adventure in finding new routes, new roads to take my German Shepherd down. Then
+                relying on the grid system to help me find my way back home. It’s delightful to see the different ways homeowners have
+                chosen to decorate their yards and homes. Some share their green thumbs with lovely flowers and shrubbery. The sight and
+                smells of which are therapeutic. Other neighbors may add interesting pieces to their yard décor. Such as an old bathtub
+                pulled from the home and filled with soil and flowers, or a little pond and fountain.
+            </p>
+            <p>
+                So come, bring <span class="pet">your pet</span> and tour the streets of Provo.
+                The large number of people and animals who travel the sidewalks makes it very important for the health and safety of
+                everyone in the community that certain guidelines are followed.
+            </p>
+            <p>
+                Always keep bags on hand and pick up all <span class="pet">your pet</span>’s droppings and place them in a waste container.
+                Keep <span class="pet">your pet</span> on a leash. <span class="pet">Your pet</span> may be very well behaved and
+                friendly to everyone they meet but that doesn’t mean everyone else’s dog is. It is completely natural for a social dog
+                to wag their tail with excitement and be eager to meet any new dog they come across. However not all dogs respond the
+                same way. Some dogs will respond aggressively no matter how friendly the other dog’s approach is. These situations can
+                escalate quickly and endanger the dogs and owners. So please, for everyone’s safety, keep your dog on a leash.
+            </p>
+            <!-- <h2>Welcome to Pedestrian Provo <span class="name"></span>!</h2> -->
 
-      
-
+        </section>
+        <!-- Form -->
+        <section class="join-community">
+            <h3>Join Our Community</h3>
+            <!-- Join our Community form. I need to add an action to the form. I will need to add a script to handle the form submission and validation. I will also need to add a success message after the form is submitted. -->
+            <form class="wf1">
+                <fieldset>
+                    <legend>Your Information</legend>
+                    <label for="fname">First Name*</label>
+                    <input type="text" id="fname" name="fname" required>
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                    <label for="pet">Pet Name (optional)</label>
+                    <input type="text" id="pet" name="pet">
+                </fieldset>
+                <input type="submit" value="Join Our Community">
+            </form>
+            <span id="successful-submission"></span>
+        </section>
     </main>
     <footer>
-        <p>&copy;<span id="currentyear"></span> Ashley Currier United States</p>
+        <p>&copy;<span id="currentyear"></span> <a href="https://ajcurrier.github.io/wdd131/index.html"
+                target="_blank">Ashley Currier</a> United States</p>
         <span>Last Modified: </span>
         <span id="lastModified"></span>
         <p>Photo by Victoria B. on <a href="https://images.pexels.com/photos/20296675/pexels-photo-20296675.jpeg"

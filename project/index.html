@@ -7,7 +7,7 @@
   <meta name="description" content="Experience the delights of Provo, Utah biking and pedestrian style. Discover the rules and regulations for safe walking, hiking, and biking. Explore the best routes and areas to explore, and learn about responsible dog-walking guidelines.">
   <link rel="stylesheet" href="styles/pedestrian-provo.css">
   <link rel="stylesheet" href="styles/pedestrian-provo-large.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,800;1,600;1,600;1,400;1,700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap">
   <title>Pedestrian Provo</title>
   <script src="scripts/pedestrian-provo.js" defer></script>
 </head>
@@ -37,18 +37,19 @@
         </picture>
     <!-- Intro -->
         <section class="intro">
-            <h2>Welcome to Pedestrian Provo</h2>
+            <h2>Welcome to Pedestrian Provo<span class="comma-name"></span>!</h2>
+            <!-- <h2>Welcome to Pedestrian Provo <span class="name"></span>!</h2> -->
             <p>Discover the delights of Provo, Utah biking and pedestrian style. Learn about the rules and regulations for safe walking, hiking, and biking. Explore the best routes and areas to explore, and learn about responsible dog-walking guidelines.</p>
         </section>
     <!-- Form -->
         <section class="join-community">
             <h3>Join Our Community</h3>
             <!-- Join our Community form. I need to add an action to the form. I will need to add a script to handle the form submission and validation. I will also need to add a success message after the form is submitted. -->
-            <form class="wf1" method="get" action="#">
+            <form class="wf1">
                 <fieldset>
                     <legend>Your Information</legend>
-                    <label for="name">Name*</label>
-                    <input type="text" id="name" name="name" required>
+                    <label for="fname">First Name*</label>
+                    <input type="text" id="fname" name="fname" required>
                     <label for="email">Email*</label>
                     <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
                     <label for="pet">Pet Name (optional)</label>
@@ -56,6 +57,7 @@
                 </fieldset>
                 <input type="submit" value="Join Our Community">
             </form>
+            <span id="successful-submission"></span>
         </section>
     </main>
     <footer>

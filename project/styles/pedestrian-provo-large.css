@@ -54,17 +54,29 @@
         z-index: -1;
     }
     .intro {
-        grid-column: 1 / 3;
+        grid-column: 1 / 4;
     }
     .intro h2, .intro p {
         margin: 0;
         padding: var(--half-universal-padding);
     }
+.walking-body {
+    grid-column: 1/5;
+    column-span: all;
+    position: relative;
+}
+.rside-img {
+    float: right;
+    width: 50%;
+    max-width: 400px;
+    margin-left: var(--universal-padding);
+}
     .join-community {
-        grid-column: 3/5;
-        max-width: 500px;
+        grid-column: 1/3;
+        width: 100%;
+        max-width: 800px;
         margin-right: 0px;
-        margin-top: var(--universal-padding);
+        margin-left: var(--universal-padding);
     }
 
     .reference-table {
