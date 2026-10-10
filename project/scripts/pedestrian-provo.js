@@ -102,54 +102,140 @@ if (savedUser) {
 
 
 
-// -----------------------------------Routes------------------------------
-// const routes = [
-//     {
-//     routeName: "Provo River Parkway – Bridal Veil Falls loop from Provo Central",
-//     bike: true,
-//     walk: false,
-//     difficulty: "moderate",
-//     miles: 13.9,
-//     link: "https://www.komoot.com/smarttour/38440203",
-//     imageUrl: "https://d2exd72xrrp1s7.cloudfront.net/www/000/1k8/uq/uqq6mluhk3ug1zzqv3x230sp4vqw6e81-uhi69015505/0?width=2048&crop=false&q=80"
+// -----------------------------------Routes Object------------------------------
+const routes = [
+    {
+    routeName: "Provo River Parkway – Bridal Veil Falls loop from Provo Central",
+    bike: true,
+    walk: false,
+    difficulty: "moderate",
+    miles: 13.9,
+    link: "https://www.komoot.com/smarttour/38440203",
+    imageUrl: "https://d2exd72xrrp1s7.cloudfront.net/www/000/1k8/uq/uqq6mluhk3ug1zzqv3x230sp4vqw6e81-uhi69015505/0?width=2048&crop=false&q=80"
         
-//     },
-//     {
-//     routeName: "Murdock Canal Trail – Murdock Canal Trail loop from Provo",
-//     bike: true,
-//     walk: false,
-//     difficulty: "easy",
-//     miles: 27.2,
-//     link: "https://www.komoot.com/smarttour/44401686",
-//     imageUrl: "https://www.komoot.com/smarttour/44401686/embed?layout=map&amp;width=100%25&amp;height=540&amp;image=1&amp;hm=false"
-//     },
-//     {
-//     routeName: "Provo River Parkway – Provo River Parkway loop from Provo",
-//     bike: true,
-//     walk: false,
-//     difficulty: "easy",
-//     miles: 18.4,
-//     link: "https://www.komoot.com/smarttour/44402821",
-//     imageUrl: "https://www.komoot.com/smarttour/44402821/embed?layout=map&amp;width=100%25&amp;height=540&amp;image=1&amp;hm=false"   
-//     },
-//     {
-//     routeName: "Provo River Parkway – Provo River loop from Indian Road Trailhead",
-//     bike: true,
-//     walk: false,
-//     difficulty: "moderate",
-//     miles: 23.3,
-//     link: "https://www.komoot.com/smarttour/45149132",
-//     imageUrl: "https://www.komoot.com/smarttour/45149132/embed?layout=map&amp;width=100%25&amp;height=540&amp;image=1&amp;hm=false"   
-//     },
-//     {
-//     routeName: "",
-//     bike: true,
-//     walk: false,
-//     difficulty: "",
-//     miles: 1,
-//     link: "",
-//     imageUrl: ""   
-//     }    
-// ]
+    },
+    {
+    routeName: "Murdock Canal Trail – Murdock Canal Trail loop from Provo",
+    bike: true,
+    walk: false,
+    difficulty: "easy",
+    miles: 27.2,
+    link: "https://www.komoot.com/smarttour/44401686",
+    imageUrl: "https://www.komoot.com/smarttour/44401686/embed?layout=map&amp;width=100%25&amp;height=540&amp;image=1&amp;hm=false"
+    },
+    {
+    routeName: "Provo River Parkway – Provo River Parkway loop from Provo",
+    bike: true,
+    walk: false,
+    difficulty: "easy",
+    miles: 18.4,
+    link: "https://www.komoot.com/smarttour/44402821",
+    imageUrl: "https://www.komoot.com/smarttour/44402821/embed?layout=map&amp;width=100%25&amp;height=540&amp;image=1&amp;hm=false"
+    },
+    {
+    routeName: "Provo River Parkway – Provo River loop from Indian Road Trailhead",
+    bike: true,
+    walk: false,
+    difficulty: "moderate",
+    miles: 23.3,
+    link: "https://www.komoot.com/smarttour/45149132",
+    imageUrl: "https://www.komoot.com/smarttour/45149132/embed?layout=map&amp;width=100%25&amp;height=540&amp;image=1&amp;hm=false"
+    },
+    {
+    routeName: "",
+    bike: true,
+    walk: false,
+    difficulty: "",
+    miles: 1,
+    link: "",
+    imageUrl: ""
+    }
+]
 
 
+
+
+
+
+
+// -----------------------------------------------------------recreation routes filter------------------------------------------------------
+
+routes.forEach(routes => {
+    
+    // card
+    const card = document.createElement("figure");
+    //optional class for routes card - I think I will select by #routes section{} in the css instead
+    // card.classList.add("routes-card");
+    
+    
+    // Title Element
+    const title = document.createElement("h3");
+    title.textContent = routes.routeName;
+    
+    // Miles
+    const miles = document.createElement("p");
+    miles.innerHTML = `<strong>Miles:</strong> ${routes.miles}`;
+    
+    //create the link information
+    
+    //Komoot Route Page
+    const routePage = document.createElement("a");
+    routePage.innerHTML = `<strong>Komoot Route Details</strong>`;
+    routePage.href = routes.link;
+    // Difficulty
+    const difficulty = document.createElement("p")
+    difficulty.innerHTML = `<strong>Difficulty:</strong> ${routes.difficulty}`;
+    
+    // Create the alt
+    const alt = `An image of the ${routes.routeName} route in Provo, Utah`;
+    // Add the image
+    const thumbIMG = document.createElement("img");
+    thumbIMG.src = routes.imageUrl;
+    // add the alt to the image
+    thumbIMG.alt = alt;
+    // Add the width and height
+    thumbIMG.width = 400;
+    thumbIMG.height = 250;
+    // Add Lazy Loading to the image
+    thumbIMG.setAttribute("loading", "lazy");
+   
+    // Turn off all cards
+    // card.style.setProperty("display", "none")
+    
+    
+    // // ADD CLASSES
+    // // add "Old" class if routes is built before 1900
+    // if (year < 1900) {
+    //     card.classList.add("old");
+    // };
+    // // Add New Class if routes was built after 2000
+    // if (year > 2000) {
+    //     card.classList.add("new");
+    // };
+    // // add large class if routes is larger than 90000
+    // if (size > 90000) {
+    //     card.classList.add("large");
+    // };
+    // // add small class if smaller than 10000 sq feet
+    // if (size < 10000) {
+    //     card.classList.add("small");
+    // };
+
+
+    
+    
+    // Add individual elements to "Card"
+    card.appendChild(title);
+    card.appendChild(miles);
+    card.appendChild(difficulty);
+    card.appendChild(thumbIMG);
+    // route information on komoot
+    card.appendChild(routePage)
+
+
+    // Find #routes in HTML and add "Card" 
+    const container = document.getElementById('routes');
+    container.appendChild(card);
+
+    
+});

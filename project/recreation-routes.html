@@ -9,8 +9,7 @@
         content="Experience the delights of Provo, Utah biking and pedestrian style. Discover the rules and regulations for safe walking, hiking, and biking. Explore the best routes and areas to explore, and learn about responsible dog-walking guidelines.">
     <link rel="stylesheet" href="styles/pedestrian-provo.css">
     <link rel="stylesheet" href="styles/pedestrian-provo-large.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,800;1,600;1,600;1,400;1,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap">
     <title>Pedestrian Provo</title>
     <script src="scripts/pedestrian-provo.js" defer></script>
 </head>
@@ -24,20 +23,36 @@
 
             <ul id="menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="bicycling.html">Bicycling</a></li>
+                <!-- <li><a href="bicycling.html">Bicycling</a></li> -->
                 <li><a href="walking.html">Walking</a></li>
                 <li><a href="recreation-routes.html">Routes</a></li>
             </ul>
         </nav>
     </header>
     <main class="home">
-        <h1>Recreation Routes</h1>
-
-        <!-- Intro -->
-   
+       <div id="routes"></div>
+        <!-- Form -->
+        <section class="join-community">
+            <h3>Join Our Community</h3>
+            <!-- Join our Community form. I need to add an action to the form. I will need to add a script to handle the form submission and validation. I will also need to add a success message after the form is submitted. -->
+            <form class="wf1">
+                <fieldset>
+                    <legend>Your Information</legend>
+                    <label for="fname">First Name*</label>
+                    <input type="text" id="fname" name="fname" required>
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                    <label for="pet">Pet Name (optional)</label>
+                    <input type="text" id="pet" name="pet">
+                </fieldset>
+                <input type="submit" value="Join Our Community">
+            </form>
+            <span id="successful-submission"></span>
+        </section>
     </main>
     <footer>
-        <p>&copy;<span id="currentyear"></span> Ashley Currier United States</p>
+        <p>&copy;<span id="currentyear"></span> <a href="https://ajcurrier.github.io/wdd131/index.html"
+                target="_blank">Ashley Currier</a> United States</p>
         <span>Last Modified: </span>
         <span id="lastModified"></span>
         <p>Photo by Victoria B. on <a href="https://images.pexels.com/photos/20296675/pexels-photo-20296675.jpeg"
