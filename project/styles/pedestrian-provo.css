@@ -220,13 +220,12 @@ figure {
     border-radius: var(--border-radius);
     background-color: rgba(255, 255, 255, 0.6);
     box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.2);
+    text-align: center;
     
 }
 figure img {
     box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.2);
-}
-figure h3 {
-    text-align: center;
+    border: 2px solid var(--pale-oak);  
 }
 
 /* ---------------------Reference Table--------------- */
