@@ -24,6 +24,7 @@ h6 {
     font-family: 'Noto Sans', sans-serif;
     font-weight: 800;
     color: var(--mocha);
+    margin-left: var(--universal-padding);
 }
 
 * {
@@ -211,6 +212,44 @@ main h1 {
 
 
 /* -------------------------Recreation Routes----------------------- */
+
+
+
+.html-filters-section {
+    background-color: var(--ocean-blue);
+    color: var(--pale-oak);
+    padding: var(--half-universal-padding);
+    margin-bottom: var(--universal-padding);
+
+}
+
+.html-filters-section li, .html-filters-section a {
+
+    color: var(--pale-oak);
+    font-weight: 500;
+    /* text-align: center; */
+    text-decoration: none;
+    padding: var(--half-universal-padding);
+      
+}
+.html-filters-section li {
+    width: fit-content;
+    padding-top: var(--half-universal-padding);
+    display: block;
+
+    
+
+}
+
+
+
+
+.html-filters-section a:hover, .html-filters-section a.is-active {
+    background-color: var(--pale-oak);
+    color: var(--mocha);
+}
+
+
 figure {
 
     /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */

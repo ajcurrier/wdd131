@@ -55,8 +55,7 @@ form.addEventListener('submit', function (event) {
 
     // --------------------Form Event Listener: Success Message-------------------------
     document.getElementById('successful-submission').innerHTML =
-        `<br>
-        <strong>Thanks for joining, ${userData.nameInput}!</strong>
+        `<strong>Thanks for joining, ${userData.nameInput}!</strong>
         <p>Your information has been sent.</p>`;
     
 })
@@ -105,7 +104,7 @@ if (savedUser) {
 // -----------------------------------Routes Object------------------------------
 const routes = [
     {
-    routeName: "Provo River Parkway – Bridal Veil Falls loop from Provo Central",
+    routeName: "Bridal Veil Falls loop from Provo Central",
     bike: true,
     walk: false,
     difficulty: "moderate",
@@ -115,7 +114,7 @@ const routes = [
         
     },
     {
-    routeName: "Murdock Canal Trail – Murdock Canal Trail loop from Provo",
+    routeName: "Murdock Canal Trail loop from Provo",
     bike: true,
     walk: false,
     difficulty: "easy",
@@ -124,7 +123,7 @@ const routes = [
     imageUrl: "images/murdockCanal.webp"
     },
     {
-    routeName: "Provo River Parkway – Provo River Parkway loop from Provo",
+    routeName: "Provo River Parkway loop from Provo",
     bike: true,
     walk: false,
     difficulty: "easy",
@@ -133,7 +132,7 @@ const routes = [
     imageUrl: "images/routeProvoRiverTrail.webp"
     },
     {
-    routeName: "Provo River Parkway – Provo River loop from Indian Road Trailhead",
+    routeName: "Provo River loop from Indian Road Trailhead",
     bike: true,
     walk: false,
     difficulty: "moderate",
@@ -176,12 +175,13 @@ const routes = [
 
 
 
-// -----------------------------------------------------------recreation routes filter------------------------------------------------------
+// -----------------------------------------------------------recreation routes------------------------------------------------------
 
 routes.forEach(routes => {
-    
+    // -----------------------ADD HTML----------------------
     // card
     const card = document.createElement("figure");
+    card.classList.add("routesCards")
     //optional class for routes card - I think I will select by #routes section{} in the css instead
     // card.classList.add("routes-card");
     
@@ -190,6 +190,19 @@ routes.forEach(routes => {
     const title = document.createElement("h3");
     title.textContent = routes.routeName;
     
+    //Recommended Mode of Transport
+    const modeLine = document.createElement("p")
+    let mode;
+    if (routes.bike) {
+        mode = "Bike";
+    } else if (routes.walk) {
+        mode = "Walk";
+    } else {
+        mode = "None";
+    } 
+
+    modeLine.innerHTML = `<strong>Recommended Mode:</strong> ${mode}`;
+
     // Miles
     const miles = document.createElement("p");
     miles.innerHTML = `<strong>Miles:</strong> ${routes.miles}`;
@@ -218,32 +231,12 @@ routes.forEach(routes => {
     thumbIMG.setAttribute("loading", "lazy");
    
     // Turn off all cards
-    card.style.setProperty("display", "none")
-    
-    const routeDifficulty = routes.difficulty;
-    const bikeRoute = routes.bike;
-    const walkRoute = routes.walk;
-    // const routeMiles = routes.miles;
-    
-    if (routeDifficulty == "easy") {
-        card.classList.add("small");
-    };
-    if (routeDifficulty == "moderate") {
-        card.classList.add("moderate");
-    };
-    if (routeDifficulty == "hard") {
-        card.classList.add("hard");
-    };
-    if (bikeRoute) {
-        card.classList.add("bike");
-    };
-    if (walkRoute) {
-        card.classList.add("walk");
-    };
+    // card.style.setProperty("display", "none")
     
     
     // Add individual elements to "Card"
     card.appendChild(title);
+    card.appendChild(modeLine);
     card.appendChild(miles);
     card.appendChild(difficulty);
     card.appendChild(thumbIMG);
@@ -255,5 +248,147 @@ routes.forEach(routes => {
     const container = document.getElementById('routes');
     container.appendChild(card);
 
+    //---------------- Add Filter Classes---------------------
+    const routeDifficulty = routes.difficulty;
+    const bikeRoute = routes.bike;
+    const walkRoute = routes.walk;
+    // const routeMiles = routes.miles;
+    
+
+    
+    if (routeDifficulty == "easy") {
+        card.classList.add("easy");
+    }else if (routeDifficulty == "moderate") {
+        card.classList.add("moderate");
+    }else if (routeDifficulty == "hard") {
+        card.classList.add("hard");
+    } else {
+        card.classList.add("difficulty-error");
+    };
+    
+    if (bikeRoute) {
+        card.classList.add("bike");
+    } else if (walkRoute) {
+        card.classList.add("walk");
+    } else {
+        card.classList.add("mode-error");
+    };
     
 });
+// -------------------------sort routes by distance-------------------------
+
+//const sortByDistance = routes.toSorted((a, b) => b.miles - a.miles);
+
+//-------------------------ADD Filter Event Listeners-----------------------
+
+//-----Filter Biking Routes
+//Define Filters
+const bikingBtn = document.getElementById('biking-filter');
+const walkingBtn = document.getElementById('walking-filter');
+//const distanceBtn = document.getElementById('distance-filter');
+const easyBtn = document.getElementById('easy-filter');
+const moderateBtn = document.getElementById('medium-filter');
+const hardBtn = document.getElementById('hard-filter');
+
+
+//access all fiters
+const allBtnFilters = document.querySelectorAll('li a')
+
+// -----Select Cards By Classes
+const allCards = document.querySelectorAll('.routesCards')
+const bikeCards = document.querySelectorAll('.bike');
+const walkCards = document.querySelectorAll('.walk');
+const easyCards = document.querySelectorAll('.easy');
+const moderateCards = document.querySelectorAll('.moderate');
+const hardCards = document.querySelectorAll('.hard');
+
+//Add Event Listners
+//biking routes
+bikingBtn.addEventListener('click', () => {
+    //reset highlighted Filter Buttons displayed
+    allBtnFilters.forEach(el => el.classList.remove('is-active'));
+    //highlight biking Filter
+    bikingBtn.classList.add('is-active');
+
+    // Hide all visible cards
+    allCards.forEach(card => {
+        card.style.display = "none";
+    });
+    //show bike cards
+    bikeCards.forEach(card => {
+        card.style.display = "";
+    });
+   
+});
+//Walk routes
+walkingBtn.addEventListener('click', () => {
+    //reset highlighted Filter Buttons displayed
+    allBtnFilters.forEach(el => el.classList.remove('is-active'));
+    //highlight biking Filter
+    walkingBtn.classList.add('is-active');
+    
+    // Hide all visible cards
+    allCards.forEach(card => {
+        card.style.display = "none";
+    });
+    //show walk cards
+    walkCards.forEach(card => {
+        card.style.display = "";
+    });
+   
+});
+
+//Easy Routes
+easyBtn.addEventListener('click', () => {
+    //reset highlighted Filter Buttons displayed
+    allBtnFilters.forEach(el => el.classList.remove('is-active'));
+    //highlight biking Filter
+    easyBtn.classList.add('is-active');
+    
+    // Hide all visible cards
+    allCards.forEach(card => {
+        card.style.display = "none";
+    });
+    //show walk cards
+    easyCards.forEach(card => {
+        card.style.display = "";
+    });
+   
+});
+//moderate routes
+moderateBtn.addEventListener('click', () => {
+    //reset highlighted Filter Buttons displayed
+    allBtnFilters.forEach(el => el.classList.remove('is-active'));
+    //highlight biking Filter
+    moderateBtn.classList.add('is-active');
+    
+    // Hide all visible cards
+    allCards.forEach(card => {
+        card.style.display = "none";
+    });
+    //show walk cards
+    moderateCards.forEach(card => {
+        card.style.display = "";
+    });
+   
+});
+
+//Hard Cards
+hardBtn.addEventListener('click', () => {
+    //reset highlighted Filter Buttons displayed
+    allBtnFilters.forEach(el => el.classList.remove('is-active'));
+    //highlight biking Filter
+    hardBtn.classList.add('is-active');
+    
+    // Hide all visible cards
+    allCards.forEach(card => {
+        card.style.display = "none";
+    });
+    //show walk cards
+    hardCards.forEach(card => {
+        card.style.display = "";
+    });
+
+});
+
+

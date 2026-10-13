@@ -25,6 +25,28 @@
         font-size: 1.25rem;
         /* padding: 10px 20px; */
     }
+/* ----------------route Filters--------------- */
+
+    .html-filters-section a {
+        width: auto;
+        margin: 0;
+        font-size: 1rem;
+        /* padding: 10px 20px; */
+    }
+    /* .html-filters-section nav {
+        height: 30px;
+    } */
+    .html-filters-section ul {
+        display: flex;
+        margin: var(--half-universal-padding);
+    }
+    .html-filters-section ul li {
+        display: block;
+        flex:  1 1 100%
+    }
+    #difficulty-section {
+        margin-top: -1.5rem;    
+    }
     .home {
         margin: var(--universal-padding);
         padding: var(--universal-padding);
