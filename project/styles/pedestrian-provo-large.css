@@ -31,6 +31,7 @@
         width: auto;
         margin: 0;
         font-size: 1rem;
+        display: block;
         /* padding: 10px 20px; */
     }
     /* .html-filters-section nav {
