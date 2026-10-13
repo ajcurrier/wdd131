@@ -266,6 +266,14 @@ figure img {
     box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.2);
     border: 2px solid var(--pale-oak);  
 }
+figure a {
+    color: var(--mocha);
+    text-decoration: none;
+    padding: var(--half-universal-padding);
+}
+figure a:hover{
+    text-decoration: underline;
+}
 
 /* ---------------------Reference Table--------------- */
 .reference-table {
