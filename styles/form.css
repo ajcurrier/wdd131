@@ -2,8 +2,8 @@
     --padding: 1rem;
     --mobile-padding: 0.75rem;
     --color1: hsl(227, 49%, 21%);
-    --color2: hsl(8, 36%, 63%);
-    --color3: hsl(4, 29%, 70%);
+    --color2: hsl(8, 36%, 75%);
+    --color3: hsl(4, 29%, 80%);
     --text-color: hsl(227, 49%, 21%);
     --border-radius: 10px;
     --focus-settings: 4px solid var(--color1);
@@ -116,12 +116,12 @@ input[type="submit"]{
     margin: var(--padding) 0;
     width: 100%;
     border-radius: var(--border-radius);
-    background: linear-gradient(var(--color3), hsl(4, 29%, 50%));
+    background: linear-gradient(var(--color3), var(--color2));
     color: var(--text-color);
     cursor: pointer;
 }
 input[type="submit"]:hover {
-    background: linear-gradient(hsl(4, 29%, 50%),   var(--color3));
+    background: linear-gradient(var(--color2), var(--color3));
 }
 input:user-invalid {
     border-color: crimson;
