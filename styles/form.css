@@ -71,6 +71,8 @@ label {
     flex-direction: column-reverse;
     margin: 0.5rem;
     height: auto;
+    display: flex;
+    width: fit-content;
 }
 .radio-group input{
     padding: 0.75rem;
@@ -85,10 +87,7 @@ select:focus {
 /* option {
     padding: .5rem;
 } */
-.radio-group {
-    display: flex;
-    width: fit-content;
-}
+
 
 input, textarea, select {
     padding: var(--padding);
