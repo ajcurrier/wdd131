@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Ashley Currier">
-    <meta name="description" content="International Confederation of Planets Product form for starship engine components. To be signed by chief Engineer and submitted to starfleet command">
+    <meta name="description" content="Submit a review for starship engine components by selecting a product, rating its performance, and providing optional feedback.">
     <!-- css -->
     <link rel="stylesheet" href="styles/form.css">
     <link rel="stylesheet" href="styles/form-desktop.css"> 
@@ -18,12 +18,10 @@
 </head>
 <body>
     <header>
-        
+        <h1>Product Review</h1>
     </header>
     <main>
         
-        <h1>Product Review</h1>
-        <p>Starship Engine Part</p>
         <form method="get" action="review.html">
             <!-- Products Drop Down -->
 
@@ -42,24 +40,24 @@
                 <legend>Overall Rating* </legend>
                     
                     <div class="radio-group">
-                        <input type="radio" name="stars" id="five-stars" value="5" required>
-                        <label for="five-stars">⭐ </label>
+                        <input type="radio" name="stars" id="one-star" value="1" required>
+                        <label for="one-star">⭐ </label>
                     </div>
                     <div class="radio-group">
-                        <input type="radio" name="stars" id="four-stars" value="4" required>
-                        <label for="four-stars">⭐⭐</label>
+                        <input type="radio" name="stars" id="two-stars" value="2" required>
+                        <label for="two-stars">⭐⭐</label>
                     </div>
                     <div class="radio-group">
                         <input type="radio" name="stars" id="three-stars" value="3" required>
                         <label for="three-stars">⭐⭐⭐</label>
                     </div>
                     <div class="radio-group">
-                        <input type="radio" name="stars" id="two-stars" value="2" required>
-                        <label for="two-stars">⭐⭐⭐⭐</label>
+                        <input type="radio" name="stars" id="four-stars" value="4" required>
+                        <label for="four-stars">⭐⭐⭐⭐</label>
                     </div>
                     <div class="radio-group">
-                        <input type="radio" name="stars" id="one-star" value="1" required>
-                        <label for="one-star">⭐⭐⭐⭐⭐</label>
+                        <input type="radio" name="stars" id="five-stars" value="5" required>
+                        <label for="five-stars">⭐⭐⭐⭐⭐</label>
                     </div>
                 
             </fieldset>
@@ -72,7 +70,7 @@
         <!-- Useful Features Checkbox -->
             <fieldset id="features">
                 <legend>Which features did you find useful?</legend>
-                <p id="subheading">(Check all that Apply)</p>
+                <p id="subheading">(Check all that apply)</p>
                 
                 <label for="features-durability"><input type="checkbox" id="features-durability" name="features" value="durability"> Durability</label>
                 <label for="ease"><input type="checkbox" id="ease" name="features" value="ease">Ease of Use</label>

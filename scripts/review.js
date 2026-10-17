@@ -7,8 +7,7 @@ document.getElementById("currentyear").textContent = year;
 document.getElementById("lastModified").textContent = document.lastModified;
 
 //-----Count the Number of Times this JS is opened
-//since the review.html page is the only one that opens this script
-//this will tell us how many times the form is submitted
+// Track how many times the review page has been loaded
 let count = Number(localStorage.getItem('formSubmissions')) || 0;
 count++;
 localStorage.setItem("formSubmissions", count);

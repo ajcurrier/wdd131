@@ -28,7 +28,7 @@ header {
     text-decoration: none;
     padding: var(--padding);
     text-align: center;
-    height: 60px;
+    min-height: 60px;
 }
 header a {
     color: white;
@@ -44,10 +44,11 @@ label, legend, #subheading {
     font-size: 1rem;
     font-family: "Bricolage Grotesque", sans-serif;
     align-items: center;
-    cursor: pointer;
     margin-bottom: 0.5rem;
 }
-
+label {
+    cursor: pointer;
+}
 
 #subheading{
     font-style: italic;
@@ -85,7 +86,7 @@ fieldset {
     height: 1rem;
     align-self: center;
 }
-select:focus {
+select:focus, input:focus, textarea:focus {
     outline: var(--focus-settings);
 }
 /* option {
@@ -105,9 +106,6 @@ input, textarea, select {
     box-sizing: border-box;
 
 }
-input:focus {
-    outline: var(--focus-settings);
-}
 input[type="checkbox"] {
     width: 1.5rem;
     height: 1.5rem;
@@ -125,12 +123,11 @@ input[type="submit"]{
 input[type="submit"]:hover {
     background: linear-gradient(hsl(4, 29%, 50%),   var(--color3));
 }
-input:invalid {
+input:user-invalid {
     border-color: crimson;
 }
 #features {
     width: fit-content;
-    flex-direction: row;
 }
 
 
