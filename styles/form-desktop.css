@@ -6,8 +6,14 @@
         padding: var(--padding);
         box-shadow: 1px 4px 8px 4px var(--color1);
     }
+    #review-page {
+        min-height: 300px;
+        text-align: center;
+        align-content: center;
+    }
     input[type="submit"] {
         max-width: 80%;
         margin: var(--padding) 10%;
+
     }
 }
