@@ -99,22 +99,29 @@ input[type="date"] {
     width: 100%;
     /* background-color: var(--color3); */
 }
-input[type="text"] {
+input[type="text"], textarea {
     width: 100%;
     margin-left: 0px;    
     padding: var(--mobile-padding);
+}
+textarea,
+input[type="text"],
+input[type="date"],
+select {
+    box-sizing: border-box;
 }
 .radio-group {
     display: flex;
     width: fit-content;
 }
 
-input {
-    padding: var(--padding) 0;
+input, textarea {
+    padding: var(--padding);
     background-color: var(--color3);
     font-family: "Bricolage Grotesque",sans-serif;
     font-size: 1rem;
     border-radius: var(--border-radius);
+    max-width: 100%;
 }
 input:focus {
     outline: var(--focus-settings);
