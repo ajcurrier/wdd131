@@ -1,0 +1,13 @@
+@media screen and (min-width: 750px) {
+	/* Desktop styles go here. */
+    main {
+        max-width: 800px;
+        margin: var(--padding) auto;
+        padding: var(--padding);
+        box-shadow: 1px 4px 8px 4px var(--color1);
+    }
+    input[type="submit"] {
+        max-width: 80%;
+        margin: var(--padding) 10%;
+    }
+}
