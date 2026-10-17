@@ -45,6 +45,7 @@ products.forEach(products => {
   const option = document.createElement('option');
   option.textContent = products.name;
   option.setAttribute("value", products.id);
+  option.setAttribute("required", "");
   //add option to the document
   productOptions.appendChild(option);
 });
